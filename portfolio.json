@@ -1,0 +1,215 @@
+{
+"name": "Madhav Makwana",
+"label": "Backend Engineer & AI Developer",
+"image_path": "img/madhav.jpeg",
+
+"contact": {
+"email": "madhavmakwana.mm@gmail.com",
+"phone": "+91 9717891589",
+"location": "Delhi, India"
+},
+
+"summary": "Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Passionate about Backend Engineering, Generative AI, RAG systems, and scalable API development. Experienced in FastAPI, Docker, LangChain, Redis, SQLAlchemy, and production-grade AI applications.",
+
+"base_url": "https://maddy-mm.github.io",
+
+"social_links": [
+{
+"label": "GitHub",
+"url": "https://github.com/Maddy-MM",
+"svg_path": "img/github.svg"
+},
+{
+"label": "LinkedIn",
+"url": "https://www.linkedin.com/in/madhav-makwana-5331a4319/",
+"svg_path": "img/linkedin.svg"
+}
+],
+
+"work_experience": [
+{
+"company": "Appsoleut Games",
+"position": "Data Science Intern",
+"url": "https://www.appsoleutgames.com/",
+"start_date": "Jun 2025",
+"end_date": "Aug 2025",
+"summary": "Worked on player retention analytics and churn prediction for a driving simulator game.",
+"highlights": [
+"Analyzed 10K+ gameplay sessions.",
+"Built churn prediction models achieving AUC greater than 0.80.",
+"Segmented players into low, medium and high-risk cohorts.",
+"Provided retention insights for onboarding optimization."
+]
+}
+],
+
+"projects": [
+  {
+    "title": "ResearchMind — Multi-Agent AI Research System",
+    "summary": "Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.",
+    "url": "https://ai-research-system-jhb7jlklgmucvhtmptz5dm.streamlit.app/",
+    "highlights": [
+      "Built a 4-step agentic workflow: Search → Scrape → Write → Critique.",
+      "Implemented JWT authentication and modular FastAPI backend.",
+      "Added Critic Chain for self-evaluation and hallucination reduction.",
+      "Integrated Prometheus monitoring and Docker deployment.",
+      "GitHub Repository: github.com/Maddy-MM/ai-research-system"
+    ],
+    "images": [
+      {
+        "img_path": "img/researchmind.png",
+        "caption": "ResearchMind Dashboard"
+      }
+    ]
+  },
+
+  {
+    "title": "YTLens — RAG-Powered YouTube Q&A System",
+    "summary": "Question answering system over YouTube transcripts using Retrieval-Augmented Generation.",
+    "url": "https://youtube-rag-chatbot-jixvzdtnxgbinlnnr4hbqo.streamlit.app/",
+    "highlights": [
+      "Built transcript ingestion and embedding pipeline.",
+      "Used FAISS vector database with HuggingFace embeddings.",
+      "Implemented MMR retrieval strategy.",
+      "Added authentication and persistent storage.",
+      "GitHub Repository: github.com/Maddy-MM/youtube-rag-assistant"
+    ],
+    "images": [
+      {
+        "img_path": "img/ytlens.png",
+        "caption": "YTLens Interface"
+      }
+    ]
+  },
+
+  {
+    "title": "Car Price Prediction API",
+    "summary": "Production-grade ML API for real-time vehicle price prediction.",
+    "url": "https://car-value-inference-api.onrender.com/",
+    "highlights": [
+      "Built FastAPI inference service.",
+      "Integrated Redis caching.",
+      "Implemented JWT and API key security.",
+      "Monitored with Prometheus and Grafana.",
+      "GitHub Repository: github.com/Maddy-MM/car-value-inference-api"
+    ],
+    "images": [
+      {
+        "img_path": "img/car-price-api.png",
+        "caption": "API Dashboard"
+      }
+    ]
+  }
+],
+
+"volunteer_experience": [
+{
+"organization": "Nanua Samagra Sewa Samiti",
+"position": "Educator",
+"url": "",
+"start_date": "",
+"end_date": "",
+"summary": "Taught mathematics and science to underprivileged children.",
+"highlights": [
+"Conducted 6+ teaching sessions.",
+"Helped students improve academic understanding."
+]
+},
+{
+"organization": "Desh Ke Mentor",
+"position": "Mentor",
+"url": "",
+"start_date": "",
+"end_date": "",
+"summary": "Mentored students on academics and career planning.",
+"highlights": [
+"Guided 4 students through one-on-one mentoring."
+]
+}
+],
+
+"education": [
+{
+"institution": "Delhi Technological University",
+"location": "Delhi, India",
+"url": "https://www.dtu.ac.in",
+"degrees": [
+"B.Tech in Engineering Physics",
+"Minor in Computer Science"
+],
+"honors": [],
+"gpa_cumulative": "7.14",
+"gpa_major": "",
+"graduation_date": "2026"
+}
+],
+
+"skills": [
+{
+"name": "Python",
+"proficiency": 90,
+"proficiency_label": "Advanced"
+},
+{
+"name": "FastAPI",
+"proficiency": 90,
+"proficiency_label": "Advanced"
+},
+{
+"name": "Docker",
+"proficiency": 85,
+"proficiency_label": "Advanced"
+},
+{
+"name": "LangChain",
+"proficiency": 85,
+"proficiency_label": "Advanced"
+},
+{
+"name": "RAG Systems",
+"proficiency": 85,
+"proficiency_label": "Advanced"
+},
+{
+"name": "Machine Learning",
+"proficiency": 80,
+"proficiency_label": "Intermediate"
+},
+{
+"name": "SQL",
+"proficiency": 80,
+"proficiency_label": "Intermediate"
+},
+{
+"name": "Redis",
+"proficiency": 75,
+"proficiency_label": "Intermediate"
+}
+],
+
+"interests": [
+{
+"name": "NPTEL Achievement",
+"summary": "Ranked among the top 5% in NPTEL Introduction to Database and featured in the Q4 toppers list.",
+"images": []
+},
+{
+"name": "Olympiad Achievements",
+"summary": "Qualified Level 2 in SOF Olympiads with notable international and Delhi rankings.",
+"images": []
+}
+],
+
+"languages": [
+{
+"language": "English",
+"fluency": "Professional"
+},
+{
+"language": "Hindi",
+"fluency": "Native"
+}
+],
+
+"references": []
+}
