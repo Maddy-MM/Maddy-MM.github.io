@@ -308,6 +308,17 @@ img {
   box-sizing: border-box;
 }
 
+.main-gallery figure {
+  width: 100%;
+}
+
+.main-gallery figcaption {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .side-gallery {
   grid-template-columns: 1fr;
 }
