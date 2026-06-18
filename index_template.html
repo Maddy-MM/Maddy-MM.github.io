@@ -101,6 +101,13 @@
               </ul>
             {% endif %}
             {% if summary %}<p class="header-summary">{{ summary }}</p>{% endif %}
+            <p class="header-actions">
+              <a class="download-resume-button"
+                 href="resume/current_resume.pdf"
+                 download="Madhav_Makwana_DTU.pdf">
+                Download Resume
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -290,15 +297,40 @@
             </section>
           {% endif %}
 
+          {% if achievements %}
+            <section>
+              <h2 class="section-heading">Achievements</h2>
+              {% for achievement in achievements %}
+                <section>
+                  <h3>{{ achievement.name }}</h3>
+                  {% if achievement.summary %}<p>{{ achievement.summary }}</p>{% endif %}
+                  {% if achievement.images %}
+                    <div class="gallery side-gallery">
+                      {% for img in achievement.images %}
+                        <figure>
+                          <img width="600"
+                               height="338"
+                               src="{{ img.img_path }}"
+                               alt="{{ img.caption }}">
+                          <figcaption>{{ img.caption }}</figcaption>
+                        </figure>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
+          {% endif %}
+
           {% if interests %}
             <section>
-              <h2 class="section-heading">Interests</h2>
+              <h2 class="section-heading">Hobbies</h2>
               {% for interest in interests %}
                 <section>
                   <h3>{{ interest.name }}</h3>
                   {% if interest.summary %}<p>{{ interest.summary }}</p>{% endif %}
                   {% if interest.images %}
-                    <div class="gallery side-gallery">
+                    <div class="gallery side-gallery interest-gallery">
                       {% for img in interest.images %}
                         <figure>
                           <img width="600"

@@ -187,7 +187,7 @@
 }
 ],
 
-"interests": [
+"achievements": [
 {
 "name": "NPTEL Achievement",
 "summary": "Ranked among the top 5% in NPTEL Introduction to Database and featured in the Q4 toppers list.",
@@ -197,6 +197,39 @@
 "name": "Olympiad Achievements",
 "summary": "Qualified Level 2 in SOF Olympiads with notable international and Delhi rankings.",
 "images": []
+}
+],
+
+"interests": [
+{
+"name": "TV Shows",
+"summary": "A good TV show is usually how I switch off after a long day. Some favorites are Panchayat, The Sopranos, Monk, and The Mentalist.",
+"images": [
+{
+"img_path": "img/entertainment.jpeg",
+"caption": "TV Shows"
+}
+]
+},
+{
+"name": "Reading",
+"summary": "I enjoy reading whenever I get the chance, especially works by authors like Ruskin Bond and Satyajit Ray. I tend to gravitate toward stories that are simple, engaging, and stay with you long after you've finished them.",
+"images": [
+{
+"img_path": "img/reading.jpeg",
+"caption": "Reading"
+}
+]
+},
+{
+"name": "Night Walks",
+"summary": "I like taking long walks, especially when I need a break from screens or want to clear my head after a busy day.",
+"images": [
+{
+"img_path": "img/walking.jpeg",
+"caption": "Night Walks"
+}
+]
 }
 ],
 
