@@ -66,12 +66,12 @@
                 <ul class="inline-list flex-responsive">
                   {% if contact.email %}
                     <li>
-                      <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+                      <a href="mailto:{{ contact.email }}" target="_blank" rel="noopener noreferrer">{{ contact.email }}</a>
                     </li>
                   {% endif %}
                   {% if contact.phone %}
                     <li>
-                      <a href="tel:+{{ contact.phone | replace('-', '') }}">{{ contact.phone }}</a>
+                      <a href="tel:+{{ contact.phone | replace('-', '') }}" target="_blank" rel="noopener noreferrer">{{ contact.phone }}</a>
                     </li>
                   {% endif %}
                   {% if contact.location %}<li>{{ contact.location }}</li>{% endif %}
@@ -94,7 +94,7 @@
                 <section>
                   <h3>
                     {% if job.url %}
-                      {{ job.position }} at <a href="{{ job.url }}">{{ job.company }}</a>
+                      {{ job.position }} at <a href="{{ job.url }}" target="_blank" rel="noopener noreferrer">{{ job.company }}</a>
                     {% else %}
                       {{ job.position }} at {{ job.company }}
                     {% endif %}
@@ -120,7 +120,7 @@
                 <section>
                   <h3>
                     {% if project.url %}
-                      <a href="{{ project.url }}">{{ project.title }}</a>
+                      <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
                     {% else %}
                       {{ project.title }}
                     {% endif %}
@@ -128,7 +128,16 @@
                   {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
                   {% if project.highlights %}
                     <ul>
-                      {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                      {% for highlight in project.highlights %}
+                        <li>
+                          {% if highlight.startswith('GitHub Repository: ') %}
+                            {% set repo_path = highlight[19:] %}
+                            GitHub Repository: <a href="https://{{ repo_path }}" target="_blank" rel="noopener noreferrer">{{ repo_path }}</a>
+                          {% else %}
+                            {{ highlight }}
+                          {% endif %}
+                        </li>
+                      {% endfor %}
                     </ul>
                   {% endif %}
                 </section>
@@ -160,7 +169,7 @@
                 <section>
                   <h3>
                     {% if vol.url %}
-                      {{ vol.position }} at <a href="{{ vol.url }}">{{ vol.organization }}</a>
+                      {{ vol.position }} at <a href="{{ vol.url }}" target="_blank" rel="noopener noreferrer">{{ vol.organization }}</a>
                     {% else %}
                       {{ vol.position }} at {{ vol.organization }}
                     {% endif %}

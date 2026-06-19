@@ -73,12 +73,12 @@
                 <ul class="inline-list flex-responsive">
                   {% if contact.email %}
                     <li>
-                      <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+                      <a href="mailto:{{ contact.email }}" target="_blank" rel="noopener noreferrer">{{ contact.email }}</a>
                     </li>
                   {% endif %}
                   {% if contact.phone %}
                     <li>
-                      <a href="tel:+{{ contact.phone | replace('-', '') }}">{{ contact.phone }}</a>
+                      <a href="tel:+{{ contact.phone | replace('-', '') }}" target="_blank" rel="noopener noreferrer">{{ contact.phone }}</a>
                     </li>
                   {% endif %}
                   {% if contact.location %}<li>{{ contact.location }}</li>{% endif %}
@@ -90,6 +90,7 @@
                 {% for link in social_links %}
                   <li>
                     <a href="{{ link.url }}"
+                        target="_blank"
                        rel="noopener noreferrer"
                        aria-label="{{ link.label }}"
                        class="link-with-icon">
@@ -123,7 +124,7 @@
                 <section>
                   <h3>
                     {% if job.url %}
-                      {{ job.position }} at <a href="{{ job.url }}">{{ job.company }}</a>
+                      {{ job.position }} at <a href="{{ job.url }}" target="_blank" rel="noopener noreferrer">{{ job.company }}</a>
                     {% else %}
                       {{ job.position }} at {{ job.company }}
                     {% endif %}
@@ -146,10 +147,10 @@
             <section>
               <h2 class="section-heading">Projects</h2>
               {% for project in projects %}
-                <section>
+                <section class="project-entry">
                   <h3>
                     {% if project.url %}
-                      <a href="{{ project.url }}">{{ project.title }}</a>
+                      <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
                     {% else %}
                       {{ project.title }}
                     {% endif %}
@@ -157,7 +158,16 @@
                   {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
                   {% if project.highlights %}
                     <ul>
-                      {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                      {% for highlight in project.highlights %}
+                        <li>
+                          {% if highlight.startswith('GitHub Repository: ') %}
+                            {% set repo_path = highlight[19:] %}
+                            GitHub Repository: <a href="https://{{ repo_path }}" target="_blank" rel="noopener noreferrer">{{ repo_path }}</a>
+                          {% else %}
+                            {{ highlight }}
+                          {% endif %}
+                        </li>
+                      {% endfor %}
                     </ul>
                   {% endif %}
                   {% if project.images %}
@@ -184,7 +194,7 @@
                 <section>
                   <h3>
                     {% if vol.url %}
-                      {{ vol.position }} at <a href="{{ vol.url }}">{{ vol.organization }}</a>
+                      {{ vol.position }} at <a href="{{ vol.url }}" target="_blank" rel="noopener noreferrer">{{ vol.organization }}</a>
                     {% else %}
                       {{ vol.position }} at {{ vol.organization }}
                     {% endif %}
@@ -227,15 +237,26 @@
             <section>
               <h2 class="section-heading">Education</h2>
               {% for edu in education %}
-                <section>
-                  <h3>
-                    {% if edu.url %}
-                      <a href="{{ edu.url }}">{{ edu.institution }}</a>
-                    {% else %}
-                      {{ edu.institution }}
+                <section class="education-card">
+                  <div class="education-header">
+                    {% if edu.logo_path %}
+                      <img class="education-logo"
+                           src="{{ edu.logo_path }}"
+                           alt="{{ edu.institution }} logo"
+                           width="40"
+                           height="40">
                     {% endif %}
-                  </h3>
-                  {% if edu.location %}<p class="section-label">{{ edu.location }}</p>{% endif %}
+                    <div class="education-heading-group">
+                      <h3 class="education-name">
+                        {% if edu.url %}
+                          <a href="{{ edu.url }}" target="_blank" rel="noopener noreferrer">{{ edu.institution }}</a>
+                        {% else %}
+                          {{ edu.institution }}
+                        {% endif %}
+                      </h3>
+                      {% if edu.location %}<p class="section-label education-location">{{ edu.location }}</p>{% endif %}
+                    </div>
+                  </div>
                   {% if edu.degrees %}
                     <h4>Degrees</h4>
                     <ul>
@@ -325,11 +346,11 @@
             <section>
               <h2 class="section-heading">Hobbies</h2>
               {% for interest in interests %}
-                <section>
-                  <h3>{{ interest.name }}</h3>
-                  {% if interest.summary %}<p>{{ interest.summary }}</p>{% endif %}
+                <section class="hobby-card">
+                  <h3 class="hobby-title">{{ interest.name }}</h3>
+                  {% if interest.summary %}<p class="hobby-summary">{{ interest.summary }}</p>{% endif %}
                   {% if interest.images %}
-                    <div class="gallery side-gallery interest-gallery">
+                    <div class="gallery side-gallery interest-gallery hobby-gallery">
                       {% for img in interest.images %}
                         <figure>
                           <img width="600"

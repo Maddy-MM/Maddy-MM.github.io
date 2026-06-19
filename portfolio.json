@@ -23,6 +23,11 @@
 "label": "LinkedIn",
 "url": "https://www.linkedin.com/in/madhav-makwana-5331a4319/",
 "svg_path": "img/linkedin.svg"
+},
+{
+"label": "Instagram",
+"url": "https://www.instagram.com/madhav_7184?igsh=MWE0YWFlNHl0ZWhqcA%3D%3D&utm_source=qr",
+"svg_path": "img/instagram.svg"
 }
 ],
 
@@ -131,6 +136,7 @@
 "education": [
 {
 "institution": "Delhi Technological University",
+"logo_path": "img/DTU_logo.webp",
 "location": "Delhi, India",
 "url": "https://www.dtu.ac.in",
 "degrees": [
