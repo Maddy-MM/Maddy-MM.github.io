@@ -55,6 +55,20 @@
   </head>
 
   <body>
+    <nav class="sticky-bar" aria-label="Quick identity bar">
+      <div class="container sticky-bar-inner">
+        <div class="sticky-bar-identity">
+          <span class="sticky-bar-name">Madhav Makwana</span>
+          <span class="sticky-bar-tagline" id="sticky-typewriter"></span>
+        </div>
+        <a class="sticky-bar-resume" href="resume/Madhav_Makwana_2K22-EP-58.pdf" download="Madhav_Makwana_DTU.pdf">Resume</a>
+      </div>
+    </nav>
+    <div class="body-aurora" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <header class="page-header">
       <div class="page-header__aurora" aria-hidden="true">
         <span></span>
@@ -73,6 +87,10 @@
           <div class="header-info">
             <h1>Madhav Makwana</h1>
             <h2 class="header-label" id="typewriter-label">Backend Engineer &amp; AI Developer</h2>
+            <span class="status-pill">
+              <span class="status-pill-dot"></span>
+              Open to opportunities
+            </span>
             
               <address>
                 <ul class="inline-list flex-responsive">
@@ -185,7 +203,7 @@
       <div class="container">
         <main>
           
-            <section id="experience">
+            <section id="experience" class="content-panel">
               <h2 class="section-heading">Work Experience</h2>
               
                 <section>
@@ -209,56 +227,82 @@
           
 
           
-            <section id="projects">
+            <section id="projects" class="content-panel">
               <h2 class="section-heading">Projects</h2>
               
+                
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    
+                  
+                
                 <section class="project-entry">
-                  <h3>
-                    
-                      <a href="https://ai-research-system-jhb7jlklgmucvhtmptz5dm.streamlit.app/" target="_blank" rel="noopener noreferrer">ResearchMind — Multi-Agent AI Research System</a>
-                    
-                  </h3>
+                  <h3>ResearchMind — Multi-Agent AI Research System</h3>
                   <p>Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.</p>
                   
                     <ul>
                       
-                        <li>
-                          
-                            Built a 4-step agentic workflow: Search → Scrape → Write → Critique.
-                          
-                        </li>
+                        
+                          <li>Built a 4-step agentic workflow: Search → Scrape → Write → Critique.</li>
+                        
                       
-                        <li>
-                          
-                            Implemented JWT authentication and modular FastAPI backend.
-                          
-                        </li>
+                        
+                          <li>Implemented JWT authentication and modular FastAPI backend.</li>
+                        
                       
-                        <li>
-                          
-                            Added Critic Chain for self-evaluation and hallucination reduction.
-                          
-                        </li>
+                        
+                          <li>Added Critic Chain for self-evaluation and hallucination reduction.</li>
+                        
                       
-                        <li>
-                          
-                            Integrated Prometheus monitoring and Docker deployment.
-                          
-                        </li>
+                        
+                          <li>Integrated Prometheus monitoring and Docker deployment.</li>
+                        
                       
-                        <li>
-                          
-                            
-                            GitHub Repository: <a href="https://github.com/Maddy-MM/ai-research-system" target="_blank" rel="noopener noreferrer">github.com/Maddy-MM/ai-research-system</a>
-                          
-                        </li>
+                        
                       
                     </ul>
+                  
+                  
+                    <div class="project-cta-group">
+                      
+                        <a class="project-cta project-cta-github"
+                           href="https://github.com/Maddy-MM/ai-research-system"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View ResearchMind — Multi-Agent AI Research System on GitHub">
+                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          GitHub
+                        </a>
+                      
+                      
+                        <a class="project-cta project-cta-demo"
+                           href="https://ai-research-system-jhb7jlklgmucvhtmptz5dm.streamlit.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View live demo of ResearchMind — Multi-Agent AI Research System">
+                          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                          Live Demo
+                        </a>
+                      
+                    </div>
                   
                   
                     <div class="gallery main-gallery">
                       
                         <figure>
+                          <div class="browser-chrome" aria-hidden="true">
+                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
+                          </div>
                           <img width="600"
                                height="338"
                                src="img/researchmind.png"
@@ -271,53 +315,79 @@
                   
                 </section>
               
+                
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    
+                  
+                
                 <section class="project-entry">
-                  <h3>
-                    
-                      <a href="https://youtube-rag-chatbot-jixvzdtnxgbinlnnr4hbqo.streamlit.app/" target="_blank" rel="noopener noreferrer">YTLens — RAG-Powered YouTube Q&amp;A System</a>
-                    
-                  </h3>
+                  <h3>YTLens — RAG-Powered YouTube Q&amp;A System</h3>
                   <p>Question answering system over YouTube transcripts using Retrieval-Augmented Generation.</p>
                   
                     <ul>
                       
-                        <li>
-                          
-                            Built transcript ingestion and embedding pipeline.
-                          
-                        </li>
+                        
+                          <li>Built transcript ingestion and embedding pipeline.</li>
+                        
                       
-                        <li>
-                          
-                            Used FAISS vector database with HuggingFace embeddings.
-                          
-                        </li>
+                        
+                          <li>Used FAISS vector database with HuggingFace embeddings.</li>
+                        
                       
-                        <li>
-                          
-                            Implemented MMR retrieval strategy.
-                          
-                        </li>
+                        
+                          <li>Implemented MMR retrieval strategy.</li>
+                        
                       
-                        <li>
-                          
-                            Added authentication and persistent storage.
-                          
-                        </li>
+                        
+                          <li>Added authentication and persistent storage.</li>
+                        
                       
-                        <li>
-                          
-                            
-                            GitHub Repository: <a href="https://github.com/Maddy-MM/youtube-rag-assistant" target="_blank" rel="noopener noreferrer">github.com/Maddy-MM/youtube-rag-assistant</a>
-                          
-                        </li>
+                        
                       
                     </ul>
+                  
+                  
+                    <div class="project-cta-group">
+                      
+                        <a class="project-cta project-cta-github"
+                           href="https://github.com/Maddy-MM/youtube-rag-assistant"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View YTLens — RAG-Powered YouTube Q&amp;A System on GitHub">
+                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          GitHub
+                        </a>
+                      
+                      
+                        <a class="project-cta project-cta-demo"
+                           href="https://youtube-rag-chatbot-jixvzdtnxgbinlnnr4hbqo.streamlit.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View live demo of YTLens — RAG-Powered YouTube Q&amp;A System">
+                          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                          Live Demo
+                        </a>
+                      
+                    </div>
                   
                   
                     <div class="gallery main-gallery">
                       
                         <figure>
+                          <div class="browser-chrome" aria-hidden="true">
+                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
+                          </div>
                           <img width="600"
                                height="338"
                                src="img/ytlens.png"
@@ -330,53 +400,79 @@
                   
                 </section>
               
+                
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    
+                  
+                
                 <section class="project-entry">
-                  <h3>
-                    
-                      <a href="https://car-value-inference-api.onrender.com/" target="_blank" rel="noopener noreferrer">Car Price Prediction API</a>
-                    
-                  </h3>
+                  <h3>Car Price Prediction API</h3>
                   <p>Production-grade ML API for real-time vehicle price prediction.</p>
                   
                     <ul>
                       
-                        <li>
-                          
-                            Built FastAPI inference service.
-                          
-                        </li>
+                        
+                          <li>Built FastAPI inference service.</li>
+                        
                       
-                        <li>
-                          
-                            Integrated Redis caching.
-                          
-                        </li>
+                        
+                          <li>Integrated Redis caching.</li>
+                        
                       
-                        <li>
-                          
-                            Implemented JWT and API key security.
-                          
-                        </li>
+                        
+                          <li>Implemented JWT and API key security.</li>
+                        
                       
-                        <li>
-                          
-                            Monitored with Prometheus and Grafana.
-                          
-                        </li>
+                        
+                          <li>Monitored with Prometheus and Grafana.</li>
+                        
                       
-                        <li>
-                          
-                            
-                            GitHub Repository: <a href="https://github.com/Maddy-MM/car-value-inference-api" target="_blank" rel="noopener noreferrer">github.com/Maddy-MM/car-value-inference-api</a>
-                          
-                        </li>
+                        
                       
                     </ul>
+                  
+                  
+                    <div class="project-cta-group">
+                      
+                        <a class="project-cta project-cta-github"
+                           href="https://github.com/Maddy-MM/car-value-inference-api"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View Car Price Prediction API on GitHub">
+                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          GitHub
+                        </a>
+                      
+                      
+                        <a class="project-cta project-cta-demo"
+                           href="https://car-value-inference-api.onrender.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View live demo of Car Price Prediction API">
+                          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                          Live Demo
+                        </a>
+                      
+                    </div>
                   
                   
                     <div class="gallery main-gallery">
                       
                         <figure>
+                          <div class="browser-chrome" aria-hidden="true">
+                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
+                          </div>
                           <img width="600"
                                height="338"
                                src="img/car-price-api.png"
@@ -393,7 +489,7 @@
           
 
           
-            <section>
+            <section class="content-panel">
               <h2 class="section-heading">Volunteer Experience</h2>
               
                 <section>
@@ -705,6 +801,10 @@
     </div>
 
     <footer class="page-footer">
+      <div class="page-footer__aurora" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
       <div class="container">
         <p>© 2026 Madhav Makwana. All rights reserved.</p>
       </div>

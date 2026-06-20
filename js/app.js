@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  initStickyBar();
+
   const revealElements = document.querySelectorAll(
     ".education-card, .hobby-card, .project-entry, main > section, aside > section"
   );
@@ -85,6 +87,22 @@ function initBackToTop() {
   });
 }
 
+function initStickyBar() {
+  const bar = document.querySelector(".sticky-bar");
+  const pageHeader = document.querySelector(".page-header");
+  if (!bar || !pageHeader) return;
+
+  const visibilityObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        bar.classList.toggle("is-visible", !entry.isIntersecting);
+      });
+    },
+    { threshold: 0, rootMargin: "-1px 0px 0px 0px" }
+  );
+  visibilityObserver.observe(pageHeader);
+}
+
 function initCopyEmail() {
   const emailLink = document.querySelector('a[href^="mailto:"]');
   if (!emailLink) return;
@@ -132,6 +150,7 @@ function initSkillBars() {
 
 function initTypewriter() {
   const el = document.getElementById("typewriter-label");
+  const stickyEl = document.getElementById("sticky-typewriter");
   if (!el) return;
 
   const roles = [
@@ -150,6 +169,7 @@ function initTypewriter() {
     if (!deleting) {
       charIndex++;
       el.textContent = current.slice(0, charIndex);
+      if (stickyEl) stickyEl.textContent = current.slice(0, charIndex);
       if (charIndex === current.length) {
         deleting = true;
         el.classList.add("is-pausing");
@@ -162,6 +182,7 @@ function initTypewriter() {
     } else {
       charIndex--;
       el.textContent = current.slice(0, charIndex);
+      if (stickyEl) stickyEl.textContent = current.slice(0, charIndex);
       if (charIndex === 0) {
         deleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
