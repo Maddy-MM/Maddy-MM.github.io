@@ -56,6 +56,11 @@
 
   <body>
     <header class="page-header">
+      <div class="page-header__aurora" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="container">
         <div class="header-top flex-responsive">
           {% if image_path %}
@@ -67,7 +72,7 @@
           {% endif %}
           <div class="header-info">
             <h1>{{ name }}</h1>
-            {% if label %}<h2 class="header-label">{{ label }}</h2>{% endif %}
+            {% if label %}<h2 class="header-label" id="typewriter-label">{{ label }}</h2>{% endif %}
             {% if contact.email or contact.phone or contact.location %}
               <address>
                 <ul class="inline-list flex-responsive">
@@ -101,7 +106,12 @@
                 {% endfor %}
               </ul>
             {% endif %}
-            {% if summary %}<p class="header-summary">{{ summary }}</p>{% endif %}
+            {% if summary %}
+              <div class="header-summary">
+                <p class="header-summary-label">About</p>
+                <p class="header-summary-text">{{ summary }}</p>
+              </div>
+            {% endif %}
             <p class="header-actions">
               <a class="download-resume-button"
                   href="resume/Madhav_Makwana_2K22-EP-58.pdf"
@@ -118,7 +128,7 @@
       <div class="container">
         <main>
           {% if work_experience %}
-            <section>
+            <section id="experience">
               <h2 class="section-heading">Work Experience</h2>
               {% for job in work_experience %}
                 <section>
@@ -144,7 +154,7 @@
           {% endif %}
 
           {% if projects %}
-            <section>
+            <section id="projects">
               <h2 class="section-heading">Projects</h2>
               {% for project in projects %}
                 <section class="project-entry">
@@ -177,7 +187,9 @@
                           <img width="600"
                                height="338"
                                src="{{ img.img_path }}"
-                               alt="{{ img.caption }}">
+                               alt="{{ img.caption }}"
+                               loading="lazy"
+                               decoding="async">
                         </figure>
                       {% endfor %}
                     </div>
@@ -234,7 +246,7 @@
         <!-- Sidebar Section -->
         <aside>
           {% if education %}
-            <section>
+            <section id="education">
               <h2 class="section-heading">Education</h2>
               {% for edu in education %}
                 <section class="education-card">
@@ -282,14 +294,15 @@
           {% endif %}
 
           {% if skills %}
-            <section>
+            <section id="skills">
               <h2 class="section-heading">Skills</h2>
               <ul class="unstyled-list">
                 {% for skill in skills %}
                   <li>
                     <h3>{{ skill.name }}</h3>
                     <div class="skill-bar">
-                      <div class="skill-bar-fill w-{{ skill.proficiency }}"
+                      <div class="skill-bar-fill"
+                           style="--target-width: {{ skill.proficiency }}%"
                            role="meter"
                            aria-valuenow="{{ skill.proficiency }}"
                            aria-valuemin="0"
@@ -331,7 +344,9 @@
                           <img width="600"
                                height="338"
                                src="{{ img.img_path }}"
-                               alt="{{ img.caption }}">
+                               alt="{{ img.caption }}"
+                               loading="lazy"
+                               decoding="async">
                           <figcaption>{{ img.caption }}</figcaption>
                         </figure>
                       {% endfor %}
@@ -356,7 +371,9 @@
                           <img width="600"
                                height="338"
                                src="{{ img.img_path }}"
-                               alt="{{ img.caption }}">
+                               alt="{{ img.caption }}"
+                               loading="lazy"
+                               decoding="async">
                           <figcaption>{{ img.caption }}</figcaption>
                         </figure>
                       {% endfor %}
