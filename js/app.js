@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
   initCopyEmail();
   initSkillBars();
+  initResumeClickFeedback();
   const typewriterEl = document.getElementById("typewriter-label");
   if (typewriterEl) typewriterEl.textContent = "";
   setTimeout(initTypewriter, 1500);
@@ -87,6 +88,32 @@ function initBackToTop() {
   });
 }
 
+function initMagneticButtons() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (window.matchMedia("(hover: none)").matches) return; // skip on touch devices
+
+  const buttons = document.querySelectorAll(".magnetic");
+  const strength = 0.35; // how strongly the button follows the cursor (0-1)
+  const maxPull = 10; // max px the button can shift
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("mousemove", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - (rect.left + rect.width / 2);
+      const y = e.clientY - (rect.top + rect.height / 2);
+
+      const pullX = Math.max(-maxPull, Math.min(maxPull, x * strength));
+      const pullY = Math.max(-maxPull, Math.min(maxPull, y * strength));
+
+      btn.style.transform = `translate(${pullX}px, ${pullY - 1}px)`;
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "translate(0, 0)";
+    });
+  });
+}
+
 function initStickyBar() {
   const bar = document.querySelector(".sticky-bar");
   const pageHeader = document.querySelector(".page-header");
@@ -101,6 +128,52 @@ function initStickyBar() {
     { threshold: 0, rootMargin: "-1px 0px 0px 0px" }
   );
   visibilityObserver.observe(pageHeader);
+}
+
+function initResumeConfetti() {
+  const link = document.getElementById("resume-download-link");
+  if (!link) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const colors = ["#0077cc", "#16a34a", "#d99b2b", "#ec4899", "#8b5cf6"];
+
+  link.addEventListener("click", () => {
+    const rect = link.getBoundingClientRect();
+    const originX = rect.left + rect.width / 2;
+    const originY = rect.top + rect.height / 2;
+
+    for (let i = 0; i < 24; i++) {
+      const piece = document.createElement("span");
+      piece.className = "confetti-piece";
+      piece.style.background = colors[i % colors.length];
+      piece.style.left = `${originX}px`;
+      piece.style.top = `${originY}px`;
+
+      const angle = (Math.PI * 2 * i) / 24 + Math.random() * 0.3;
+      const distance = 60 + Math.random() * 60;
+      const dx = Math.cos(angle) * distance;
+      const dy = Math.sin(angle) * distance - 40;
+
+      piece.style.setProperty("--dx", `${dx}px`);
+      piece.style.setProperty("--dy", `${dy}px`);
+      piece.style.setProperty("--rot", `${Math.random() * 540 - 270}deg`);
+
+      document.body.appendChild(piece);
+      piece.addEventListener("animationend", () => piece.remove());
+    }
+  });
+}
+
+function initResumeClickFeedback() {
+  const link = document.getElementById("resume-download-link");
+  if (!link) return;
+
+  link.addEventListener("click", () => {
+    link.classList.add("is-confirming");
+    setTimeout(() => {
+      link.classList.remove("is-confirming");
+    }, 900);
+  });
 }
 
 function initCopyEmail() {
@@ -132,6 +205,10 @@ function initCopyEmail() {
 function initSkillBars() {
   const bars = document.querySelectorAll(".skill-bar-fill");
   if (!bars.length) return;
+
+  bars.forEach((bar, index) => {
+    bar.style.setProperty("--shimmer-delay", `${1.2 + index * 0.15}s`);
+  });
 
   const observer = new IntersectionObserver(
     (entries) => {

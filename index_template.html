@@ -54,7 +54,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
   </head>
 
-  <body>
+  <body id="top">
     <nav class="sticky-bar" aria-label="Quick identity bar">
       <div class="container sticky-bar-inner">
         <div class="sticky-bar-identity">
@@ -131,9 +131,10 @@
               </div>
             {% endif %}
             <p class="header-actions">
-              <a class="download-resume-button"
+              <a class="download-resume-button magnetic"
                   href="resume/Madhav_Makwana_2K22-EP-58.pdf"
-                 download="Madhav_Makwana_DTU.pdf">
+                 download="Madhav_Makwana_DTU.pdf"
+                 id="resume-download-link">
                 Download Resume
               </a>
             </p>
@@ -183,6 +184,13 @@
                 {% endfor %}
                 <section class="project-entry">
                   <h3>{{ project.title }}</h3>
+                  {% if project.tech_stack %}
+                    <ul class="tech-stack-list">
+                      {% for tech in project.tech_stack %}
+                        <li class="tech-chip tech-chip--{{ tech | lower | replace(' ', '-') }}">{{ tech }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
                   {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
                   {% if project.highlights %}
                     <ul>
@@ -196,7 +204,7 @@
                   {% if project.url or github_url.value %}
                     <div class="project-cta-group">
                       {% if github_url.value %}
-                        <a class="project-cta project-cta-github"
+                        <a class="project-cta project-cta-github magnetic"
                            href="{{ github_url.value }}"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -206,7 +214,7 @@
                         </a>
                       {% endif %}
                       {% if project.url %}
-                        <a class="project-cta project-cta-demo"
+                        <a class="project-cta project-cta-demo magnetic"
                            href="{{ project.url }}"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -434,8 +442,28 @@
         <span></span>
         <span></span>
       </div>
-      <div class="container">
-        <p>© {{ current_year }} {{ name }}. All rights reserved.</p>
+      <div class="container footer-content">
+        {% if social_links %}
+          <ul class="footer-social-list">
+            {% for link in social_links %}
+              <li>
+                <a href="{{ link.url }}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="{{ link.label }}"
+                   class="footer-social-link">
+                  {% if link.svg_path %}
+                    <img src="{{ link.svg_path }}" alt="" width="18" height="18">
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        <div class="footer-bottom-row">
+          <p class="footer-copyright">© {{ current_year }} {{ name }}. All rights reserved.</p>
+        </div>
+        <p class="footer-attribution">Built with Python &amp; Jinja2</p>
       </div>
     </footer>
 

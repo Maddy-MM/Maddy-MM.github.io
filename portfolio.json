@@ -51,6 +51,7 @@
 "projects": [
   {
     "title": "ResearchMind — Multi-Agent AI Research System",
+    "tech_stack": ["FastAPI", "LangChain", "Groq API", "JWT", "Prometheus", "Docker"],
     "summary": "Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.",
     "url": "https://ai-research-system-jhb7jlklgmucvhtmptz5dm.streamlit.app/",
     "highlights": [
@@ -70,6 +71,7 @@
 
   {
     "title": "YTLens — RAG-Powered YouTube Q&A System",
+    "tech_stack": ["FastAPI", "FAISS", "HuggingFace", "RAG", "JWT"],
     "summary": "Question answering system over YouTube transcripts using Retrieval-Augmented Generation.",
     "url": "https://youtube-rag-chatbot-jixvzdtnxgbinlnnr4hbqo.streamlit.app/",
     "highlights": [
@@ -89,6 +91,7 @@
 
   {
     "title": "Car Price Prediction API",
+    "tech_stack": ["FastAPI", "Redis", "JWT", "Prometheus", "Grafana"],
     "summary": "Production-grade ML API for real-time vehicle price prediction.",
     "url": "https://car-value-inference-api.onrender.com/",
     "highlights": [

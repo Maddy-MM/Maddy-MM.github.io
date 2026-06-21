@@ -54,7 +54,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
   </head>
 
-  <body>
+  <body id="top">
     <nav class="sticky-bar" aria-label="Quick identity bar">
       <div class="container sticky-bar-inner">
         <div class="sticky-bar-identity">
@@ -188,9 +188,10 @@
               </div>
             
             <p class="header-actions">
-              <a class="download-resume-button"
+              <a class="download-resume-button magnetic"
                   href="resume/Madhav_Makwana_2K22-EP-58.pdf"
-                 download="Madhav_Makwana_DTU.pdf">
+                 download="Madhav_Makwana_DTU.pdf"
+                 id="resume-download-link">
                 Download Resume
               </a>
             </p>
@@ -246,6 +247,23 @@
                 
                 <section class="project-entry">
                   <h3>ResearchMind — Multi-Agent AI Research System</h3>
+                  
+                    <ul class="tech-stack-list">
+                      
+                        <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                      
+                        <li class="tech-chip tech-chip--langchain">LangChain</li>
+                      
+                        <li class="tech-chip tech-chip--groq-api">Groq API</li>
+                      
+                        <li class="tech-chip tech-chip--jwt">JWT</li>
+                      
+                        <li class="tech-chip tech-chip--prometheus">Prometheus</li>
+                      
+                        <li class="tech-chip tech-chip--docker">Docker</li>
+                      
+                    </ul>
+                  
                   <p>Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.</p>
                   
                     <ul>
@@ -273,7 +291,7 @@
                   
                     <div class="project-cta-group">
                       
-                        <a class="project-cta project-cta-github"
+                        <a class="project-cta project-cta-github magnetic"
                            href="https://github.com/Maddy-MM/ai-research-system"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -283,7 +301,7 @@
                         </a>
                       
                       
-                        <a class="project-cta project-cta-demo"
+                        <a class="project-cta project-cta-demo magnetic"
                            href="https://ai-research-system-jhb7jlklgmucvhtmptz5dm.streamlit.app/"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -331,6 +349,21 @@
                 
                 <section class="project-entry">
                   <h3>YTLens — RAG-Powered YouTube Q&amp;A System</h3>
+                  
+                    <ul class="tech-stack-list">
+                      
+                        <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                      
+                        <li class="tech-chip tech-chip--faiss">FAISS</li>
+                      
+                        <li class="tech-chip tech-chip--huggingface">HuggingFace</li>
+                      
+                        <li class="tech-chip tech-chip--rag">RAG</li>
+                      
+                        <li class="tech-chip tech-chip--jwt">JWT</li>
+                      
+                    </ul>
+                  
                   <p>Question answering system over YouTube transcripts using Retrieval-Augmented Generation.</p>
                   
                     <ul>
@@ -358,7 +391,7 @@
                   
                     <div class="project-cta-group">
                       
-                        <a class="project-cta project-cta-github"
+                        <a class="project-cta project-cta-github magnetic"
                            href="https://github.com/Maddy-MM/youtube-rag-assistant"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -368,7 +401,7 @@
                         </a>
                       
                       
-                        <a class="project-cta project-cta-demo"
+                        <a class="project-cta project-cta-demo magnetic"
                            href="https://youtube-rag-chatbot-jixvzdtnxgbinlnnr4hbqo.streamlit.app/"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -416,6 +449,21 @@
                 
                 <section class="project-entry">
                   <h3>Car Price Prediction API</h3>
+                  
+                    <ul class="tech-stack-list">
+                      
+                        <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                      
+                        <li class="tech-chip tech-chip--redis">Redis</li>
+                      
+                        <li class="tech-chip tech-chip--jwt">JWT</li>
+                      
+                        <li class="tech-chip tech-chip--prometheus">Prometheus</li>
+                      
+                        <li class="tech-chip tech-chip--grafana">Grafana</li>
+                      
+                    </ul>
+                  
                   <p>Production-grade ML API for real-time vehicle price prediction.</p>
                   
                     <ul>
@@ -443,7 +491,7 @@
                   
                     <div class="project-cta-group">
                       
-                        <a class="project-cta project-cta-github"
+                        <a class="project-cta project-cta-github magnetic"
                            href="https://github.com/Maddy-MM/car-value-inference-api"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -453,7 +501,7 @@
                         </a>
                       
                       
-                        <a class="project-cta project-cta-demo"
+                        <a class="project-cta project-cta-demo magnetic"
                            href="https://car-value-inference-api.onrender.com/"
                            target="_blank"
                            rel="noopener noreferrer"
@@ -805,8 +853,52 @@
         <span></span>
         <span></span>
       </div>
-      <div class="container">
-        <p>© 2026 Madhav Makwana. All rights reserved.</p>
+      <div class="container footer-content">
+        
+          <ul class="footer-social-list">
+            
+              <li>
+                <a href="https://github.com/Maddy-MM"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub"
+                   class="footer-social-link">
+                  
+                    <img src="img/github.svg" alt="" width="18" height="18">
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://www.linkedin.com/in/madhav-makwana-5331a4319/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn"
+                   class="footer-social-link">
+                  
+                    <img src="img/linkedin.svg" alt="" width="18" height="18">
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://www.instagram.com/madhav_7184?igsh=MWE0YWFlNHl0ZWhqcA%3D%3D&amp;utm_source=qr"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram"
+                   class="footer-social-link">
+                  
+                    <img src="img/instagram.svg" alt="" width="18" height="18">
+                  
+                </a>
+              </li>
+            
+          </ul>
+        
+        <div class="footer-bottom-row">
+          <p class="footer-copyright">© 2026 Madhav Makwana. All rights reserved.</p>
+        </div>
+        <p class="footer-attribution">Built with Python &amp; Jinja2</p>
       </div>
     </footer>
 
