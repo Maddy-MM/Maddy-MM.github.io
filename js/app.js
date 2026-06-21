@@ -180,12 +180,15 @@ function initCopyEmail() {
   const emailLink = document.querySelector('a[href^="mailto:"]');
   if (!emailLink) return;
 
+  const copyIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+  const checkIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`;
+
   const email = emailLink.textContent.trim();
   const btn = document.createElement("button");
   btn.className = "copy-email-btn";
   btn.type = "button";
   btn.setAttribute("aria-label", "Copy email address");
-  btn.textContent = "📋";
+  btn.innerHTML = copyIcon;
 
   emailLink.insertAdjacentElement("afterend", btn);
 
@@ -193,9 +196,12 @@ function initCopyEmail() {
     e.preventDefault();
     try {
       await navigator.clipboard.writeText(email);
-      const original = btn.textContent;
-      btn.textContent = "✓";
-      setTimeout(() => (btn.textContent = original), 1500);
+      btn.innerHTML = checkIcon;
+      btn.classList.add("is-copied");
+      setTimeout(() => {
+        btn.innerHTML = copyIcon;
+        btn.classList.remove("is-copied");
+      }, 1500);
     } catch (err) {
       console.error("Copy failed:", err);
     }

@@ -253,7 +253,7 @@
             <section class="content-panel">
               <h2 class="section-heading">Volunteer Experience</h2>
               {% for vol in volunteer_experience %}
-                <section>
+                <section class="divided-entry">
                   <h3>
                     {% if vol.url %}
                       {{ vol.position }} at <a href="{{ vol.url }}" target="_blank" rel="noopener noreferrer">{{ vol.organization }}</a>
