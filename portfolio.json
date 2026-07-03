@@ -110,6 +110,45 @@
   }
 ],
 
+"other_projects": [
+  {
+    "title": "Credit Card Customer Churn Prediction (ANN)",
+    "tech_stack": ["TensorFlow/Keras", "Scikit-learn", "Pandas"],
+    "summary": "Deep learning ANN model predicting bank customer churn from demographic and account data.",
+    "url": "",
+    "highlights": [
+      "Preprocessed data with one-hot encoding and StandardScaler.",
+      "Built a 2-hidden-layer ANN with ReLU and Sigmoid output.",
+      "Achieved ~86% test accuracy with early stopping to prevent overfitting.",
+      "GitHub Repository: github.com/Maddy-MM/customer-churn-prediction"
+    ]
+  },
+  {
+    "title": "Movie Recommender System",
+    "tech_stack": ["Scikit-learn", "TF-IDF", "Streamlit", "TMDB API"],
+    "summary": "Content-based movie recommender using metadata similarity, deployed as a Streamlit app.",
+    "url": "https://movie-recommender-system-cgjbuwdm3ztug4cmvvpduu.streamlit.app/",
+    "highlights": [
+      "Engineered tags from overview, genres, cast, and crew.",
+      "Vectorized text with TF-IDF and computed cosine similarity.",
+      "Fetched real-time posters via the TMDB API in a Streamlit UI.",
+      "GitHub Repository: github.com/Maddy-MM/movie-recommender-system"
+    ]
+  },
+  {
+    "title": "SMS Spam Classifier",
+    "tech_stack": ["NLTK", "Scikit-learn", "Streamlit"],
+    "summary": "NLP-based classifier distinguishing spam from ham SMS messages in real time.",
+    "url": "https://sms-spam-classifier-6swv8cbspbnma9ydsuludw.streamlit.app/",
+    "highlights": [
+      "Engineered text and structural features (URLs, punctuation, uppercase ratio).",
+      "Compared Naive Bayes variants; selected BernoulliNB for best precision.",
+      "Achieved ~97% accuracy with a live Streamlit prediction interface.",
+      "GitHub Repository: github.com/Maddy-MM/sms-spam-classifier"
+    ]
+  }
+],
+
 "volunteer_experience": [
 {
 "organization": "Nanua Samagra Sewa Samiti",

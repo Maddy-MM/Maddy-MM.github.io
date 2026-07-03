@@ -180,7 +180,7 @@
 
           {% if projects %}
             <section id="projects" class="content-panel">
-              <h2 class="section-heading">Projects</h2>
+              <h2 class="section-heading">Featured Projects</h2>
               {% for project in projects %}
                 {% set github_url = namespace(value=None) %}
                 {% for highlight in project.highlights %}
@@ -252,6 +252,44 @@
                   {% endif %}
                 </section>
               {% endfor %}
+
+              {% if other_projects %}
+                <details class="other-projects-details">
+                  <summary class="other-projects-summary">
+                    Other Projects
+                    <span class="other-projects-count">{{ other_projects|length }}</span>
+                  </summary>
+                  {% for project in other_projects %}
+                    <section class="project-entry">
+                      <h3>{{ project.title }}</h3>
+                      {% if project.tech_stack %}
+                        <ul class="tech-stack-list">
+                          {% for tech in project.tech_stack %}
+                            <li class="tech-chip tech-chip--{{ tech | lower | replace(' ', '-') }}">{{ tech }}</li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                      {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+                      {% if project.highlights %}
+                        <ul>
+                          {% for highlight in project.highlights %}<li>{{ highlight }}</li>{% endfor %}
+                        </ul>
+                      {% endif %}
+                      {% if project.url %}
+                        <div class="project-cta-group">
+                          <a class="project-cta project-cta-demo magnetic"
+                             href="{{ project.url }}"
+                             target="_blank"
+                             rel="noopener noreferrer"
+                             aria-label="View live demo of {{ project.title }}">
+                            View Project
+                          </a>
+                        </div>
+                      {% endif %}
+                    </section>
+                  {% endfor %}
+                </details>
+              {% endif %}
             </section>
           {% endif %}
 

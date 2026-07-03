@@ -212,16 +212,24 @@ function initSkillBars() {
   const bars = document.querySelectorAll(".skill-bar-fill");
   if (!bars.length) return;
 
-  bars.forEach((bar, index) => {
-    bar.style.setProperty("--shimmer-delay", `${1.2 + index * 0.15}s`);
-  });
+  // Anchor every bar's shimmer to one shared clock (script init time) so the
+  // sweep stays in sync across all bars, whether they fill together on load
+  // or the user scrolls down to later ones seconds/minutes afterward.
+  const shimmerBaseDelay = 1.2; // seconds, first sweep after fill
+  const shimmerStagger = 0.15; // per-bar offset for the cascading look
+  const epoch = performance.now();
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-filled");
-          observer.unobserve(entry.target);
+          const bar = entry.target;
+          const index = Array.from(bars).indexOf(bar);
+          const elapsed = (performance.now() - epoch) / 1000;
+          const targetPhase = shimmerBaseDelay + index * shimmerStagger;
+          bar.style.setProperty("--shimmer-delay", `${targetPhase - elapsed}s`);
+          bar.classList.add("is-filled");
+          observer.unobserve(bar);
         }
       });
     },
