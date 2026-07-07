@@ -1292,6 +1292,14 @@ main > .content-panel + .content-panel {
   border-top: 1px dashed #d8d2c5;
 }
 
+/* Other Projects — force all tech chips to a uniform blue tone,
+   overriding the per-tech brand colors used in Featured Projects */
+.other-projects-details [class*="tech-chip--"] {
+  background: rgba(0, 119, 204, 0.07);
+  border-color: rgba(0, 119, 204, 0.2);
+  color: #0077cc;
+}
+
 .other-projects-summary {
   display: flex;
   align-items: center;

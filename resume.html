@@ -6,7 +6,7 @@
 
     <!-- Site Info -->
     <title>Madhav Makwana - Resume</title>
-    <meta name="description" content="Madhav Makwana - Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Passionate about Backend Engineering, Generative AI, RAG systems, and scalable API development. Experienced in FastAPI, Docker, LangChain, Redis, SQLAlchemy, and production-grade AI applications.">
+    <meta name="description" content="Madhav Makwana - Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.">
     <meta name="author" content="Madhav Makwana">
 
     <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
@@ -78,7 +78,7 @@
                 </ul>
               </address>
             
-            <p class="header-summary">Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Passionate about Backend Engineering, Generative AI, RAG systems, and scalable API development. Experienced in FastAPI, Docker, LangChain, Redis, SQLAlchemy, and production-grade AI applications.</p>
+            <p class="header-summary">Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.</p>
           </div>
         </div>
       </div>
@@ -114,6 +114,44 @@
           
             <section>
               <h2 class="section-heading">Projects</h2>
+              
+                <section>
+                  <h3>
+                    
+                      <a href="https://github.com/Maddy-MM/llm-gateway" target="_blank" rel="noopener noreferrer">LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs</a>
+                    
+                  </h3>
+                  <p>Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.</p>
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            Built an OpenAI-compatible gateway with circuit-breaker routing and automatic failover.
+                          
+                        </li>
+                      
+                        <li>
+                          
+                            Blocked adversarial prompts via embedding-similarity injection detection.
+                          
+                        </li>
+                      
+                        <li>
+                          
+                            Added dual-layer caching — Redis exact-match plus FAISS semantic match.
+                          
+                        </li>
+                      
+                        <li>
+                          
+                            Enforced per-API-key budget caps; deployed via Docker Compose to AWS EC2.
+                          
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
               
                 <section>
                   <h3>
@@ -198,51 +236,6 @@
                           
                             
                             GitHub Repository: <a href="https://github.com/Maddy-MM/youtube-rag-assistant" target="_blank" rel="noopener noreferrer">github.com/Maddy-MM/youtube-rag-assistant</a>
-                          
-                        </li>
-                      
-                    </ul>
-                  
-                </section>
-              
-                <section>
-                  <h3>
-                    
-                      <a href="https://car-value-inference-api.onrender.com/" target="_blank" rel="noopener noreferrer">Car Price Prediction API</a>
-                    
-                  </h3>
-                  <p>Production-grade ML API for real-time vehicle price prediction.</p>
-                  
-                    <ul>
-                      
-                        <li>
-                          
-                            Built FastAPI inference service.
-                          
-                        </li>
-                      
-                        <li>
-                          
-                            Integrated Redis caching.
-                          
-                        </li>
-                      
-                        <li>
-                          
-                            Implemented JWT and API key security.
-                          
-                        </li>
-                      
-                        <li>
-                          
-                            Monitored with Prometheus and Grafana.
-                          
-                        </li>
-                      
-                        <li>
-                          
-                            
-                            GitHub Repository: <a href="https://github.com/Maddy-MM/car-value-inference-api" target="_blank" rel="noopener noreferrer">github.com/Maddy-MM/car-value-inference-api</a>
                           
                         </li>
                       

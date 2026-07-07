@@ -12,7 +12,7 @@
 
     <!-- Site Info -->
     <title>Madhav Makwana - Portfolio</title>
-    <meta name="description" content="Madhav Makwana - Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Passionate about Backend Engineering, Generative AI, RAG systems, and scalable API development. Experienced in FastAPI, Docker, LangChain, Redis, SQLAlchemy, and production-grade AI applications.">
+    <meta name="description" content="Madhav Makwana - Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.">
     <meta name="author" content="Madhav Makwana">
 
     <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
@@ -190,7 +190,7 @@
             
               <div class="header-summary">
                 <p class="header-summary-label">About</p>
-                <p class="header-summary-text">Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Passionate about Backend Engineering, Generative AI, RAG systems, and scalable API development. Experienced in FastAPI, Docker, LangChain, Redis, SQLAlchemy, and production-grade AI applications.</p>
+                <p class="header-summary-text">Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.</p>
               </div>
             
             <p class="header-actions">
@@ -237,6 +237,99 @@
             <section id="projects" class="content-panel">
               <h2 class="section-heading">Featured Projects</h2>
               
+                
+                
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                <section class="project-entry">
+                  <h3>LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs</h3>
+                  
+                    <ul class="tech-stack-list">
+                      
+                        <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                      
+                        <li class="tech-chip tech-chip--redis">Redis</li>
+                      
+                        <li class="tech-chip tech-chip--faiss">FAISS</li>
+                      
+                        <li class="tech-chip tech-chip--docker">Docker</li>
+                      
+                        <li class="tech-chip tech-chip--aws-ec2">AWS EC2</li>
+                      
+                        <li class="tech-chip tech-chip--prometheus">Prometheus</li>
+                      
+                        <li class="tech-chip tech-chip--grafana">Grafana</li>
+                      
+                        <li class="tech-chip tech-chip--pytest">pytest</li>
+                      
+                    </ul>
+                  
+                  <p>Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.</p>
+                  
+                    <ul>
+                      
+                        
+                          <li>Built an OpenAI-compatible gateway with circuit-breaker routing and automatic failover.</li>
+                        
+                      
+                        
+                          <li>Blocked adversarial prompts via embedding-similarity injection detection.</li>
+                        
+                      
+                        
+                          <li>Added dual-layer caching — Redis exact-match plus FAISS semantic match.</li>
+                        
+                      
+                        
+                          <li>Enforced per-API-key budget caps; deployed via Docker Compose to AWS EC2.</li>
+                        
+                      
+                    </ul>
+                  
+                  
+                    <div class="project-cta-group">
+                      
+                        <a class="project-cta project-cta-github magnetic"
+                           href="https://github.com/Maddy-MM/llm-gateway"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs on GitHub">
+                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          GitHub
+                        </a>
+                      
+                      
+                    </div>
+                  
+                  
+                    <div class="gallery main-gallery">
+                      
+                        <figure>
+                          <div class="browser-chrome" aria-hidden="true">
+                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
+                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
+                          </div>
+                          <img width="600"
+                               height="338"
+                               src="img/llm-gateway.png"
+                               alt="LLM Gateway Architecture"
+                               loading="lazy"
+                               decoding="async">
+                        </figure>
+                      
+                    </div>
+                  
+                </section>
+              
+                
                 
                 
                   
@@ -341,6 +434,7 @@
               
                 
                 
+                
                   
                 
                   
@@ -439,136 +533,103 @@
                   
                 </section>
               
-                
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                    
-                  
-                
-                <section class="project-entry">
-                  <h3>Car Price Prediction API</h3>
-                  
-                    <ul class="tech-stack-list">
-                      
-                        <li class="tech-chip tech-chip--fastapi">FastAPI</li>
-                      
-                        <li class="tech-chip tech-chip--redis">Redis</li>
-                      
-                        <li class="tech-chip tech-chip--jwt">JWT</li>
-                      
-                        <li class="tech-chip tech-chip--prometheus">Prometheus</li>
-                      
-                        <li class="tech-chip tech-chip--grafana">Grafana</li>
-                      
-                    </ul>
-                  
-                  <p>Production-grade ML API for real-time vehicle price prediction.</p>
-                  
-                    <ul>
-                      
-                        
-                          <li>Built FastAPI inference service.</li>
-                        
-                      
-                        
-                          <li>Integrated Redis caching.</li>
-                        
-                      
-                        
-                          <li>Implemented JWT and API key security.</li>
-                        
-                      
-                        
-                          <li>Monitored with Prometheus and Grafana.</li>
-                        
-                      
-                        
-                      
-                    </ul>
-                  
-                  
-                    <div class="project-cta-group">
-                      
-                        <a class="project-cta project-cta-github magnetic"
-                           href="https://github.com/Maddy-MM/car-value-inference-api"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label="View Car Price Prediction API on GitHub">
-                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                          GitHub
-                        </a>
-                      
-                      
-                        <a class="project-cta project-cta-demo magnetic"
-                           href="https://car-value-inference-api.onrender.com/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label="View live demo of Car Price Prediction API">
-                          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
-                          Live Demo
-                        </a>
-                      
-                    </div>
-                  
-                  
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <div class="browser-chrome" aria-hidden="true">
-                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
-                          </div>
-                          <img width="600"
-                               height="338"
-                               src="img/car-price-api.png"
-                               alt="API Dashboard"
-                               loading="lazy"
-                               decoding="async">
-                        </figure>
-                      
-                    </div>
-                  
-                </section>
-              
 
               
                 <details class="other-projects-details">
                   <summary class="other-projects-summary">
                     Other Projects
-                    <span class="other-projects-count">3</span>
+                    <span class="other-projects-count">4</span>
                   </summary>
                   
+                    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
                     <section class="project-entry">
-                      <h3>Credit Card Customer Churn Prediction (ANN)</h3>
+                      <h3>Car Price Prediction API</h3>
                       
                         <ul class="tech-stack-list">
                           
-                            <li class="tech-chip tech-chip--tensorflow/keras">TensorFlow/Keras</li>
+                            <li class="tech-chip tech-chip--fastapi">FastAPI</li>
                           
-                            <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
+                            <li class="tech-chip tech-chip--redis">Redis</li>
                           
-                            <li class="tech-chip tech-chip--pandas">Pandas</li>
+                            <li class="tech-chip tech-chip--jwt">JWT</li>
+                          
+                            <li class="tech-chip tech-chip--prometheus">Prometheus</li>
+                          
+                            <li class="tech-chip tech-chip--grafana">Grafana</li>
                           
                         </ul>
                       
-                      <p>Deep learning ANN model predicting bank customer churn from demographic and account data.</p>
+                      <p>Production-grade ML API for real-time vehicle price prediction.</p>
                       
                         <ul>
-                          <li>Preprocessed data with one-hot encoding and StandardScaler.</li><li>Built a 2-hidden-layer ANN with ReLU and Sigmoid output.</li><li>Achieved ~86% test accuracy with early stopping to prevent overfitting.</li><li>GitHub Repository: github.com/Maddy-MM/customer-churn-prediction</li>
+                          
+                            
+                              <li>Built a FastAPI inference service serving real-time price predictions.</li>
+                            
+                          
+                            
+                              <li>Integrated Redis caching to eliminate redundant inference calls.</li>
+                            
+                          
+                            
+                              <li>Enforced JWT + API key auth with Prometheus/Grafana observability.</li>
+                            
+                          
+                            
+                          
                         </ul>
                       
+                      
+                        <div class="project-cta-group">
+                          
+                            <a class="project-cta project-cta-github magnetic"
+                               href="https://github.com/Maddy-MM/car-value-inference-api"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="View Car Price Prediction API on GitHub">
+                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                              GitHub
+                            </a>
+                          
+                          
+                            <a class="project-cta project-cta-demo magnetic"
+                               href="https://car-value-inference-api.onrender.com/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="View live demo of Car Price Prediction API">
+                              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                              View Project
+                            </a>
+                          
+                        </div>
                       
                     </section>
                   
+                    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
                     <section class="project-entry">
                       <h3>Movie Recommender System</h3>
                       
@@ -587,22 +648,62 @@
                       <p>Content-based movie recommender using metadata similarity, deployed as a Streamlit app.</p>
                       
                         <ul>
-                          <li>Engineered tags from overview, genres, cast, and crew.</li><li>Vectorized text with TF-IDF and computed cosine similarity.</li><li>Fetched real-time posters via the TMDB API in a Streamlit UI.</li><li>GitHub Repository: github.com/Maddy-MM/movie-recommender-system</li>
+                          
+                            
+                              <li>Engineered tags from overview, genres, cast, and crew.</li>
+                            
+                          
+                            
+                              <li>Vectorized text with TF-IDF and computed cosine similarity.</li>
+                            
+                          
+                            
+                              <li>Fetched real-time posters via the TMDB API in a Streamlit UI.</li>
+                            
+                          
+                            
+                          
                         </ul>
                       
                       
                         <div class="project-cta-group">
-                          <a class="project-cta project-cta-demo magnetic"
-                             href="https://movie-recommender-system-cgjbuwdm3ztug4cmvvpduu.streamlit.app/"
-                             target="_blank"
-                             rel="noopener noreferrer"
-                             aria-label="View live demo of Movie Recommender System">
-                            View Project
-                          </a>
+                          
+                            <a class="project-cta project-cta-github magnetic"
+                               href="https://github.com/Maddy-MM/movie-recommender-system"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="View Movie Recommender System on GitHub">
+                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                              GitHub
+                            </a>
+                          
+                          
+                            <a class="project-cta project-cta-demo magnetic"
+                               href="https://movie-recommender-system-cgjbuwdm3ztug4cmvvpduu.streamlit.app/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="View live demo of Movie Recommender System">
+                              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                              View Project
+                            </a>
+                          
                         </div>
                       
                     </section>
                   
+                    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
                     <section class="project-entry">
                       <h3>SMS Spam Classifier</h3>
                       
@@ -619,18 +720,108 @@
                       <p>NLP-based classifier distinguishing spam from ham SMS messages in real time.</p>
                       
                         <ul>
-                          <li>Engineered text and structural features (URLs, punctuation, uppercase ratio).</li><li>Compared Naive Bayes variants; selected BernoulliNB for best precision.</li><li>Achieved ~97% accuracy with a live Streamlit prediction interface.</li><li>GitHub Repository: github.com/Maddy-MM/sms-spam-classifier</li>
+                          
+                            
+                              <li>Engineered text and structural features (URLs, punctuation, uppercase ratio).</li>
+                            
+                          
+                            
+                              <li>Compared Naive Bayes variants; selected BernoulliNB for best precision.</li>
+                            
+                          
+                            
+                              <li>Achieved ~97% accuracy with a live Streamlit prediction interface.</li>
+                            
+                          
+                            
+                          
                         </ul>
                       
                       
                         <div class="project-cta-group">
-                          <a class="project-cta project-cta-demo magnetic"
-                             href="https://sms-spam-classifier-6swv8cbspbnma9ydsuludw.streamlit.app/"
-                             target="_blank"
-                             rel="noopener noreferrer"
-                             aria-label="View live demo of SMS Spam Classifier">
-                            View Project
-                          </a>
+                          
+                            <a class="project-cta project-cta-github magnetic"
+                               href="https://github.com/Maddy-MM/sms-spam-classifier"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="View SMS Spam Classifier on GitHub">
+                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                              GitHub
+                            </a>
+                          
+                          
+                            <a class="project-cta project-cta-demo magnetic"
+                               href="https://sms-spam-classifier-6swv8cbspbnma9ydsuludw.streamlit.app/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="View live demo of SMS Spam Classifier">
+                              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                              View Project
+                            </a>
+                          
+                        </div>
+                      
+                    </section>
+                  
+                    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                    <section class="project-entry">
+                      <h3>Credit Card Customer Churn Prediction (ANN)</h3>
+                      
+                        <ul class="tech-stack-list">
+                          
+                            <li class="tech-chip tech-chip--tensorflow/keras">TensorFlow/Keras</li>
+                          
+                            <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
+                          
+                            <li class="tech-chip tech-chip--pandas">Pandas</li>
+                          
+                        </ul>
+                      
+                      <p>Deep learning ANN model predicting bank customer churn from demographic and account data.</p>
+                      
+                        <ul>
+                          
+                            
+                              <li>Preprocessed data with one-hot encoding and StandardScaler.</li>
+                            
+                          
+                            
+                              <li>Built a 2-hidden-layer ANN with ReLU and Sigmoid output.</li>
+                            
+                          
+                            
+                              <li>Achieved ~86% test accuracy with early stopping to prevent overfitting.</li>
+                            
+                          
+                            
+                          
+                        </ul>
+                      
+                      
+                        <div class="project-cta-group">
+                          
+                            <a class="project-cta project-cta-github magnetic"
+                               href="https://github.com/Maddy-MM/customer-churn-prediction"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="View Credit Card Customer Churn Prediction (ANN) on GitHub">
+                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                              GitHub
+                            </a>
+                          
+                          
                         </div>
                       
                     </section>
@@ -714,7 +905,7 @@
                   
                     <p>
                       
-                      <span class="block">Cumulative GPA: 7.14</span>
+                      <span class="block">Cumulative GPA: 7.21</span>
                       <span class="block">Graduation Date: 2026</span>
                     </p>
                   

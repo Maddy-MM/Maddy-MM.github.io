@@ -9,7 +9,7 @@
 "location": "Delhi, India"
 },
 
-"summary": "Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Passionate about Backend Engineering, Generative AI, RAG systems, and scalable API development. Experienced in FastAPI, Docker, LangChain, Redis, SQLAlchemy, and production-grade AI applications.",
+"summary": "Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.",
 
 "base_url": "https://maddy-mm.github.io",
 
@@ -50,6 +50,25 @@
 
 "projects": [
   {
+    "title": "LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs",
+    "tech_stack": ["FastAPI", "Redis", "FAISS", "Docker", "AWS EC2", "Prometheus", "Grafana", "pytest"],
+    "summary": "Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.",
+    "url": "https://github.com/Maddy-MM/llm-gateway",
+    "highlights": [
+      "Built an OpenAI-compatible gateway with circuit-breaker routing and automatic failover.",
+      "Blocked adversarial prompts via embedding-similarity injection detection.",
+      "Added dual-layer caching — Redis exact-match plus FAISS semantic match.",
+      "Enforced per-API-key budget caps; deployed via Docker Compose to AWS EC2."
+    ],
+    "images": [
+      {
+        "img_path": "img/llm-gateway.png",
+        "caption": "LLM Gateway Architecture"
+      }
+    ]
+  },
+
+  {
     "title": "ResearchMind — Multi-Agent AI Research System",
     "tech_stack": ["FastAPI", "LangChain", "Groq API", "JWT", "Prometheus", "Docker"],
     "summary": "Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.",
@@ -87,40 +106,20 @@
         "caption": "YTLens Interface"
       }
     ]
-  },
+  }
+],
 
+"other_projects": [
   {
     "title": "Car Price Prediction API",
     "tech_stack": ["FastAPI", "Redis", "JWT", "Prometheus", "Grafana"],
     "summary": "Production-grade ML API for real-time vehicle price prediction.",
     "url": "https://car-value-inference-api.onrender.com/",
     "highlights": [
-      "Built FastAPI inference service.",
-      "Integrated Redis caching.",
-      "Implemented JWT and API key security.",
-      "Monitored with Prometheus and Grafana.",
+      "Built a FastAPI inference service serving real-time price predictions.",
+      "Integrated Redis caching to eliminate redundant inference calls.",
+      "Enforced JWT + API key auth with Prometheus/Grafana observability.",
       "GitHub Repository: github.com/Maddy-MM/car-value-inference-api"
-    ],
-    "images": [
-      {
-        "img_path": "img/car-price-api.png",
-        "caption": "API Dashboard"
-      }
-    ]
-  }
-],
-
-"other_projects": [
-  {
-    "title": "Credit Card Customer Churn Prediction (ANN)",
-    "tech_stack": ["TensorFlow/Keras", "Scikit-learn", "Pandas"],
-    "summary": "Deep learning ANN model predicting bank customer churn from demographic and account data.",
-    "url": "",
-    "highlights": [
-      "Preprocessed data with one-hot encoding and StandardScaler.",
-      "Built a 2-hidden-layer ANN with ReLU and Sigmoid output.",
-      "Achieved ~86% test accuracy with early stopping to prevent overfitting.",
-      "GitHub Repository: github.com/Maddy-MM/customer-churn-prediction"
     ]
   },
   {
@@ -145,6 +144,18 @@
       "Compared Naive Bayes variants; selected BernoulliNB for best precision.",
       "Achieved ~97% accuracy with a live Streamlit prediction interface.",
       "GitHub Repository: github.com/Maddy-MM/sms-spam-classifier"
+    ]
+  },
+  {
+    "title": "Credit Card Customer Churn Prediction (ANN)",
+    "tech_stack": ["TensorFlow/Keras", "Scikit-learn", "Pandas"],
+    "summary": "Deep learning ANN model predicting bank customer churn from demographic and account data.",
+    "url": "https://github.com/Maddy-MM/customer-churn-prediction",
+    "highlights": [
+      "Preprocessed data with one-hot encoding and StandardScaler.",
+      "Built a 2-hidden-layer ANN with ReLU and Sigmoid output.",
+      "Achieved ~86% test accuracy with early stopping to prevent overfitting.",
+      "GitHub Repository: github.com/Maddy-MM/customer-churn-prediction"
     ]
   }
 ],
@@ -186,7 +197,7 @@
 "Minor in Computer Science"
 ],
 "honors": [],
-"gpa_cumulative": "7.14",
+"gpa_cumulative": "7.21",
 "gpa_major": "",
 "graduation_date": "2026"
 }
