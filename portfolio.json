@@ -9,7 +9,7 @@
 "location": "Delhi, India"
 },
 
-"summary": "Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.",
+"summary": "Final-year <strong>Engineering Physics</strong> student at <strong>Delhi Technological University</strong> with a Minor in Computer Science. Focused on backend and GenAI systems that hold up in production — <strong>LLM gateways</strong> with cost and safety guardrails, low-latency Redis caching layers, and finely tuned <strong>RAG retrieval</strong>. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying scalable inference pipelines end-to-end.",
 
 "base_url": "https://maddy-mm.github.io",
 
@@ -164,7 +164,7 @@
 {
 "organization": "Nanua Samagra Sewa Samiti",
 "position": "Educator",
-"url": "",
+"url": "https://www.nsssfoundation.org/",
 "start_date": "",
 "end_date": "",
 "summary": "Taught mathematics and science to underprivileged children.",
@@ -176,7 +176,7 @@
 {
 "organization": "Desh Ke Mentor",
 "position": "Mentor",
-"url": "",
+"url": "https://deshkementor.com/",
 "start_date": "",
 "end_date": "",
 "summary": "Mentored students on academics and career planning.",
@@ -191,7 +191,7 @@
 "institution": "Delhi Technological University",
 "logo_path": "img/DTU_logo.webp",
 "location": "Delhi, India",
-"url": "https://www.dtu.ac.in",
+"url": "",
 "degrees": [
 "B.Tech in Engineering Physics",
 "Minor in Computer Science"
@@ -262,31 +262,31 @@
 "interests": [
 {
 "name": "TV Shows",
-"summary": "A good TV show is usually how I switch off after a long day. Some favorites are Panchayat, The Sopranos, Monk, and The Mentalist.",
+"summary": "A good crime thriller or mystery drama is usually how I switch off after a long day of coding. Big fan of character-driven classics like The Sopranos and Bosch, along with the comforting mystery-solving quirks in Monk and The Mentalist. There's something deeply engaging about complex protagonists and sharp dialogue.",
 "images": [
 {
 "img_path": "img/entertainment.jpeg",
-"caption": "TV Shows"
+"caption": "The Sopranos"
 }
 ]
 },
 {
 "name": "Reading",
-"summary": "I enjoy reading whenever I get the chance, especially works by authors like Ruskin Bond and Satyajit Ray. I tend to gravitate toward stories that are simple, engaging, and stay with you long after you've finished them.",
+"summary": "I enjoy reading whenever I get a quiet moment, particularly classic Indian fiction and detective stories. Ruskin Bond's nostalgic tales of the Himalayan hills and Satyajit Ray's Feluda mysteries are perennial favorites. I gravitate toward narrative simplicity, charming atmosphere, and stories that stay with you long after the last page.",
 "images": [
 {
 "img_path": "img/reading.jpeg",
-"caption": "Reading"
+"caption": "The Adventures of Feluda"
 }
 ]
 },
 {
 "name": "Night Walks",
-"summary": "I like taking long walks, especially when I need a break from screens or want to clear my head after a busy day.",
+"summary": "Taking long evening walks is my favorite ritual to disconnect from screens and decompress after a day at the keyboard. Whether exploring quiet neighborhood trails or walking under city lights with a podcast or ambient soundtrack, it's where my best debugging breakthroughs and project ideas usually happen.",
 "images": [
 {
 "img_path": "img/walking.jpeg",
-"caption": "Night Walks"
+"caption": "Quiet Trails"
 }
 ]
 }

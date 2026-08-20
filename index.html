@@ -12,7 +12,7 @@
 
     <!-- Site Info -->
     <title>Madhav Makwana - Portfolio</title>
-    <meta name="description" content="Madhav Makwana - Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.">
+    <meta name="description" content="Madhav Makwana - Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on backend and GenAI systems that hold up in production — LLM gateways with cost and safety guardrails, low-latency Redis caching layers, and finely tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying scalable inference pipelines end-to-end.">
     <meta name="author" content="Madhav Makwana">
 
     <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Custom Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet">
 
     <!-- Stylesheet -->
@@ -67,63 +67,100 @@
           <span class="sticky-bar-name">Madhav Makwana</span>
           <span class="sticky-bar-tagline" id="sticky-typewriter"></span>
         </div>
-        <a class="sticky-bar-resume" href="resume/Madhav_Makwana_2K22-EP-58.pdf" download="Madhav_Makwana_DTU.pdf">Resume</a>
+        <a class="sticky-bar-resume" href="resume/Madhav_Makwana_2K22-EP-58.pdf" download="Madhav_Makwana_DTU.pdf">
+          <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14H2.75Zm4.47-3.28a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V1.75a.75.75 0 0 0-1.5 0v6.63L5.28 6.66a.75.75 0 0 0-1.06 1.06l3 3Z"/></svg>
+          <span>Resume</span>
+        </a>
       </div>
     </nav>
-    <div class="body-aurora" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     <header class="page-header">
-      <div class="page-header__aurora" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="page-header__backdrop" aria-hidden="true">
+        <div class="page-header__grid"></div>
+        <div class="page-header__grid-highlight"></div>
+        <div class="page-header__nodes"></div>
+        <div class="page-header__nodes-highlight"></div>
+        <div class="page-header__spotlight"></div>
+        <div class="page-header__beam"></div>
+        <div class="page-header__aurora">
+          <span class="aurora-orb orb-azure"></span>
+          <span class="aurora-orb orb-indigo"></span>
+          <span class="aurora-orb orb-teal"></span>
+          <span class="aurora-orb orb-prism"></span>
+        </div>
       </div>
       <div class="container">
         <div class="header-top flex-responsive">
           
-            <img class="header-image"
-                 width="256"
-                 height="256"
-                 src="img/madhav.jpeg"
-                 alt="Madhav Makwana Profile Image" />
+            <div class="header-avatar-col">
+              <div class="header-avatar-wrap" role="button" tabindex="0" aria-label="Open profile photo in full view" title="Click to view full photo">
+                <div class="header-avatar-halo" aria-hidden="true"></div>
+                <div class="avatar-ring-pulse avatar-ring-1" aria-hidden="true"></div>
+                <div class="avatar-ring-pulse avatar-ring-2" aria-hidden="true"></div>
+                <img class="header-image"
+                     width="256"
+                     height="256"
+                     src="img/madhav.jpeg"
+                     alt="Madhav Makwana Profile Image" />
+              </div>
+              <div class="avatar-meta-badge" title="Delhi Technological University • Class of 2026">
+                <svg class="avatar-meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <span class="avatar-meta-text">DTU '26</span>
+              </div>
+            </div>
           
           <div class="header-info">
-            <h1>Madhav Makwana</h1>
-            <h2 class="header-label" id="typewriter-label">Backend Engineer &amp; AI Developer</h2>
-            <span class="status-pill">
-              <span class="status-pill-dot"></span>
-              Open to opportunities
-            </span>
+            <div class="header-name-row">
+              <h1>Madhav Makwana</h1>
+              <span class="status-pill">
+                <span class="status-pill-dot"></span>
+                Open to opportunities
+              </span>
+            </div>
             
-              <address>
-                <ul class="inline-list flex-responsive">
+              <div class="header-prompt-row">
+                <span class="header-prompt-arrow" aria-hidden="true">❯</span>
+                <h2 class="header-label" id="typewriter-label">Backend Engineer &amp; AI Developer</h2>
+              </div>
+            
+            
+              <address class="header-contact-group">
+                <ul class="inline-list contact-list">
                   
-                    <li>
-                      <a href="mailto:madhavmakwana.mm@gmail.com" target="_blank" rel="noopener noreferrer">madhavmakwana.mm@gmail.com</a>
+                    <li class="contact-pill location-tag">
+                      <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 .5C5.1.5 2.75 2.85 2.75 5.75c0 3.94 5.25 9.75 5.25 9.75s5.25-5.81 5.25-9.75C13.25 2.85 10.9.5 8 .5Zm0 7.15a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8Z"/></svg>
+                      <span>Delhi, India</span>
                     </li>
                   
                   
-                    <li>
-                      <a href="tel:++91 9717891589" target="_blank" rel="noopener noreferrer">+91 9717891589</a>
+                    <li class="contact-pill email-tag">
+                      <a href="mailto:madhavmakwana.mm@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-pill-link">
+                        <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 4.5v7.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V4.5L8.414 9.086a.625.625 0 0 1-.828 0L1.5 4.5Zm12.72-1H1.78l6.22 4.665L14.22 3.5Z"/></svg>
+                        <span>madhavmakwana.mm@gmail.com</span>
+                      </a>
                     </li>
                   
-                  <li>Delhi, India</li>
+                  
+                    <li class="contact-pill phone-tag">
+                      <a href="tel:+919717891589" target="_blank" rel="noopener noreferrer" class="contact-pill-link">
+                        <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.47 8.53a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328ZM1.884.518a2.178 2.178 0 0 1 3.26.202l2.308 1.794a2.178 2.178 0 0 1 .39 1.865l-.547 2.189a.245.245 0 0 0 .065.233l2.477 2.477a.245.245 0 0 0 .233.065l2.189-.547a2.178 2.178 0 0 1 1.865.39l1.794 2.308a2.178 2.178 0 0 1-.202 3.26l-1.034 1.034c-.84.84-2.028 1.146-3.072.78a19.068 19.068 0 0 1-7.172-4.526 19.066 19.066 0 0 1-4.526-7.172C.738 2.546 1.044 1.358 1.884.518Z"/></svg>
+                        <span>+91 9717891589</span>
+                      </a>
+                    </li>
+                  
                 </ul>
               </address>
             
             
-              <ul class="inline-list flex-responsive">
-                
-                  <li>
-                    <a href="https://github.com/Maddy-MM"
-                        target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="GitHub"
-                       class="link-with-icon">
-                      <svg aria-hidden="true"
+              <div class="header-social-group">
+                <ul class="inline-list social-list">
+                  
+                    <li>
+                      <a href="https://github.com/Maddy-MM"
+                          target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label="GitHub"
+                         class="link-with-icon social-pill-link">
+                        <svg aria-hidden="true"
      xmlns="http://www.w3.org/2000/svg"
      role="img"
      width="16"
@@ -134,17 +171,17 @@
   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
 </svg>
 
-                      GitHub
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://www.linkedin.com/in/madhav-makwana-5331a4319/"
-                        target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="LinkedIn"
-                       class="link-with-icon">
-                      <svg aria-hidden="true"
+                        <span>GitHub</span>
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a href="https://www.linkedin.com/in/madhav-makwana-5331a4319/"
+                          target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label="LinkedIn"
+                         class="link-with-icon social-pill-link">
+                        <svg aria-hidden="true"
      xmlns="http://www.w3.org/2000/svg"
      role="img"
      width="16"
@@ -155,17 +192,17 @@
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
 </svg>
 
-                      LinkedIn
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://www.instagram.com/madhav_7184?igsh=MWE0YWFlNHl0ZWhqcA%3D%3D&amp;utm_source=qr"
-                        target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Instagram"
-                       class="link-with-icon">
-                      <svg aria-hidden="true"
+                        <span>LinkedIn</span>
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a href="https://www.instagram.com/madhav_7184?igsh=MWE0YWFlNHl0ZWhqcA%3D%3D&amp;utm_source=qr"
+                          target="_blank"
+                         rel="noopener noreferrer"
+                         aria-label="Instagram"
+                         class="link-with-icon social-pill-link">
+                        <svg aria-hidden="true"
      xmlns="http://www.w3.org/2000/svg"
      role="img"
      width="16"
@@ -181,26 +218,48 @@
   <circle cx="11.5" cy="4.5" r="0.75" fill="currentColor" stroke="none" />
 </svg>
 
-                      Instagram
-                    </a>
-                  </li>
-                
-              </ul>
+                        <span>Instagram</span>
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div>
             
             
               <div class="header-summary">
-                <p class="header-summary-label">About</p>
-                <p class="header-summary-text">Final-year Engineering Physics student at Delhi Technological University with a Minor in Computer Science. Focused on GenAI systems that hold up in production - LLM gateways with cost and safety guardrails, multi-agent pipelines, and tuned RAG retrieval. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying agentic AI applications end to end.</p>
+                <div class="header-summary-badge">
+                  <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path fill="currentColor" d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/></svg>
+                  <span>About</span>
+                </div>
+                <p class="header-summary-text">Final-year <strong>Engineering Physics</strong> student at <strong>Delhi Technological University</strong> with a Minor in Computer Science. Focused on backend and GenAI systems that hold up in production — <strong>LLM gateways</strong> with cost and safety guardrails, low-latency Redis caching layers, and finely tuned <strong>RAG retrieval</strong>. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying scalable inference pipelines end-to-end.</p>
               </div>
             
-            <p class="header-actions">
+            <div class="header-actions">
               <a class="download-resume-button magnetic"
-                  href="resume/Madhav_Makwana_2K22-EP-58.pdf"
+                 href="resume/Madhav_Makwana_2K22-EP-58.pdf"
                  download="Madhav_Makwana_DTU.pdf"
                  id="resume-download-link">
-                Download Resume
+                <span>Download Resume</span>
+                <span class="btn-icon-wrap">
+                  <svg class="btn-icon btn-icon-download" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  <svg class="btn-icon btn-icon-check" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
               </a>
-            </p>
+              <a class="header-secondary-btn magnetic" href="#projects">
+                <span>View Projects</span>
+                <span class="btn-icon-wrap">
+                  <svg class="btn-icon btn-icon-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -209,24 +268,409 @@
     <div class="page-content">
       <div class="container">
         <main>
+          <div class="mobile-sidebar-banner">
+            <button type="button" class="mobile-sidebar-banner-btn" id="open-sidebar-banner-btn" aria-label="Explore Education, Skills and Background">
+              <div class="banner-left">
+                <span class="banner-icon-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </span>
+                <div class="banner-text-group">
+                  <span class="banner-title">Education, Skills &amp; Background</span>
+                  <span class="banner-subtitle">Tap to view DTU, tech stack, and hobbies</span>
+                </div>
+              </div>
+              <span class="banner-arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06Z"/></svg>
+              </span>
+            </button>
+          </div>
           
-            <section id="experience" class="content-panel">
-              <h2 class="section-heading">Work Experience</h2>
+            <section id="experience" class="content-section">
+              <h2 class="section-heading">
+                <span class="section-heading-pill">
+                  <svg class="heading-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M1.75 3.5A1.75 1.75 0 0 0 0 5.25v7.5C0 13.716.784 14.5 1.75 14.5h12.5A1.75 1.75 0 0 0 16 12.75v-7.5A1.75 1.75 0 0 0 14.25 3.5h-2.5V2.75A1.75 1.75 0 0 0 10 1H6a1.75 1.75 0 0 0-1.75 1.75v.75h-2.5Zm4-1a.25.25 0 0 1 .25-.25h4a.25.25 0 0 1 .25.25v.75h-4.5V2.5Zm-4.25 2.5h13c.138 0 .25.112.25.25v7.5a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25v-7.5c0-.138.112-.25.25-.25Z"/></svg>
+                  Work Experience
+                </span>
+              </h2>
+              <div class="timeline-entries-list">
+                
+                  <article class="timeline-entry">
+                    <div class="timeline-entry-header">
+                      <h3 class="timeline-role">
+                        Data Science Intern
+                        <span class="timeline-at">at</span>
+                        
+                          <a href="https://www.appsoleutgames.com/" target="_blank" rel="noopener noreferrer" class="timeline-company">Appsoleut Games</a>
+                        
+                      </h3>
+                      
+                        <span class="timeline-date-badge">
+                          <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path fill="currentColor" d="M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0ZM2.5 6.5v7.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V6.5h-11Z"/></svg>
+                          Jun 2025 - Aug 2025
+                        </span>
+                      
+                    </div>
+                    <p class="timeline-summary">Worked on player retention analytics and churn prediction for a driving simulator game.</p>
+                    
+                      <ul class="timeline-highlights">
+                        <li>Analyzed 10K+ gameplay sessions.</li><li>Built churn prediction models achieving AUC greater than 0.80.</li><li>Segmented players into low, medium and high-risk cohorts.</li><li>Provided retention insights for onboarding optimization.</li>
+                      </ul>
+                    
+                  </article>
+                
+              </div>
+            </section>
+          
+
+          
+            <section id="projects" class="content-section">
+              <h2 class="section-heading">
+                <span class="section-heading-pill">
+                  <svg class="heading-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25H1.75ZM3 4.5A1.5 1.5 0 0 1 4.5 3h7A1.5 1.5 0 0 1 13 4.5v3A1.5 1.5 0 0 1 11.5 9h-7A1.5 1.5 0 0 1 3 7.5v-3Zm1.5 0v3a0 0 0 0 0 0 0h7a0 0 0 0 0 0 0v-3a0 0 0 0 0 0 0h-7a0 0 0 0 0 0 0Z"/></svg>
+                  Featured Projects
+                </span>
+              </h2>
+              <div class="project-carousel">
+                <div class="project-carousel-track" id="project-carousel-track" tabindex="0" aria-label="Featured projects, scroll to browse">
               
-                <section>
-                  <h3>
+                <div class="project-card-slot">
+                <button class="project-card" type="button" data-project-index="0" aria-haspopup="dialog" aria-label="View details for LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs">
+                  
+                    <div class="project-card-thumb">
+                      <span class="project-card-badge" aria-hidden="true">
+                        <span class="project-card-badge-dot"></span>
+                        Viewing
+                      </span>
+                      <img src="img/llm-gateway.png" alt="" loading="lazy" decoding="async">
+                    </div>
+                  
+                  <div class="project-card-body">
+                    <h3 class="project-card-title">LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs</h3>
+                    <p class="project-card-teaser">Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.</p>
                     
-                      Data Science Intern at <a href="https://www.appsoleutgames.com/" target="_blank" rel="noopener noreferrer">Appsoleut Games</a>
+                      
+                        <ul class="tech-stack-list project-card-chips project-card-chips--collapsed">
+                          
+                            <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                          
+                            <li class="tech-chip tech-chip--redis">Redis</li>
+                          
+                            <li class="tech-chip tech-chip--faiss">FAISS</li>
+                          
+                            <li class="tech-chip tech-chip--docker">Docker</li>
+                          
+                          <li class="tech-chip tech-chip-more">+4</li>
+                        </ul>
+                      
+                      <ul class="tech-stack-list project-card-chips project-card-chips--expanded">
+                        
+                          <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                        
+                          <li class="tech-chip tech-chip--redis">Redis</li>
+                        
+                          <li class="tech-chip tech-chip--faiss">FAISS</li>
+                        
+                          <li class="tech-chip tech-chip--docker">Docker</li>
+                        
+                          <li class="tech-chip tech-chip--aws-ec2">AWS EC2</li>
+                        
+                          <li class="tech-chip tech-chip--prometheus">Prometheus</li>
+                        
+                          <li class="tech-chip tech-chip--grafana">Grafana</li>
+                        
+                          <li class="tech-chip tech-chip--pytest">pytest</li>
+                        
+                      </ul>
                     
-                  </h3>
+
+                    <div class="project-card-more" aria-hidden="true">
+                      <span>More info</span>
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8.53 10.97a.75.75 0 0 1-1.06 0L3.22 6.78a.75.75 0 0 1 1.06-1.06L8 9.44l3.72-3.72a.75.75 0 1 1 1.06 1.06L8.53 10.97Z"/></svg>
+                    </div>
+                  </div>
+                </button>
+                </div>
+              
+                <div class="project-card-slot">
+                <button class="project-card" type="button" data-project-index="1" aria-haspopup="dialog" aria-label="View details for ResearchMind — Multi-Agent AI Research System">
                   
-                    <p class="section-label">Jun 2025 - Aug 2025</p>
+                    <div class="project-card-thumb">
+                      <span class="project-card-badge" aria-hidden="true">
+                        <span class="project-card-badge-dot"></span>
+                        Viewing
+                      </span>
+                      <img src="img/researchmind.png" alt="" loading="lazy" decoding="async">
+                    </div>
                   
-                  <p>Worked on player retention analytics and churn prediction for a driving simulator game.</p>
+                  <div class="project-card-body">
+                    <h3 class="project-card-title">ResearchMind — Multi-Agent AI Research System</h3>
+                    <p class="project-card-teaser">Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.</p>
+                    
+                      
+                        <ul class="tech-stack-list project-card-chips project-card-chips--collapsed">
+                          
+                            <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                          
+                            <li class="tech-chip tech-chip--langchain">LangChain</li>
+                          
+                            <li class="tech-chip tech-chip--groq-api">Groq API</li>
+                          
+                            <li class="tech-chip tech-chip--jwt">JWT</li>
+                          
+                          <li class="tech-chip tech-chip-more">+2</li>
+                        </ul>
+                      
+                      <ul class="tech-stack-list project-card-chips project-card-chips--expanded">
+                        
+                          <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                        
+                          <li class="tech-chip tech-chip--langchain">LangChain</li>
+                        
+                          <li class="tech-chip tech-chip--groq-api">Groq API</li>
+                        
+                          <li class="tech-chip tech-chip--jwt">JWT</li>
+                        
+                          <li class="tech-chip tech-chip--prometheus">Prometheus</li>
+                        
+                          <li class="tech-chip tech-chip--docker">Docker</li>
+                        
+                      </ul>
+                    
+
+                    <div class="project-card-more" aria-hidden="true">
+                      <span>More info</span>
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8.53 10.97a.75.75 0 0 1-1.06 0L3.22 6.78a.75.75 0 0 1 1.06-1.06L8 9.44l3.72-3.72a.75.75 0 1 1 1.06 1.06L8.53 10.97Z"/></svg>
+                    </div>
+                  </div>
+                </button>
+                </div>
+              
+                <div class="project-card-slot">
+                <button class="project-card" type="button" data-project-index="2" aria-haspopup="dialog" aria-label="View details for YTLens — RAG-Powered YouTube Q&amp;A System">
                   
-                    <ul>
-                      <li>Analyzed 10K+ gameplay sessions.</li><li>Built churn prediction models achieving AUC greater than 0.80.</li><li>Segmented players into low, medium and high-risk cohorts.</li><li>Provided retention insights for onboarding optimization.</li>
-                    </ul>
+                    <div class="project-card-thumb">
+                      <span class="project-card-badge" aria-hidden="true">
+                        <span class="project-card-badge-dot"></span>
+                        Viewing
+                      </span>
+                      <img src="img/ytlens.png" alt="" loading="lazy" decoding="async">
+                    </div>
+                  
+                  <div class="project-card-body">
+                    <h3 class="project-card-title">YTLens — RAG-Powered YouTube Q&amp;A System</h3>
+                    <p class="project-card-teaser">Question answering system over YouTube transcripts using Retrieval-Augmented Generation.</p>
+                    
+                      
+                        <ul class="tech-stack-list project-card-chips project-card-chips--collapsed">
+                          
+                            <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                          
+                            <li class="tech-chip tech-chip--faiss">FAISS</li>
+                          
+                            <li class="tech-chip tech-chip--huggingface">HuggingFace</li>
+                          
+                            <li class="tech-chip tech-chip--rag">RAG</li>
+                          
+                          <li class="tech-chip tech-chip-more">+1</li>
+                        </ul>
+                      
+                      <ul class="tech-stack-list project-card-chips project-card-chips--expanded">
+                        
+                          <li class="tech-chip tech-chip--fastapi">FastAPI</li>
+                        
+                          <li class="tech-chip tech-chip--faiss">FAISS</li>
+                        
+                          <li class="tech-chip tech-chip--huggingface">HuggingFace</li>
+                        
+                          <li class="tech-chip tech-chip--rag">RAG</li>
+                        
+                          <li class="tech-chip tech-chip--jwt">JWT</li>
+                        
+                      </ul>
+                    
+
+                    <div class="project-card-more" aria-hidden="true">
+                      <span>More info</span>
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8.53 10.97a.75.75 0 0 1-1.06 0L3.22 6.78a.75.75 0 0 1 1.06-1.06L8 9.44l3.72-3.72a.75.75 0 1 1 1.06 1.06L8.53 10.97Z"/></svg>
+                    </div>
+                  </div>
+                </button>
+                </div>
+              
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="Previous project" disabled>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10.78 3.22a.75.75 0 0 1 0 1.06L6.56 8.5l4.22 4.22a.75.75 0 1 1-1.06 1.06L4.94 9.03a.75.75 0 0 1 0-1.06l4.78-4.78a.75.75 0 0 1 1.06 0Z"/></svg>
+                </button>
+                <div class="carousel-dots" id="project-carousel-dots" role="tablist" aria-label="Select featured project">
+                  
+                    <button class="carousel-dot is-active" type="button" role="tab" aria-label="Go to LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs" aria-selected="true"></button>
+                  
+                    <button class="carousel-dot" type="button" role="tab" aria-label="Go to ResearchMind — Multi-Agent AI Research System" aria-selected="false"></button>
+                  
+                    <button class="carousel-dot" type="button" role="tab" aria-label="Go to YTLens — RAG-Powered YouTube Q&amp;A System" aria-selected="false"></button>
+                  
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Next project">
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M5.22 3.22a.75.75 0 0 1 1.06 0l4.78 4.78a.75.75 0 0 1 0 1.06l-4.78 4.78a.75.75 0 0 1-1.06-1.06L9.44 8.5 5.22 4.28a.75.75 0 0 1 0-1.06Z"/></svg>
+                </button>
+              </div>
+
+              
+                <div class="other-projects-rail-divider"></div>
+                <button type="button" class="other-projects-trigger" id="open-other-projects-btn" aria-haspopup="dialog" aria-label="Explore other projects archive">
+                  <div class="other-projects-trigger-left">
+                    <span class="other-projects-trigger-icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h3l1.5 2h4.5A1.5 1.5 0 0 1 14 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 12.5v-9Z"/></svg>
+                    </span>
+                    <span class="other-projects-trigger-text">Other Projects</span>
+                  </div>
+                  <div class="other-projects-trigger-right">
+                    <span class="other-projects-count-badge">4</span>
+                    <span class="other-projects-trigger-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" width="14" height="14"><path fill="currentColor" d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06Z"/></svg>
+                    </span>
+                  </div>
+                </button>
+              
+            </section>
+          
+
+          
+            <section id="volunteer" class="content-section">
+              <h2 class="section-heading">
+                <span class="section-heading-pill">
+                  <svg class="heading-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.75 1a5.002 5.002 0 0 1 3.25 1.184A5.002 5.002 0 0 1 11.25 1C13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 0 1-3.433 2.414 7.152 7.152 0 0 1-.31.17l-.018.01-.008.004L8 14.25Zm0-1.445c.433-.285.83-.585 1.2-.897C10.875 10.457 12.5 8.35 12.5 5.5c0-1.748-1.327-3-3.25-3a3.5 3.5 0 0 0-2.6 1.166l-.65.733-.65-.733A3.5 3.5 0 0 0 2.75 2.5C.827 2.5-.5 3.752-.5 5.5c0 2.85 1.625 4.957 3.3 6.408.37.312.767.612 1.2.897L8 12.805Z"/></svg>
+                  Volunteer Experience
+                </span>
+              </h2>
+              <div class="timeline-entries-list">
+                
+                  <article class="timeline-entry">
+                    <div class="timeline-entry-header">
+                      <h3 class="timeline-role">
+                        Educator
+                        <span class="timeline-at">at</span>
+                        
+                          <a href="https://www.nsssfoundation.org/" target="_blank" rel="noopener noreferrer" class="timeline-company">Nanua Samagra Sewa Samiti</a>
+                        
+                      </h3>
+                      
+                    </div>
+                    <p class="timeline-summary">Taught mathematics and science to underprivileged children.</p>
+                    
+                      <ul class="timeline-highlights">
+                        <li>Conducted 6+ teaching sessions.</li><li>Helped students improve academic understanding.</li>
+                      </ul>
+                    
+                  </article>
+                
+                  <article class="timeline-entry">
+                    <div class="timeline-entry-header">
+                      <h3 class="timeline-role">
+                        Mentor
+                        <span class="timeline-at">at</span>
+                        
+                          <a href="https://deshkementor.com/" target="_blank" rel="noopener noreferrer" class="timeline-company">Desh Ke Mentor</a>
+                        
+                      </h3>
+                      
+                    </div>
+                    <p class="timeline-summary">Mentored students on academics and career planning.</p>
+                    
+                      <ul class="timeline-highlights">
+                        <li>Guided 4 students through one-on-one mentoring.</li>
+                      </ul>
+                    
+                  </article>
+                
+              </div>
+            </section>
+          
+
+          
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside class="page-sidebar" id="page-sidebar" aria-label="Education, Skills and Background">
+          <div class="sidebar-drawer-header">
+            <div class="sidebar-drawer-drag-pill" aria-hidden="true"></div>
+            <div class="sidebar-drawer-header-content">
+              <div class="sidebar-drawer-title-group">
+                <div class="sidebar-drawer-eyebrow">
+                  <span class="eyebrow-dot"></span>
+                  <span>Profile Overview</span>
+                </div>
+                <h3 class="sidebar-drawer-title">Education &amp; Skills</h3>
+              </div>
+              <button type="button" class="sidebar-drawer-close" id="sidebar-drawer-close" aria-label="Close sidebar drawer">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+          
+            <section id="education" class="content-section">
+              <h2 class="section-heading">
+                <svg class="heading-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 1.75a.75.75 0 0 1 .37.1l6.25 3.5a.75.75 0 0 1 0 1.3l-6.25 3.5a.75.75 0 0 1-.74 0l-6.25-3.5a.75.75 0 0 1 0-1.3l6.25-3.5a.75.75 0 0 1 .37-.1ZM3.069 6 8 8.761 12.931 6 8 3.239 3.069 6ZM2 8.5a.75.75 0 0 1 .75.75v2.484l5 2.632a.75.75 0 0 0 .5 0l5-2.632V9.25a.75.75 0 0 1 1.5 0v2.968a.75.75 0 0 1-.395.66l-5.75 3.026a.75.75 0 0 1-.71 0l-5.75-3.026A.75.75 0 0 1 2 12.218V9.25A.75.75 0 0 1 2 8.5Z"/></svg>
+                Education
+              </h2>
+              
+                <section class="education-card">
+                  <div class="education-header">
+                    
+                      <img class="education-logo"
+                           src="img/DTU_logo.webp"
+                           alt="Delhi Technological University logo"
+                           width="44"
+                           height="44">
+                    
+                    <div class="education-heading-group">
+                      <h3 class="education-name">
+                        
+                          Delhi Technological University
+                        
+                      </h3>
+                      
+                        <p class="section-label education-location">
+                          <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path fill="currentColor" d="M8 .5C5.1.5 2.75 2.85 2.75 5.75c0 3.94 5.25 9.75 5.25 9.75s5.25-5.81 5.25-9.75C13.25 2.85 10.9.5 8 .5Zm0 7.15a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8Z"/></svg>
+                          Delhi, India
+                        </p>
+                      
+                    </div>
+                  </div>
+                  
+                    <div class="education-degrees-list">
+                      
+                        <div class="education-degree-tag">
+                          <svg class="education-degree-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 1.75a.75.75 0 0 1 .37.1l6.25 3.5a.75.75 0 0 1 0 1.3l-6.25 3.5a.75.75 0 0 1-.74 0l-6.25-3.5a.75.75 0 0 1 0-1.3l6.25-3.5a.75.75 0 0 1 .37-.1ZM3.069 6 8 8.761 12.931 6 8 3.239 3.069 6ZM2 8.5a.75.75 0 0 1 .75.75v2.484l5 2.632a.75.75 0 0 0 .5 0l5-2.632V9.25a.75.75 0 0 1 1.5 0v2.968a.75.75 0 0 1-.395.66l-5.75 3.026a.75.75 0 0 1-.71 0l-5.75-3.026A.75.75 0 0 1 2 12.218V9.25A.75.75 0 0 1 2 8.5Z"/></svg>
+                          <span>B.Tech in Engineering Physics</span>
+                        </div>
+                      
+                        <div class="education-degree-tag">
+                          <svg class="education-degree-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 1.75a.75.75 0 0 1 .37.1l6.25 3.5a.75.75 0 0 1 0 1.3l-6.25 3.5a.75.75 0 0 1-.74 0l-6.25-3.5a.75.75 0 0 1 0-1.3l6.25-3.5a.75.75 0 0 1 .37-.1ZM3.069 6 8 8.761 12.931 6 8 3.239 3.069 6ZM2 8.5a.75.75 0 0 1 .75.75v2.484l5 2.632a.75.75 0 0 0 .5 0l5-2.632V9.25a.75.75 0 0 1 1.5 0v2.968a.75.75 0 0 1-.395.66l-5.75 3.026a.75.75 0 0 1-.71 0l-5.75-3.026A.75.75 0 0 1 2 12.218V9.25A.75.75 0 0 1 2 8.5Z"/></svg>
+                          <span>Minor in Computer Science</span>
+                        </div>
+                      
+                    </div>
+                  
+                  
+                  
+                    <div class="education-meta-chips">
+                      
+                        <span class="education-meta-chip education-meta-chip--gpa">
+                          <svg class="education-meta-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M2.5 1.75a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-1.5 0V2.5a.75.75 0 0 1 .75-.75Zm4 4a.75.75 0 0 1 .75.75v6.5a.75.75 0 0 1-1.5 0v-6.5a.75.75 0 0 1 .75-.75Zm4 2.5a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm4-4a.75.75 0 0 1 .75.75v8a.75.75 0 0 1-1.5 0v-8a.75.75 0 0 1 .75-.75Z"/></svg>
+                          <span>CGPA: <strong>7.21</strong></span>
+                        </span>
+                      
+                      
+                      
+                        <span class="education-meta-chip education-meta-chip--date">
+                          <svg class="education-meta-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0ZM2.5 6.5v7.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V6.5h-11Z"/></svg>
+                          <span>Class of <strong>2026</strong></span>
+                        </span>
+                      
+                    </div>
                   
                 </section>
               
@@ -234,21 +678,522 @@
           
 
           
-            <section id="projects" class="content-panel">
-              <h2 class="section-heading">Featured Projects</h2>
+            <section id="skills" class="content-section">
+              <h2 class="section-heading">
+                <svg class="heading-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L13.94 8l-3.72-3.72a.75.75 0 0 1 1.06-1.06Zm-6.56 0a.75.75 0 0 1 0 1.06L1.06 8l3.72 3.72a.75.75 0 1 1-1.06 1.06L.47 8.53a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Zm3.78.28a.75.75 0 0 1 .53.92l-2 7a.75.75 0 0 1-1.44-.44l2-7a.75.75 0 0 1 .91-.48Z"/></svg>
+                Skills
+              </h2>
+              <ul class="unstyled-list skill-list">
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">Python</h3>
+                      <span class="skill-badge">Advanced <span class="skill-percent">· 90%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 90%"
+                           role="meter"
+                           aria-valuenow="90"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">FastAPI</h3>
+                      <span class="skill-badge">Advanced <span class="skill-percent">· 90%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 90%"
+                           role="meter"
+                           aria-valuenow="90"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">Docker</h3>
+                      <span class="skill-badge">Advanced <span class="skill-percent">· 85%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 85%"
+                           role="meter"
+                           aria-valuenow="85"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">LangChain</h3>
+                      <span class="skill-badge">Advanced <span class="skill-percent">· 85%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 85%"
+                           role="meter"
+                           aria-valuenow="85"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">RAG Systems</h3>
+                      <span class="skill-badge">Advanced <span class="skill-percent">· 85%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 85%"
+                           role="meter"
+                           aria-valuenow="85"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">Machine Learning</h3>
+                      <span class="skill-badge">Intermediate <span class="skill-percent">· 80%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 80%"
+                           role="meter"
+                           aria-valuenow="80"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">SQL</h3>
+                      <span class="skill-badge">Intermediate <span class="skill-percent">· 80%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 80%"
+                           role="meter"
+                           aria-valuenow="80"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+                  <li class="skill-item">
+                    <div class="skill-header">
+                      <h3 class="skill-name">Redis</h3>
+                      <span class="skill-badge">Intermediate <span class="skill-percent">· 75%</span></span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-bar-fill"
+                           style="--target-width: 75%"
+                           role="meter"
+                           aria-valuenow="75"
+                           aria-valuemin="0"
+                           aria-valuemax="100">
+                        <span class="skill-glow-dot"></span>
+                      </div>
+                    </div>
+                  </li>
+                
+              </ul>
+            </section>
+          
+
+          
+            <section id="languages" class="content-section">
+              <h2 class="section-heading">
+                <svg class="heading-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c-2.098-.59-3.743-2.18-4.329-4.177H5.78Zm-2.966-1.5a7.025 7.025 0 0 1 4.33-4.177 9.64 9.64 0 0 0-1.364 4.177H2.814Zm4.466 0c.12-1.464.53-2.83 1.178-3.925a6.52 6.52 0 0 1 1.178 3.925H7.28Zm0 1.5h3.888a6.52 6.52 0 0 1-1.178 3.925 9.17 9.17 0 0 1-1.178-3.925Zm4.39-1.5h2.966c-.586-1.997-2.231-3.587-4.33-4.177.585 1.258.98 2.668 1.364 4.177Zm2.966 1.5H11.67a9.64 9.64 0 0 1-1.363 4.177c2.099-.59 3.744-2.18 4.33-4.177Z"/></svg>
+                Languages
+              </h2>
+              <div class="languages-grid">
+                
+                  <div class="language-card">
+                    <span class="language-name">English</span>
+                    <span class="language-badge">Professional</span>
+                  </div>
+                
+                  <div class="language-card">
+                    <span class="language-name">Hindi</span>
+                    <span class="language-badge">Native</span>
+                  </div>
+                
+              </div>
+            </section>
+          
+          
+            <section id="achievements" class="content-section">
+              <h2 class="section-heading">
+                <svg class="heading-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M3.75 2h8.5a.75.75 0 0 1 .75.75v1.5a3.75 3.75 0 0 1-3.25 3.715v1.285h1.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-.75.75h-6.5a.75.75 0 0 1-.75-.75v-1.5a.75.75 0 0 1 .75-.75h1.5V8.215A3.75 3.75 0 0 1 3 4.25v-1.5A.75.75 0 0 1 3.75 2Zm7.5 1.5H4.75v.75a2.25 2.25 0 0 0 2.25 2.25h2a2.25 2.25 0 0 0 2.25-2.25V3.5ZM1.5 4.25a2.75 2.75 0 0 1 1.75-2.559v1.64A1.25 1.25 0 0 0 2.75 4.5v.25c0 .602.215 1.155.575 1.585L2.1 7.214A2.75 2.75 0 0 1 1.5 4.75v-.5Zm13 0v.5a2.75 2.75 0 0 1-.6 1.714l-1.225-.879c.36-.43.575-.983.575-1.585V4.5a1.25 1.25 0 0 0-.5-1.169V1.691A2.75 2.75 0 0 1 14.5 4.25Z"/></svg>
+                Achievements
+              </h2>
+              <div class="achievement-compact-list">
+                
+                  <div class="achievement-compact-item">
+                    <h3 class="achievement-compact-title">
+                      <span class="achievement-accent-dot"></span>
+                      NPTEL Achievement
+                    </h3>
+                    <p class="achievement-compact-summary">Ranked among the top 5% in NPTEL Introduction to Database and featured in the Q4 toppers list.</p>
+                  </div>
+                
+                  <div class="achievement-compact-item">
+                    <h3 class="achievement-compact-title">
+                      <span class="achievement-accent-dot"></span>
+                      Olympiad Achievements
+                    </h3>
+                    <p class="achievement-compact-summary">Qualified Level 2 in SOF Olympiads with notable international and Delhi rankings.</p>
+                  </div>
+                
+              </div>
+            </section>
+          
+
+          
+            <section id="hobbies" class="content-section">
+              <h2 class="section-heading">
+                <svg class="heading-icon" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M7.53 1.282a.5.5 0 0 1 .94 0l.965 2.894a4.5 4.5 0 0 0 2.889 2.889l2.894.965a.5.5 0 0 1 0 .94l-2.894.965a4.5 4.5 0 0 0-2.889 2.889l-.965 2.894a.5.5 0 0 1-.94 0l-.965-2.894a4.5 4.5 0 0 0-2.889-2.889l-2.894-.965a.5.5 0 0 1 0-.94l2.894-.965a4.5 4.5 0 0 0 2.889-2.889l.965-2.894Z"/></svg>
+                Hobbies
+              </h2>
+              <div class="hobby-card-wrapper">
+                <div class="hobby-tabs-nav" role="tablist" aria-label="Select hobby">
+                  
+                    <button class="hobby-tab-btn is-active"
+                            type="button"
+                            role="tab"
+                            data-hobby-index="0"
+                            aria-selected="true"
+                            aria-controls="hobby-panel-0"
+                            id="hobby-tab-0">
+                      TV Shows
+                    </button>
+                  
+                    <button class="hobby-tab-btn"
+                            type="button"
+                            role="tab"
+                            data-hobby-index="1"
+                            aria-selected="false"
+                            aria-controls="hobby-panel-1"
+                            id="hobby-tab-1">
+                      Reading
+                    </button>
+                  
+                    <button class="hobby-tab-btn"
+                            type="button"
+                            role="tab"
+                            data-hobby-index="2"
+                            aria-selected="false"
+                            aria-controls="hobby-panel-2"
+                            id="hobby-tab-2">
+                      Night Walks
+                    </button>
+                  
+                </div>
+                <div class="hobby-panels-container">
+                  
+                    <article class="hobby-card hobby-tabpanel is-active"
+                             role="tabpanel"
+                             id="hobby-panel-0"
+                             aria-labelledby="hobby-tab-0"
+                             data-hobby-index="0">
+                      
+                        <div class="hobby-media">
+                          <img width="600"
+                               height="338"
+                               src="img/entertainment.jpeg"
+                               alt="The Sopranos"
+                               loading="lazy"
+                               decoding="async">
+                          <div class="hobby-media-overlay" aria-hidden="true"></div>
+                          <span class="hobby-tag">The Sopranos</span>
+                        </div>
+                      
+                      <div class="hobby-body">
+                        <h3 class="hobby-title">TV Shows</h3>
+                        
+                          <p class="hobby-summary">A good crime thriller or mystery drama is usually how I switch off after a long day of coding. Big fan of character-driven classics like The Sopranos and Bosch, along with the comforting mystery-solving quirks in Monk and The Mentalist. There&#39;s something deeply engaging about complex protagonists and sharp dialogue.</p>
+                          <button type="button" class="hobby-read-more-btn" aria-label="Read full description for TV Shows">Read more...</button>
+                        
+                      </div>
+                      
+                        <div class="hobby-overlay-panel" aria-hidden="true">
+                          <div class="hobby-overlay-header">
+                            <button type="button" class="hobby-overlay-close-btn" aria-label="Close TV Shows description">
+                              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                            </button>
+                            <div class="hobby-overlay-badge">
+                              <span class="hobby-overlay-badge-dot"></span>
+                              <span>TV Shows</span>
+                            </div>
+                          </div>
+                          <div class="hobby-overlay-frame">
+                            <h4 class="hobby-overlay-title">TV Shows</h4>
+                            <p class="hobby-overlay-text">A good crime thriller or mystery drama is usually how I switch off after a long day of coding. Big fan of character-driven classics like The Sopranos and Bosch, along with the comforting mystery-solving quirks in Monk and The Mentalist. There&#39;s something deeply engaging about complex protagonists and sharp dialogue.</p>
+                          </div>
+                        </div>
+                      
+                    </article>
+                  
+                    <article class="hobby-card hobby-tabpanel"
+                             role="tabpanel"
+                             id="hobby-panel-1"
+                             aria-labelledby="hobby-tab-1"
+                             data-hobby-index="1">
+                      
+                        <div class="hobby-media">
+                          <img width="600"
+                               height="338"
+                               src="img/reading.jpeg"
+                               alt="The Adventures of Feluda"
+                               loading="lazy"
+                               decoding="async">
+                          <div class="hobby-media-overlay" aria-hidden="true"></div>
+                          <span class="hobby-tag">The Adventures of Feluda</span>
+                        </div>
+                      
+                      <div class="hobby-body">
+                        <h3 class="hobby-title">Reading</h3>
+                        
+                          <p class="hobby-summary">I enjoy reading whenever I get a quiet moment, particularly classic Indian fiction and detective stories. Ruskin Bond&#39;s nostalgic tales of the Himalayan hills and Satyajit Ray&#39;s Feluda mysteries are perennial favorites. I gravitate toward narrative simplicity, charming atmosphere, and stories that stay with you long after the last page.</p>
+                          <button type="button" class="hobby-read-more-btn" aria-label="Read full description for Reading">Read more...</button>
+                        
+                      </div>
+                      
+                        <div class="hobby-overlay-panel" aria-hidden="true">
+                          <div class="hobby-overlay-header">
+                            <button type="button" class="hobby-overlay-close-btn" aria-label="Close Reading description">
+                              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                            </button>
+                            <div class="hobby-overlay-badge">
+                              <span class="hobby-overlay-badge-dot"></span>
+                              <span>Reading</span>
+                            </div>
+                          </div>
+                          <div class="hobby-overlay-frame">
+                            <h4 class="hobby-overlay-title">Reading</h4>
+                            <p class="hobby-overlay-text">I enjoy reading whenever I get a quiet moment, particularly classic Indian fiction and detective stories. Ruskin Bond&#39;s nostalgic tales of the Himalayan hills and Satyajit Ray&#39;s Feluda mysteries are perennial favorites. I gravitate toward narrative simplicity, charming atmosphere, and stories that stay with you long after the last page.</p>
+                          </div>
+                        </div>
+                      
+                    </article>
+                  
+                    <article class="hobby-card hobby-tabpanel"
+                             role="tabpanel"
+                             id="hobby-panel-2"
+                             aria-labelledby="hobby-tab-2"
+                             data-hobby-index="2">
+                      
+                        <div class="hobby-media">
+                          <img width="600"
+                               height="338"
+                               src="img/walking.jpeg"
+                               alt="Quiet Trails"
+                               loading="lazy"
+                               decoding="async">
+                          <div class="hobby-media-overlay" aria-hidden="true"></div>
+                          <span class="hobby-tag">Quiet Trails</span>
+                        </div>
+                      
+                      <div class="hobby-body">
+                        <h3 class="hobby-title">Night Walks</h3>
+                        
+                          <p class="hobby-summary">Taking long evening walks is my favorite ritual to disconnect from screens and decompress after a day at the keyboard. Whether exploring quiet neighborhood trails or walking under city lights with a podcast or ambient soundtrack, it&#39;s where my best debugging breakthroughs and project ideas usually happen.</p>
+                          <button type="button" class="hobby-read-more-btn" aria-label="Read full description for Night Walks">Read more...</button>
+                        
+                      </div>
+                      
+                        <div class="hobby-overlay-panel" aria-hidden="true">
+                          <div class="hobby-overlay-header">
+                            <button type="button" class="hobby-overlay-close-btn" aria-label="Close Night Walks description">
+                              <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                            </button>
+                            <div class="hobby-overlay-badge">
+                              <span class="hobby-overlay-badge-dot"></span>
+                              <span>Night Walks</span>
+                            </div>
+                          </div>
+                          <div class="hobby-overlay-frame">
+                            <h4 class="hobby-overlay-title">Night Walks</h4>
+                            <p class="hobby-overlay-text">Taking long evening walks is my favorite ritual to disconnect from screens and decompress after a day at the keyboard. Whether exploring quiet neighborhood trails or walking under city lights with a podcast or ambient soundtrack, it&#39;s where my best debugging breakthroughs and project ideas usually happen.</p>
+                          </div>
+                        </div>
+                      
+                    </article>
+                  
+                </div>
+              </div>
+            </section>
+          
+        </aside>
+      </div>
+    </div>
+
+    <!-- Mobile Sidebar Drawer Overlay & Floating Trigger -->
+    <div class="sidebar-drawer-overlay" id="sidebar-drawer-overlay" aria-hidden="true"></div>
+    <button type="button" class="mobile-sidebar-fab" id="open-sidebar-fab" aria-label="Open Education, Skills &amp; Background sidebar">
+      <span class="fab-icon-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </span>
+      <span>Skills &amp; Details</span>
+      <span class="fab-arrow" aria-hidden="true">❯</span>
+    </button>
+
+    <footer class="page-footer">
+      <div class="page-footer__backdrop" aria-hidden="true">
+        <div class="page-footer__grid"></div>
+        <div class="page-footer__grid-highlight"></div>
+        <div class="page-footer__nodes"></div>
+        <div class="page-footer__nodes-highlight"></div>
+        <div class="page-footer__spotlight"></div>
+        <div class="page-footer__aurora">
+          <span class="footer-orb orb-azure"></span>
+          <span class="footer-orb orb-indigo"></span>
+        </div>
+      </div>
+      <div class="container footer-content">
+        <p class="footer-tagline">Let's connect and build something together</p>
+        
+          <ul class="footer-social-list">
+            
+              <li>
+                <a href="https://github.com/Maddy-MM"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub"
+                   title="GitHub"
+                   class="footer-social-icon-btn">
+                  
+                    <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-github"
+     viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+</svg>
+
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://www.linkedin.com/in/madhav-makwana-5331a4319/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn"
+                   title="LinkedIn"
+                   class="footer-social-icon-btn">
+                  
+                    <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     fill="currentColor"
+     class="bi bi-linkedin"
+     viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+</svg>
+
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://www.instagram.com/madhav_7184?igsh=MWE0YWFlNHl0ZWhqcA%3D%3D&amp;utm_source=qr"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram"
+                   title="Instagram"
+                   class="footer-social-icon-btn">
+                  
+                    <svg aria-hidden="true"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+  <rect x="1.5" y="1.5" width="13" height="13" rx="3" />
+  <circle cx="8" cy="8" r="3" />
+  <circle cx="11.5" cy="4.5" r="0.75" fill="currentColor" stroke="none" />
+</svg>
+
+                  
+                </a>
+              </li>
+            
+          </ul>
+        
+        <div class="footer-bottom-row">
+          <p class="footer-copyright">&copy; 2026 Madhav Makwana. All rights reserved.</p>
+          <p class="footer-attribution">Built with Python &amp; Jinja2 &bull; Hosted on GitHub Pages</p>
+        </div>
+      </div>
+    </footer>
+
+    
+      <div class="project-modal-overlay" id="project-modal-overlay" role="dialog" aria-modal="true" aria-label="Project details">
+        <button class="project-modal-nav project-modal-prev" type="button" aria-label="Previous project">
+          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10.78 3.22a.75.75 0 0 1 0 1.06L6.56 8.5l4.22 4.22a.75.75 0 1 1-1.06 1.06L4.94 9.03a.75.75 0 0 1 0-1.06l4.78-4.78a.75.75 0 0 1 1.06 0Z"/></svg>
+        </button>
+        <button class="project-modal-nav project-modal-next" type="button" aria-label="Next project">
+          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M5.22 3.22a.75.75 0 0 1 1.06 0l4.78 4.78a.75.75 0 0 1 0 1.06l-4.78 4.78a.75.75 0 0 1-1.06-1.06L9.44 8.5 5.22 4.28a.75.75 0 0 1 0-1.06Z"/></svg>
+        </button>
+        <div class="project-modal-dialog">
+          <button class="project-modal-close" type="button" aria-label="Close project details">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <div class="project-modal-panels">
+            
+              
+              
               
                 
+              
                 
+              
                 
-                  
+              
                 
-                  
-                
-                  
-                
-                  
-                
-                <section class="project-entry">
+              
+              <div class="project-modal-panel is-active">
+                <header class="project-modal-header">
+                  <div class="project-modal-eyebrow-badge">
+                    <span class="eyebrow-dot"></span>
+                    <span>Project 1 of 3</span>
+                  </div>
                   <h3>LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs</h3>
                   
                     <ul class="tech-stack-list">
@@ -271,30 +1216,84 @@
                       
                     </ul>
                   
-                  <p>Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.</p>
+                </header>
+                <div class="project-modal-content">
+                  <p class="project-modal-summary">Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.</p>
                   
-                    <ul>
+                    <div class="project-modal-section-title">
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0Zm0 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm.75 4.75v5.5a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 1.5 0ZM8 4a.875.875 0 1 1 0 1.75A.875.875 0 0 1 8 4Z"/></svg>
+                      Key Highlights & Architecture
+                    </div>
+                    <ul class="project-modal-highlights">
                       
                         
-                          <li>Built an OpenAI-compatible gateway with circuit-breaker routing and automatic failover.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Built an OpenAI-compatible gateway with circuit-breaker routing and automatic failover.</span>
+                          </li>
                         
                       
                         
-                          <li>Blocked adversarial prompts via embedding-similarity injection detection.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Blocked adversarial prompts via embedding-similarity injection detection.</span>
+                          </li>
                         
                       
                         
-                          <li>Added dual-layer caching — Redis exact-match plus FAISS semantic match.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Added dual-layer caching — Redis exact-match plus FAISS semantic match.</span>
+                          </li>
                         
                       
                         
-                          <li>Enforced per-API-key budget caps; deployed via Docker Compose to AWS EC2.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Enforced per-API-key budget caps; deployed via Docker Compose to AWS EC2.</span>
+                          </li>
                         
                       
                     </ul>
                   
                   
+                    <div class="project-modal-section-title">
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M1.75 2.5h12.5a.25.25 0 0 1 .25.25v10.5a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25V2.75a.25.25 0 0 1 .25-.25ZM0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75Zm4.5 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM1.5 12.28 4.5 8.5l3.25 4.06 2.5-3.13 2.75 2.85v1.22H1.5v-1.22Z"/></svg>
+                      Preview & Interface
+                    </div>
+                    <div class="gallery main-gallery project-modal-gallery">
+                      
+                        <figure>
+                          <div class="browser-chrome" aria-hidden="true">
+                            <div class="browser-chrome-dots">
+                              <span class="browser-chrome-dot browser-chrome-dot-red"></span>
+                              <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
+                              <span class="browser-chrome-dot browser-chrome-dot-green"></span>
+                            </div>
+                            <div class="browser-chrome-address">LLM Gateway Architecture</div>
+                          </div>
+                          <div class="project-modal-img-wrap">
+                            <img src="img/llm-gateway.png"
+                                 alt="LLM Gateway Architecture"
+                                 loading="lazy"
+                                 decoding="async">
+                            <div class="project-modal-img-hint" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
+                              <span>Click to enlarge</span>
+                            </div>
+                          </div>
+                          
+                            <figcaption class="project-modal-figcaption">LLM Gateway Architecture</figcaption>
+                          
+                        </figure>
+                      
+                    </div>
+                  
+                </div>
+                
+                  <footer class="project-modal-footer">
                     <div class="project-cta-group">
+                      
                       
                         <a class="project-cta project-cta-github magnetic"
                            href="https://github.com/Maddy-MM/llm-gateway"
@@ -302,49 +1301,35 @@
                            rel="noopener noreferrer"
                            aria-label="View LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs on GitHub">
                           <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                          GitHub
+                          GitHub Repo
                         </a>
                       
-                      
                     </div>
-                  
-                  
-                    <div class="gallery main-gallery">
-                      
-                        <figure>
-                          <div class="browser-chrome" aria-hidden="true">
-                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
-                          </div>
-                          <img width="600"
-                               height="338"
-                               src="img/llm-gateway.png"
-                               alt="LLM Gateway Architecture"
-                               loading="lazy"
-                               decoding="async">
-                        </figure>
-                      
-                    </div>
-                  
-                </section>
+                  </footer>
+                
+              </div>
+            
+              
+              
               
                 
+              
                 
+              
                 
-                  
+              
                 
-                  
-                
-                  
-                
-                  
+              
                 
                   
-                    
-                  
                 
-                <section class="project-entry">
+              
+              <div class="project-modal-panel">
+                <header class="project-modal-header">
+                  <div class="project-modal-eyebrow-badge">
+                    <span class="eyebrow-dot"></span>
+                    <span>Project 2 of 3</span>
+                  </div>
                   <h3>ResearchMind — Multi-Agent AI Research System</h3>
                   
                     <ul class="tech-stack-list">
@@ -363,24 +1348,42 @@
                       
                     </ul>
                   
-                  <p>Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.</p>
+                </header>
+                <div class="project-modal-content">
+                  <p class="project-modal-summary">Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.</p>
                   
-                    <ul>
+                    <div class="project-modal-section-title">
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0Zm0 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm.75 4.75v5.5a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 1.5 0ZM8 4a.875.875 0 1 1 0 1.75A.875.875 0 0 1 8 4Z"/></svg>
+                      Key Highlights & Architecture
+                    </div>
+                    <ul class="project-modal-highlights">
                       
                         
-                          <li>Built a 4-step agentic workflow: Search → Scrape → Write → Critique.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Built a 4-step agentic workflow: Search → Scrape → Write → Critique.</span>
+                          </li>
                         
                       
                         
-                          <li>Implemented JWT authentication and modular FastAPI backend.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Implemented JWT authentication and modular FastAPI backend.</span>
+                          </li>
                         
                       
                         
-                          <li>Added Critic Chain for self-evaluation and hallucination reduction.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Added Critic Chain for self-evaluation and hallucination reduction.</span>
+                          </li>
                         
                       
                         
-                          <li>Integrated Prometheus monitoring and Docker deployment.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Integrated Prometheus monitoring and Docker deployment.</span>
+                          </li>
                         
                       
                         
@@ -388,17 +1391,42 @@
                     </ul>
                   
                   
+                    <div class="project-modal-section-title">
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M1.75 2.5h12.5a.25.25 0 0 1 .25.25v10.5a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25V2.75a.25.25 0 0 1 .25-.25ZM0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75Zm4.5 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM1.5 12.28 4.5 8.5l3.25 4.06 2.5-3.13 2.75 2.85v1.22H1.5v-1.22Z"/></svg>
+                      Preview & Interface
+                    </div>
+                    <div class="gallery main-gallery project-modal-gallery">
+                      
+                        <figure>
+                          <div class="browser-chrome" aria-hidden="true">
+                            <div class="browser-chrome-dots">
+                              <span class="browser-chrome-dot browser-chrome-dot-red"></span>
+                              <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
+                              <span class="browser-chrome-dot browser-chrome-dot-green"></span>
+                            </div>
+                            <div class="browser-chrome-address">ResearchMind Dashboard</div>
+                          </div>
+                          <div class="project-modal-img-wrap">
+                            <img src="img/researchmind.png"
+                                 alt="ResearchMind Dashboard"
+                                 loading="lazy"
+                                 decoding="async">
+                            <div class="project-modal-img-hint" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
+                              <span>Click to enlarge</span>
+                            </div>
+                          </div>
+                          
+                            <figcaption class="project-modal-figcaption">ResearchMind Dashboard</figcaption>
+                          
+                        </figure>
+                      
+                    </div>
+                  
+                </div>
+                
+                  <footer class="project-modal-footer">
                     <div class="project-cta-group">
-                      
-                        <a class="project-cta project-cta-github magnetic"
-                           href="https://github.com/Maddy-MM/ai-research-system"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label="View ResearchMind — Multi-Agent AI Research System on GitHub">
-                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                          GitHub
-                        </a>
-                      
                       
                         <a class="project-cta project-cta-demo magnetic"
                            href="https://ai-research-system-jhb7jlklgmucvhtmptz5dm.streamlit.app/"
@@ -409,45 +1437,42 @@
                           Live Demo
                         </a>
                       
-                    </div>
-                  
-                  
-                    <div class="gallery main-gallery">
                       
-                        <figure>
-                          <div class="browser-chrome" aria-hidden="true">
-                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
-                          </div>
-                          <img width="600"
-                               height="338"
-                               src="img/researchmind.png"
-                               alt="ResearchMind Dashboard"
-                               loading="lazy"
-                               decoding="async">
-                        </figure>
+                        <a class="project-cta project-cta-github magnetic"
+                           href="https://github.com/Maddy-MM/ai-research-system"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View ResearchMind — Multi-Agent AI Research System on GitHub">
+                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          GitHub Repo
+                        </a>
                       
                     </div>
-                  
-                </section>
+                  </footer>
+                
+              </div>
+            
+              
+              
               
                 
+              
                 
+              
                 
-                  
+              
                 
-                  
-                
-                  
-                
-                  
+              
                 
                   
-                    
-                  
                 
-                <section class="project-entry">
+              
+              <div class="project-modal-panel">
+                <header class="project-modal-header">
+                  <div class="project-modal-eyebrow-badge">
+                    <span class="eyebrow-dot"></span>
+                    <span>Project 3 of 3</span>
+                  </div>
                   <h3>YTLens — RAG-Powered YouTube Q&amp;A System</h3>
                   
                     <ul class="tech-stack-list">
@@ -464,24 +1489,42 @@
                       
                     </ul>
                   
-                  <p>Question answering system over YouTube transcripts using Retrieval-Augmented Generation.</p>
+                </header>
+                <div class="project-modal-content">
+                  <p class="project-modal-summary">Question answering system over YouTube transcripts using Retrieval-Augmented Generation.</p>
                   
-                    <ul>
+                    <div class="project-modal-section-title">
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0Zm0 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm.75 4.75v5.5a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 1.5 0ZM8 4a.875.875 0 1 1 0 1.75A.875.875 0 0 1 8 4Z"/></svg>
+                      Key Highlights & Architecture
+                    </div>
+                    <ul class="project-modal-highlights">
                       
                         
-                          <li>Built transcript ingestion and embedding pipeline.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Built transcript ingestion and embedding pipeline.</span>
+                          </li>
                         
                       
                         
-                          <li>Used FAISS vector database with HuggingFace embeddings.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Used FAISS vector database with HuggingFace embeddings.</span>
+                          </li>
                         
                       
                         
-                          <li>Implemented MMR retrieval strategy.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Implemented MMR retrieval strategy.</span>
+                          </li>
                         
                       
                         
-                          <li>Added authentication and persistent storage.</li>
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Added authentication and persistent storage.</span>
+                          </li>
                         
                       
                         
@@ -489,17 +1532,42 @@
                     </ul>
                   
                   
+                    <div class="project-modal-section-title">
+                      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M1.75 2.5h12.5a.25.25 0 0 1 .25.25v10.5a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25V2.75a.25.25 0 0 1 .25-.25ZM0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75Zm4.5 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM1.5 12.28 4.5 8.5l3.25 4.06 2.5-3.13 2.75 2.85v1.22H1.5v-1.22Z"/></svg>
+                      Preview & Interface
+                    </div>
+                    <div class="gallery main-gallery project-modal-gallery">
+                      
+                        <figure>
+                          <div class="browser-chrome" aria-hidden="true">
+                            <div class="browser-chrome-dots">
+                              <span class="browser-chrome-dot browser-chrome-dot-red"></span>
+                              <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
+                              <span class="browser-chrome-dot browser-chrome-dot-green"></span>
+                            </div>
+                            <div class="browser-chrome-address">YTLens Interface</div>
+                          </div>
+                          <div class="project-modal-img-wrap">
+                            <img src="img/ytlens.png"
+                                 alt="YTLens Interface"
+                                 loading="lazy"
+                                 decoding="async">
+                            <div class="project-modal-img-hint" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
+                              <span>Click to enlarge</span>
+                            </div>
+                          </div>
+                          
+                            <figcaption class="project-modal-figcaption">YTLens Interface</figcaption>
+                          
+                        </figure>
+                      
+                    </div>
+                  
+                </div>
+                
+                  <footer class="project-modal-footer">
                     <div class="project-cta-group">
-                      
-                        <a class="project-cta project-cta-github magnetic"
-                           href="https://github.com/Maddy-MM/youtube-rag-assistant"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label="View YTLens — RAG-Powered YouTube Q&amp;A System on GitHub">
-                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                          GitHub
-                        </a>
-                      
                       
                         <a class="project-cta project-cta-demo magnetic"
                            href="https://youtube-rag-chatbot-jixvzdtnxgbinlnnr4hbqo.streamlit.app/"
@@ -510,692 +1578,453 @@
                           Live Demo
                         </a>
                       
-                    </div>
-                  
-                  
-                    <div class="gallery main-gallery">
                       
-                        <figure>
-                          <div class="browser-chrome" aria-hidden="true">
-                            <span class="browser-chrome-dot browser-chrome-dot-red"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-yellow"></span>
-                            <span class="browser-chrome-dot browser-chrome-dot-green"></span>
-                          </div>
-                          <img width="600"
-                               height="338"
-                               src="img/ytlens.png"
-                               alt="YTLens Interface"
-                               loading="lazy"
-                               decoding="async">
-                        </figure>
+                        <a class="project-cta project-cta-github magnetic"
+                           href="https://github.com/Maddy-MM/youtube-rag-assistant"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View YTLens — RAG-Powered YouTube Q&amp;A System on GitHub">
+                          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          GitHub Repo
+                        </a>
                       
                     </div>
-                  
-                </section>
-              
+                  </footer>
+                
+              </div>
+            
+          </div>
+          <div class="project-modal-dots" id="project-modal-dots" role="tablist" aria-label="Select project">
+            
+              <button class="carousel-dot is-active" type="button" role="tab" aria-label="Go to LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs" aria-selected="true"></button>
+            
+              <button class="carousel-dot" type="button" role="tab" aria-label="Go to ResearchMind — Multi-Agent AI Research System" aria-selected="false"></button>
+            
+              <button class="carousel-dot" type="button" role="tab" aria-label="Go to YTLens — RAG-Powered YouTube Q&amp;A System" aria-selected="false"></button>
+            
+          </div>
+        </div>
+      </div>
+    
 
+    
+      <div class="other-projects-modal-overlay" id="other-projects-modal-overlay" role="dialog" aria-modal="true" aria-label="Other Projects Archive">
+        <div class="other-projects-modal-dialog">
+          <button class="other-projects-modal-close" id="close-other-projects-btn" type="button" aria-label="Close other projects archive">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <header class="other-projects-modal-header">
+            <div class="other-projects-eyebrow">
+              <span class="eyebrow-dot"></span>
+              <span>Project Directory</span>
+            </div>
+            <h3>Other Projects Archive</h3>
+            <p class="other-projects-modal-subtitle">A collection of machine learning APIs, NLP systems, and analytical applications.</p>
+          </header>
+          <div class="other-projects-modal-body" id="other-projects-modal-body">
+            <div class="other-projects-grid">
               
-                <details class="other-projects-details">
-                  <summary class="other-projects-summary">
-                    Other Projects
-                    <span class="other-projects-count">4</span>
-                  </summary>
+                
+                
+                
+                  
+                
+                  
+                
+                  
+                
                   
                     
+                  
+                
+                <article class="other-project-card">
+                  <div class="other-project-card-header">
+                    <h4>Car Price Prediction API</h4>
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
+                      <ul class="tech-stack-list other-project-tech-list">
                         
-                      
-                    
-                    <section class="project-entry">
-                      <h3>Car Price Prediction API</h3>
-                      
-                        <ul class="tech-stack-list">
-                          
-                            <li class="tech-chip tech-chip--fastapi">FastAPI</li>
-                          
-                            <li class="tech-chip tech-chip--redis">Redis</li>
-                          
-                            <li class="tech-chip tech-chip--jwt">JWT</li>
-                          
-                            <li class="tech-chip tech-chip--prometheus">Prometheus</li>
-                          
-                            <li class="tech-chip tech-chip--grafana">Grafana</li>
-                          
-                        </ul>
-                      
-                      <p>Production-grade ML API for real-time vehicle price prediction.</p>
-                      
-                        <ul>
-                          
-                            
-                              <li>Built a FastAPI inference service serving real-time price predictions.</li>
-                            
-                          
-                            
-                              <li>Integrated Redis caching to eliminate redundant inference calls.</li>
-                            
-                          
-                            
-                              <li>Enforced JWT + API key auth with Prometheus/Grafana observability.</li>
-                            
-                          
-                            
-                          
-                        </ul>
-                      
-                      
-                        <div class="project-cta-group">
-                          
-                            <a class="project-cta project-cta-github magnetic"
-                               href="https://github.com/Maddy-MM/car-value-inference-api"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="View Car Price Prediction API on GitHub">
-                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                              GitHub
-                            </a>
-                          
-                          
-                            <a class="project-cta project-cta-demo magnetic"
-                               href="https://car-value-inference-api.onrender.com/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="View live demo of Car Price Prediction API">
-                              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
-                              View Project
-                            </a>
-                          
-                        </div>
-                      
-                    </section>
-                  
-                    
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
+                          <li class="tech-chip tech-chip--fastapi">FastAPI</li>
                         
-                      
-                    
-                    <section class="project-entry">
-                      <h3>Movie Recommender System</h3>
-                      
-                        <ul class="tech-stack-list">
-                          
-                            <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
-                          
-                            <li class="tech-chip tech-chip--tf-idf">TF-IDF</li>
-                          
-                            <li class="tech-chip tech-chip--streamlit">Streamlit</li>
-                          
-                            <li class="tech-chip tech-chip--tmdb-api">TMDB API</li>
-                          
-                        </ul>
-                      
-                      <p>Content-based movie recommender using metadata similarity, deployed as a Streamlit app.</p>
-                      
-                        <ul>
-                          
-                            
-                              <li>Engineered tags from overview, genres, cast, and crew.</li>
-                            
-                          
-                            
-                              <li>Vectorized text with TF-IDF and computed cosine similarity.</li>
-                            
-                          
-                            
-                              <li>Fetched real-time posters via the TMDB API in a Streamlit UI.</li>
-                            
-                          
-                            
-                          
-                        </ul>
-                      
-                      
-                        <div class="project-cta-group">
-                          
-                            <a class="project-cta project-cta-github magnetic"
-                               href="https://github.com/Maddy-MM/movie-recommender-system"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="View Movie Recommender System on GitHub">
-                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                              GitHub
-                            </a>
-                          
-                          
-                            <a class="project-cta project-cta-demo magnetic"
-                               href="https://movie-recommender-system-cgjbuwdm3ztug4cmvvpduu.streamlit.app/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="View live demo of Movie Recommender System">
-                              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
-                              View Project
-                            </a>
-                          
-                        </div>
-                      
-                    </section>
-                  
-                    
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
+                          <li class="tech-chip tech-chip--redis">Redis</li>
                         
-                      
-                    
-                    <section class="project-entry">
-                      <h3>SMS Spam Classifier</h3>
-                      
-                        <ul class="tech-stack-list">
-                          
-                            <li class="tech-chip tech-chip--nltk">NLTK</li>
-                          
-                            <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
-                          
-                            <li class="tech-chip tech-chip--streamlit">Streamlit</li>
-                          
-                        </ul>
-                      
-                      <p>NLP-based classifier distinguishing spam from ham SMS messages in real time.</p>
-                      
-                        <ul>
-                          
-                            
-                              <li>Engineered text and structural features (URLs, punctuation, uppercase ratio).</li>
-                            
-                          
-                            
-                              <li>Compared Naive Bayes variants; selected BernoulliNB for best precision.</li>
-                            
-                          
-                            
-                              <li>Achieved ~97% accuracy with a live Streamlit prediction interface.</li>
-                            
-                          
-                            
-                          
-                        </ul>
-                      
-                      
-                        <div class="project-cta-group">
-                          
-                            <a class="project-cta project-cta-github magnetic"
-                               href="https://github.com/Maddy-MM/sms-spam-classifier"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="View SMS Spam Classifier on GitHub">
-                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                              GitHub
-                            </a>
-                          
-                          
-                            <a class="project-cta project-cta-demo magnetic"
-                               href="https://sms-spam-classifier-6swv8cbspbnma9ydsuludw.streamlit.app/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="View live demo of SMS Spam Classifier">
-                              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
-                              View Project
-                            </a>
-                          
-                        </div>
-                      
-                    </section>
-                  
-                    
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
+                          <li class="tech-chip tech-chip--jwt">JWT</li>
                         
-                      
-                    
-                    <section class="project-entry">
-                      <h3>Credit Card Customer Churn Prediction (ANN)</h3>
-                      
-                        <ul class="tech-stack-list">
-                          
-                            <li class="tech-chip tech-chip--tensorflow/keras">TensorFlow/Keras</li>
-                          
-                            <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
-                          
-                            <li class="tech-chip tech-chip--pandas">Pandas</li>
-                          
-                        </ul>
-                      
-                      <p>Deep learning ANN model predicting bank customer churn from demographic and account data.</p>
-                      
-                        <ul>
-                          
-                            
-                              <li>Preprocessed data with one-hot encoding and StandardScaler.</li>
-                            
-                          
-                            
-                              <li>Built a 2-hidden-layer ANN with ReLU and Sigmoid output.</li>
-                            
-                          
-                            
-                              <li>Achieved ~86% test accuracy with early stopping to prevent overfitting.</li>
-                            
-                          
-                            
-                          
-                        </ul>
-                      
-                      
-                        <div class="project-cta-group">
-                          
-                            <a class="project-cta project-cta-github magnetic"
-                               href="https://github.com/Maddy-MM/customer-churn-prediction"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               aria-label="View Credit Card Customer Churn Prediction (ANN) on GitHub">
-                              <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                              GitHub
-                            </a>
-                          
-                          
-                        </div>
-                      
-                    </section>
-                  
-                </details>
-              
-            </section>
-          
-
-          
-            <section class="content-panel">
-              <h2 class="section-heading">Volunteer Experience</h2>
-              
-                <section class="divided-entry">
-                  <h3>
-                    
-                      Educator at Nanua Samagra Sewa Samiti
-                    
-                  </h3>
-                  
-                  <p>Taught mathematics and science to underprivileged children.</p>
-                  
-                    <ul>
-                      <li>Conducted 6+ teaching sessions.</li><li>Helped students improve academic understanding.</li>
-                    </ul>
-                  
-                </section>
-              
-                <section class="divided-entry">
-                  <h3>
-                    
-                      Mentor at Desh Ke Mentor
-                    
-                  </h3>
-                  
-                  <p>Mentored students on academics and career planning.</p>
-                  
-                    <ul>
-                      <li>Guided 4 students through one-on-one mentoring.</li>
-                    </ul>
-                  
-                </section>
-              
-            </section>
-          
-
-          
-        </main>
-
-        <!-- Sidebar Section -->
-        <aside>
-          
-            <section id="education">
-              <h2 class="section-heading">Education</h2>
-              
-                <section class="education-card">
-                  <div class="education-header">
-                    
-                      <img class="education-logo"
-                           src="img/DTU_logo.webp"
-                           alt="Delhi Technological University logo"
-                           width="40"
-                           height="40">
-                    
-                    <div class="education-heading-group">
-                      <h3 class="education-name">
+                          <li class="tech-chip tech-chip--prometheus">Prometheus</li>
                         
-                          <a href="https://www.dtu.ac.in" target="_blank" rel="noopener noreferrer">Delhi Technological University</a>
+                          <li class="tech-chip tech-chip--grafana">Grafana</li>
                         
-                      </h3>
-                      <p class="section-label education-location">Delhi, India</p>
-                    </div>
+                      </ul>
+                    
                   </div>
                   
-                    <h4>Degrees</h4>
-                    <ul>
-                      <li>B.Tech in Engineering Physics</li><li>Minor in Computer Science</li>
+                    <p class="other-project-summary">Production-grade ML API for real-time vehicle price prediction.</p>
+                  
+                  
+                    <ul class="other-project-highlights">
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Built a FastAPI inference service serving real-time price predictions.</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Integrated Redis caching to eliminate redundant inference calls.</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Enforced JWT + API key auth with Prometheus/Grafana observability.</span>
+                          </li>
+                        
+                      
+                        
+                      
                     </ul>
                   
                   
-                  
-                    <p>
+                    <div class="other-project-card-actions">
                       
-                      <span class="block">Cumulative GPA: 7.21</span>
-                      <span class="block">Graduation Date: 2026</span>
-                    </p>
-                  
-                </section>
-              
-            </section>
-          
-
-          
-            <section id="skills">
-              <h2 class="section-heading">Skills</h2>
-              <ul class="unstyled-list">
-                
-                  <li>
-                    <h3>Python</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 90%"
-                           role="meter"
-                           aria-valuenow="90"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Advanced</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>FastAPI</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 90%"
-                           role="meter"
-                           aria-valuenow="90"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Advanced</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Docker</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 85%"
-                           role="meter"
-                           aria-valuenow="85"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Advanced</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>LangChain</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 85%"
-                           role="meter"
-                           aria-valuenow="85"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Advanced</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>RAG Systems</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 85%"
-                           role="meter"
-                           aria-valuenow="85"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Advanced</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Machine Learning</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 80%"
-                           role="meter"
-                           aria-valuenow="80"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Intermediate</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>SQL</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 80%"
-                           role="meter"
-                           aria-valuenow="80"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Intermediate</span>
-                      </div>
-                    </div>
-                  </li>
-                
-                  <li>
-                    <h3>Redis</h3>
-                    <div class="skill-bar">
-                      <div class="skill-bar-fill"
-                           style="--target-width: 75%"
-                           role="meter"
-                           aria-valuenow="75"
-                           aria-valuemin="0"
-                           aria-valuemax="100">
-                        <span class="skill-bar-label">Intermediate</span>
-                      </div>
-                    </div>
-                  </li>
-                
-              </ul>
-            </section>
-          
-
-          
-            <section>
-              <h2 class="section-heading">Languages</h2>
-              <ul class="unstyled-list">
-                
-                  <li>
-                    <h3>English</h3>
-                    <p class="section-label">Professional</p>
-                  </li>
-                
-                  <li>
-                    <h3>Hindi</h3>
-                    <p class="section-label">Native</p>
-                  </li>
-                
-              </ul>
-            </section>
-          
-
-          
-            <section>
-              <h2 class="section-heading">Achievements</h2>
-              
-                <section>
-                  <h3>NPTEL Achievement</h3>
-                  <p>Ranked among the top 5% in NPTEL Introduction to Database and featured in the Q4 toppers list.</p>
-                  
-                </section>
-              
-                <section>
-                  <h3>Olympiad Achievements</h3>
-                  <p>Qualified Level 2 in SOF Olympiads with notable international and Delhi rankings.</p>
-                  
-                </section>
-              
-            </section>
-          
-
-          
-            <section>
-              <h2 class="section-heading">Hobbies</h2>
-              
-                <section class="hobby-card">
-                  <h3 class="hobby-title">TV Shows</h3>
-                  <p class="hobby-summary">A good TV show is usually how I switch off after a long day. Some favorites are Panchayat, The Sopranos, Monk, and The Mentalist.</p>
-                  
-                    <div class="gallery side-gallery interest-gallery hobby-gallery">
+                        <a class="other-project-btn other-project-btn-demo"
+                           href="https://car-value-inference-api.onrender.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View live demo of Car Price Prediction API">
+                          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                          <span>Live Demo</span>
+                        </a>
                       
-                        <figure>
-                          <img width="600"
-                               height="338"
-                               src="img/entertainment.jpeg"
-                               alt="TV Shows"
-                               loading="lazy"
-                               decoding="async">
-                          <figcaption>TV Shows</figcaption>
-                        </figure>
+                      
+                        <a class="other-project-btn other-project-btn-github"
+                           href="https://github.com/Maddy-MM/car-value-inference-api"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View Car Price Prediction API on GitHub">
+                          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          <span>GitHub</span>
+                        </a>
                       
                     </div>
                   
-                </section>
+                </article>
               
-                <section class="hobby-card">
-                  <h3 class="hobby-title">Reading</h3>
-                  <p class="hobby-summary">I enjoy reading whenever I get the chance, especially works by authors like Ruskin Bond and Satyajit Ray. I tend to gravitate toward stories that are simple, engaging, and stay with you long after you&#39;ve finished them.</p>
+                
+                
+                
                   
-                    <div class="gallery side-gallery interest-gallery hobby-gallery">
+                
+                  
+                
+                  
+                
+                  
+                    
+                  
+                
+                <article class="other-project-card">
+                  <div class="other-project-card-header">
+                    <h4>Movie Recommender System</h4>
+                    
+                      <ul class="tech-stack-list other-project-tech-list">
+                        
+                          <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
+                        
+                          <li class="tech-chip tech-chip--tf-idf">TF-IDF</li>
+                        
+                          <li class="tech-chip tech-chip--streamlit">Streamlit</li>
+                        
+                          <li class="tech-chip tech-chip--tmdb-api">TMDB API</li>
+                        
+                      </ul>
+                    
+                  </div>
+                  
+                    <p class="other-project-summary">Content-based movie recommender using metadata similarity, deployed as a Streamlit app.</p>
+                  
+                  
+                    <ul class="other-project-highlights">
                       
-                        <figure>
-                          <img width="600"
-                               height="338"
-                               src="img/reading.jpeg"
-                               alt="Reading"
-                               loading="lazy"
-                               decoding="async">
-                          <figcaption>Reading</figcaption>
-                        </figure>
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Engineered tags from overview, genres, cast, and crew.</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Vectorized text with TF-IDF and computed cosine similarity.</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Fetched real-time posters via the TMDB API in a Streamlit UI.</span>
+                          </li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  
+                  
+                    <div class="other-project-card-actions">
+                      
+                        <a class="other-project-btn other-project-btn-demo"
+                           href="https://movie-recommender-system-cgjbuwdm3ztug4cmvvpduu.streamlit.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View live demo of Movie Recommender System">
+                          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                          <span>Live Demo</span>
+                        </a>
+                      
+                      
+                        <a class="other-project-btn other-project-btn-github"
+                           href="https://github.com/Maddy-MM/movie-recommender-system"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View Movie Recommender System on GitHub">
+                          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          <span>GitHub</span>
+                        </a>
                       
                     </div>
                   
-                </section>
+                </article>
               
-                <section class="hobby-card">
-                  <h3 class="hobby-title">Night Walks</h3>
-                  <p class="hobby-summary">I like taking long walks, especially when I need a break from screens or want to clear my head after a busy day.</p>
+                
+                
+                
                   
-                    <div class="gallery side-gallery interest-gallery hobby-gallery">
+                
+                  
+                
+                  
+                
+                  
+                    
+                  
+                
+                <article class="other-project-card">
+                  <div class="other-project-card-header">
+                    <h4>SMS Spam Classifier</h4>
+                    
+                      <ul class="tech-stack-list other-project-tech-list">
+                        
+                          <li class="tech-chip tech-chip--nltk">NLTK</li>
+                        
+                          <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
+                        
+                          <li class="tech-chip tech-chip--streamlit">Streamlit</li>
+                        
+                      </ul>
+                    
+                  </div>
+                  
+                    <p class="other-project-summary">NLP-based classifier distinguishing spam from ham SMS messages in real time.</p>
+                  
+                  
+                    <ul class="other-project-highlights">
                       
-                        <figure>
-                          <img width="600"
-                               height="338"
-                               src="img/walking.jpeg"
-                               alt="Night Walks"
-                               loading="lazy"
-                               decoding="async">
-                          <figcaption>Night Walks</figcaption>
-                        </figure>
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Engineered text and structural features (URLs, punctuation, uppercase ratio).</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Compared Naive Bayes variants; selected BernoulliNB for best precision.</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Achieved ~97% accuracy with a live Streamlit prediction interface.</span>
+                          </li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  
+                  
+                    <div class="other-project-card-actions">
+                      
+                        <a class="other-project-btn other-project-btn-demo"
+                           href="https://sms-spam-classifier-6swv8cbspbnma9ydsuludw.streamlit.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View live demo of SMS Spam Classifier">
+                          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M6.22 8.72a.75.75 0 0 0 1.06 1.06l5.22-5.22v1.69a.75.75 0 0 0 1.5 0v-3.5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0 0 1.5h1.69L6.22 8.72ZM3.5 3a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V9a.75.75 0 0 0-1.5 0v3.5a0 0 0 0 1-1 0v-8a0 0 0 0 1 0-1H7a.75.75 0 0 0 0-1.5H3.5Z"/></svg>
+                          <span>Live Demo</span>
+                        </a>
+                      
+                      
+                        <a class="other-project-btn other-project-btn-github"
+                           href="https://github.com/Maddy-MM/sms-spam-classifier"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View SMS Spam Classifier on GitHub">
+                          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          <span>GitHub</span>
+                        </a>
                       
                     </div>
                   
-                </section>
+                </article>
               
-            </section>
-          
-        </aside>
-      </div>
-    </div>
-
-    <footer class="page-footer">
-      <div class="page-footer__aurora" aria-hidden="true">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="container footer-content">
-        
-          <ul class="footer-social-list">
-            
-              <li>
-                <a href="https://github.com/Maddy-MM"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="GitHub"
-                   class="footer-social-link">
+                
+                
+                
                   
-                    <img src="img/github.svg" alt="" width="18" height="18">
+                
                   
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://www.linkedin.com/in/madhav-makwana-5331a4319/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="LinkedIn"
-                   class="footer-social-link">
+                
                   
-                    <img src="img/linkedin.svg" alt="" width="18" height="18">
+                
                   
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://www.instagram.com/madhav_7184?igsh=MWE0YWFlNHl0ZWhqcA%3D%3D&amp;utm_source=qr"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Instagram"
-                   class="footer-social-link">
+                    
                   
-                    <img src="img/instagram.svg" alt="" width="18" height="18">
+                
+                <article class="other-project-card">
+                  <div class="other-project-card-header">
+                    <h4>Credit Card Customer Churn Prediction (ANN)</h4>
+                    
+                      <ul class="tech-stack-list other-project-tech-list">
+                        
+                          <li class="tech-chip tech-chip--tensorflow-keras">TensorFlow/Keras</li>
+                        
+                          <li class="tech-chip tech-chip--scikit-learn">Scikit-learn</li>
+                        
+                          <li class="tech-chip tech-chip--pandas">Pandas</li>
+                        
+                      </ul>
+                    
+                  </div>
                   
-                </a>
-              </li>
-            
-          </ul>
-        
-        <div class="footer-bottom-row">
-          <p class="footer-copyright">© 2026 Madhav Makwana. All rights reserved.</p>
+                    <p class="other-project-summary">Deep learning ANN model predicting bank customer churn from demographic and account data.</p>
+                  
+                  
+                    <ul class="other-project-highlights">
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Preprocessed data with one-hot encoding and StandardScaler.</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Built a 2-hidden-layer ANN with ReLU and Sigmoid output.</span>
+                          </li>
+                        
+                      
+                        
+                          <li>
+                            <svg class="highlight-bullet-icon" viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>
+                            <span>Achieved ~86% test accuracy with early stopping to prevent overfitting.</span>
+                          </li>
+                        
+                      
+                        
+                      
+                    </ul>
+                  
+                  
+                    <div class="other-project-card-actions">
+                      
+                      
+                        <a class="other-project-btn other-project-btn-github"
+                           href="https://github.com/Maddy-MM/customer-churn-prediction"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View Credit Card Customer Churn Prediction (ANN) on GitHub">
+                          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                          <span>GitHub</span>
+                        </a>
+                      
+                    </div>
+                  
+                </article>
+              
+            </div>
+          </div>
+          <footer class="other-projects-modal-footer">
+            <div class="other-projects-footer-info">
+              <span class="footer-info-dot"></span>
+              <span class="other-projects-total-count">4 Projects in Archive</span>
+            </div>
+            <a class="other-projects-github-profile-btn"
+               href="https://github.com/Maddy-MM?tab=repositories"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="View more repositories on GitHub">
+              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              <span>Explore All Repositories on GitHub</span>
+              <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06Z"/></svg>
+            </a>
+          </footer>
         </div>
-        <p class="footer-attribution">Built with Python &amp; Jinja2</p>
       </div>
-    </footer>
+    
+
+    
+      <div class="avatar-modal-overlay" id="avatar-modal-overlay" role="dialog" aria-modal="true" aria-label="Profile Picture View">
+        <button class="avatar-modal-close" id="avatar-modal-close-btn" type="button" aria-label="Close profile picture">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="avatar-modal-dialog">
+          <div class="avatar-modal-card id-badge-card" id="avatar-modal-card">
+            <div class="id-badge-slot" aria-hidden="true"></div>
+            <div class="id-badge-header">
+              <div class="id-badge-chip">
+                <span class="id-badge-dot"></span>
+                <span>ENGINEER PROFILE</span>
+              </div>
+              <span class="id-badge-code">DTU &bull; '26</span>
+            </div>
+            <div class="avatar-modal-img-wrap">
+              <img class="avatar-modal-img"
+                   src="img/madhav.jpeg"
+                   alt="Madhav Makwana Profile Photo" />
+            </div>
+            <div class="avatar-modal-meta">
+              <h3 class="avatar-modal-name">Madhav Makwana</h3>
+              
+                <p class="id-badge-subtitle">Backend Engineer &amp; AI Developer</p>
+              
+              <div class="id-badge-pills">
+                <span class="id-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span>Delhi Technological University</span>
+                </span>
+                <span class="id-pill id-pill--batch">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <span>Class of 2026</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="avatar-modal-hint" aria-hidden="true">
+            <span>Click anywhere outside to close</span>
+          </div>
+        </div>
+      </div>
+    
 
     <script src="js/app.js"></script>
   </body>

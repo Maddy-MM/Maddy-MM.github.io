@@ -6,7 +6,7 @@
 
     <!-- Site Info -->
     <title>{{ name }} - Resume</title>
-    <meta name="description" content="{{ name }} - {{ summary }}">
+    <meta name="description" content="{{ name }} - {{ summary | striptags }}">
     <meta name="author" content="{{ name }}">
 
     <!-- Open Graph Tags: The title of the page for social media sharing. It can match the title tag or be more descriptive. -->
@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Custom Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet">
 
     <!-- Stylesheet -->
@@ -78,7 +78,7 @@
                 </ul>
               </address>
             {% endif %}
-            {% if summary %}<p class="header-summary">{{ summary }}</p>{% endif %}
+            {% if summary %}<p class="header-summary">{{ summary | safe }}</p>{% endif %}
           </div>
         </div>
       </div>
