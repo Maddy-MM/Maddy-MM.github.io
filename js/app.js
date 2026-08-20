@@ -38,12 +38,21 @@ function initLightbox() {
     overlayImg.src = src;
     overlayImg.alt = alt;
     overlay.classList.add("is-open");
+    document.body.classList.add("modal-open");
+    document.documentElement.classList.add("modal-open");
     document.body.style.overflow = "hidden";
   }
 
   function closeLightbox() {
     overlay.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+    document.documentElement.classList.remove("modal-open");
     document.body.style.overflow = "";
+    setTimeout(() => {
+      if (!overlay.classList.contains("is-open")) {
+        overlayImg.src = "";
+      }
+    }, 300);
   }
 
   document.querySelectorAll(".main-gallery img, .side-gallery img, .hobby-media img").forEach((img) => {
@@ -55,7 +64,7 @@ function initLightbox() {
     if (e.target === overlay) closeLightbox();
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) closeLightbox();
   });
 }
 
@@ -66,13 +75,24 @@ function initBackToTop() {
   btn.innerHTML = "&uarr;";
   document.body.appendChild(btn);
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-      btn.classList.add("is-visible");
-    } else {
-      btn.classList.remove("is-visible");
-    }
-  });
+  let ticking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 500) {
+            btn.classList.add("is-visible");
+          } else {
+            btn.classList.remove("is-visible");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
 
   btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -957,6 +977,7 @@ function initOtherProjectsModal() {
 function initInteractiveGridSpotlight(selector, prefix) {
   const container = document.querySelector(selector);
   if (!container) return;
+  if (window.matchMedia("(hover: none)").matches) return;
 
   let mouseX = -500;
   let mouseY = -500;
@@ -1089,13 +1110,13 @@ function initFooterSpotlight() {
 }
 
 function initScrollReveal() {
-  const sections = document.querySelectorAll("main > section, aside > section");
+  const sections = document.querySelectorAll("main > section");
 
   sections.forEach((section) => {
     section.classList.add("reveal-section");
 
     const items = section.querySelectorAll(
-      ".timeline-entry, .education-card, .skill-list, .hobby-panel, .language-card, .achievement-compact-entry, .project-carousel"
+      ".timeline-entry, .project-carousel"
     );
     items.forEach((item, index) => {
       item.classList.add("reveal-child");

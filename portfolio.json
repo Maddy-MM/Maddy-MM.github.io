@@ -62,7 +62,7 @@
     ],
     "images": [
       {
-        "img_path": "img/llm-gateway.png",
+        "img_path": "img/llm-gateway.webp",
         "caption": "LLM Gateway Architecture"
       }
     ]
@@ -82,7 +82,7 @@
     ],
     "images": [
       {
-        "img_path": "img/researchmind.png",
+        "img_path": "img/researchmind.webp",
         "caption": "ResearchMind Dashboard"
       }
     ]
@@ -102,7 +102,7 @@
     ],
     "images": [
       {
-        "img_path": "img/ytlens.png",
+        "img_path": "img/ytlens.webp",
         "caption": "YTLens Interface"
       }
     ]
@@ -265,7 +265,7 @@
 "summary": "A good crime thriller or mystery drama is usually how I switch off after a long day of coding. Big fan of character-driven classics like The Sopranos and Bosch, along with the comforting mystery-solving quirks in Monk and The Mentalist. There's something deeply engaging about complex protagonists and sharp dialogue.",
 "images": [
 {
-"img_path": "img/entertainment.jpeg",
+"img_path": "img/entertainment.webp",
 "caption": "The Sopranos"
 }
 ]
@@ -275,7 +275,7 @@
 "summary": "I enjoy reading whenever I get a quiet moment, particularly classic Indian fiction and detective stories. Ruskin Bond's nostalgic tales of the Himalayan hills and Satyajit Ray's Feluda mysteries are perennial favorites. I gravitate toward narrative simplicity, charming atmosphere, and stories that stay with you long after the last page.",
 "images": [
 {
-"img_path": "img/reading.jpeg",
+"img_path": "img/reading.webp",
 "caption": "The Adventures of Feluda"
 }
 ]
@@ -285,7 +285,7 @@
 "summary": "Taking long evening walks is my favorite ritual to disconnect from screens and decompress after a day at the keyboard. Whether exploring quiet neighborhood trails or walking under city lights with a podcast or ambient soundtrack, it's where my best debugging breakthroughs and project ideas usually happen.",
 "images": [
 {
-"img_path": "img/walking.jpeg",
+"img_path": "img/walking.webp",
 "caption": "Quiet Trails"
 }
 ]

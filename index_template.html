@@ -291,7 +291,7 @@
                         <span class="project-card-badge-dot"></span>
                         Viewing
                       </span>
-                      <img src="{{ project.images[0].img_path }}" alt="" loading="eager">
+                      <img src="{{ project.images[0].img_path }}" alt="" loading="lazy" decoding="async">
                     </div>
                   {% endif %}
                   <div class="project-card-body">
@@ -458,7 +458,8 @@
                            alt="{{ edu.institution }} logo"
                            width="44"
                            height="44"
-                           loading="eager">
+                           loading="lazy"
+                           decoding="async">
                     {% endif %}
                     <div class="education-heading-group">
                       <h3 class="education-name">
@@ -621,7 +622,8 @@
                                height="338"
                                src="{{ interest.images[0].img_path }}"
                                alt="{{ interest.images[0].caption }}"
-                               loading="eager">
+                               loading="lazy"
+                               decoding="async">
                           <div class="hobby-media-overlay" aria-hidden="true"></div>
                           <span class="hobby-tag">{{ interest.images[0].caption }}</span>
                         </div>
@@ -784,7 +786,8 @@
                           <div class="project-modal-img-wrap">
                             <img src="{{ img.img_path }}"
                                  alt="{{ img.caption }}"
-                                 loading="eager">
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="project-modal-img-hint" aria-hidden="true">
                               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
                               <span>Click to enlarge</span>
@@ -970,7 +973,8 @@
               <img class="avatar-modal-img"
                    src="{{ image_path }}"
                    alt="{{ name }} Profile Photo"
-                   loading="eager" />
+                   loading="lazy"
+                   decoding="async" />
             </div>
             <div class="avatar-modal-meta">
               <h3 class="avatar-modal-name">{{ name }}</h3>
