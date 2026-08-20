@@ -56,7 +56,10 @@ function initLightbox() {
   }
 
   document.querySelectorAll(".main-gallery img, .side-gallery img, .hobby-media img").forEach((img) => {
-    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+    img.addEventListener("click", () => {
+      if (window.matchMedia("(max-width: 47.99rem)").matches) return;
+      openLightbox(img.src, img.alt);
+    });
   });
 
   closeBtn.addEventListener("click", closeLightbox);
