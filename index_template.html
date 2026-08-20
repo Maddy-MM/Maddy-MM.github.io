@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="css/modern_normalize.css" />
     <link rel="stylesheet" href="css/html5bp.css">
     <link rel="stylesheet" href="css/main.css">
+    {% if image_path %}
+    <link rel="preload" as="image" href="{{ image_path }}" fetchpriority="high">
+    {% endif %}
 
     <!-- Set a theme color that matches your website's primary color -->
     <meta name="theme-color" content="#fafafa">
@@ -100,7 +103,9 @@
                      width="256"
                      height="256"
                      src="{{ image_path }}"
-                     alt="{{ name }} Profile Image" />
+                     alt="{{ name }} Profile Image"
+                     loading="eager"
+                     fetchpriority="high" />
               </div>
               <div class="avatar-meta-badge" title="Delhi Technological University • Class of 2026">
                 <svg class="avatar-meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
@@ -286,7 +291,7 @@
                         <span class="project-card-badge-dot"></span>
                         Viewing
                       </span>
-                      <img src="{{ project.images[0].img_path }}" alt="" loading="lazy" decoding="async">
+                      <img src="{{ project.images[0].img_path }}" alt="" loading="eager">
                     </div>
                   {% endif %}
                   <div class="project-card-body">
@@ -452,7 +457,8 @@
                            src="{{ edu.logo_path }}"
                            alt="{{ edu.institution }} logo"
                            width="44"
-                           height="44">
+                           height="44"
+                           loading="eager">
                     {% endif %}
                     <div class="education-heading-group">
                       <h3 class="education-name">
@@ -615,8 +621,7 @@
                                height="338"
                                src="{{ interest.images[0].img_path }}"
                                alt="{{ interest.images[0].caption }}"
-                               loading="lazy"
-                               decoding="async">
+                               loading="eager">
                           <div class="hobby-media-overlay" aria-hidden="true"></div>
                           <span class="hobby-tag">{{ interest.images[0].caption }}</span>
                         </div>
@@ -779,8 +784,7 @@
                           <div class="project-modal-img-wrap">
                             <img src="{{ img.img_path }}"
                                  alt="{{ img.caption }}"
-                                 loading="lazy"
-                                 decoding="async">
+                                 loading="eager">
                             <div class="project-modal-img-hint" aria-hidden="true">
                               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
                               <span>Click to enlarge</span>
@@ -965,7 +969,8 @@
             <div class="avatar-modal-img-wrap">
               <img class="avatar-modal-img"
                    src="{{ image_path }}"
-                   alt="{{ name }} Profile Photo" />
+                   alt="{{ name }} Profile Photo"
+                   loading="eager" />
             </div>
             <div class="avatar-modal-meta">
               <h3 class="avatar-modal-name">{{ name }}</h3>

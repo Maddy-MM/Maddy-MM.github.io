@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="css/modern_normalize.css" />
     <link rel="stylesheet" href="css/html5bp.css">
     <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="preload" as="image" href="img/madhav.jpeg" fetchpriority="high">
+    
 
     <!-- Set a theme color that matches your website's primary color -->
     <meta name="theme-color" content="#fafafa">
@@ -100,7 +103,9 @@
                      width="256"
                      height="256"
                      src="img/madhav.jpeg"
-                     alt="Madhav Makwana Profile Image" />
+                     alt="Madhav Makwana Profile Image"
+                     loading="eager"
+                     fetchpriority="high" />
               </div>
               <div class="avatar-meta-badge" title="Delhi Technological University • Class of 2026">
                 <svg class="avatar-meta-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
@@ -341,7 +346,7 @@
                         <span class="project-card-badge-dot"></span>
                         Viewing
                       </span>
-                      <img src="img/llm-gateway.png" alt="" loading="lazy" decoding="async">
+                      <img src="img/llm-gateway.png" alt="" loading="eager">
                     </div>
                   
                   <div class="project-card-body">
@@ -399,7 +404,7 @@
                         <span class="project-card-badge-dot"></span>
                         Viewing
                       </span>
-                      <img src="img/researchmind.png" alt="" loading="lazy" decoding="async">
+                      <img src="img/researchmind.png" alt="" loading="eager">
                     </div>
                   
                   <div class="project-card-body">
@@ -453,7 +458,7 @@
                         <span class="project-card-badge-dot"></span>
                         Viewing
                       </span>
-                      <img src="img/ytlens.png" alt="" loading="lazy" decoding="async">
+                      <img src="img/ytlens.png" alt="" loading="eager">
                     </div>
                   
                   <div class="project-card-body">
@@ -623,7 +628,8 @@
                            src="img/DTU_logo.webp"
                            alt="Delhi Technological University logo"
                            width="44"
-                           height="44">
+                           height="44"
+                           loading="eager">
                     
                     <div class="education-heading-group">
                       <h3 class="education-name">
@@ -927,8 +933,7 @@
                                height="338"
                                src="img/entertainment.jpeg"
                                alt="The Sopranos"
-                               loading="lazy"
-                               decoding="async">
+                               loading="eager">
                           <div class="hobby-media-overlay" aria-hidden="true"></div>
                           <span class="hobby-tag">The Sopranos</span>
                         </div>
@@ -970,8 +975,7 @@
                                height="338"
                                src="img/reading.jpeg"
                                alt="The Adventures of Feluda"
-                               loading="lazy"
-                               decoding="async">
+                               loading="eager">
                           <div class="hobby-media-overlay" aria-hidden="true"></div>
                           <span class="hobby-tag">The Adventures of Feluda</span>
                         </div>
@@ -1013,8 +1017,7 @@
                                height="338"
                                src="img/walking.jpeg"
                                alt="Quiet Trails"
-                               loading="lazy"
-                               decoding="async">
+                               loading="eager">
                           <div class="hobby-media-overlay" aria-hidden="true"></div>
                           <span class="hobby-tag">Quiet Trails</span>
                         </div>
@@ -1275,8 +1278,7 @@
                           <div class="project-modal-img-wrap">
                             <img src="img/llm-gateway.png"
                                  alt="LLM Gateway Architecture"
-                                 loading="lazy"
-                                 decoding="async">
+                                 loading="eager">
                             <div class="project-modal-img-hint" aria-hidden="true">
                               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
                               <span>Click to enlarge</span>
@@ -1409,8 +1411,7 @@
                           <div class="project-modal-img-wrap">
                             <img src="img/researchmind.png"
                                  alt="ResearchMind Dashboard"
-                                 loading="lazy"
-                                 decoding="async">
+                                 loading="eager">
                             <div class="project-modal-img-hint" aria-hidden="true">
                               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
                               <span>Click to enlarge</span>
@@ -1550,8 +1551,7 @@
                           <div class="project-modal-img-wrap">
                             <img src="img/ytlens.png"
                                  alt="YTLens Interface"
-                                 loading="lazy"
-                                 decoding="async">
+                                 loading="eager">
                             <div class="project-modal-img-hint" aria-hidden="true">
                               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
                               <span>Click to enlarge</span>
@@ -2000,7 +2000,8 @@
             <div class="avatar-modal-img-wrap">
               <img class="avatar-modal-img"
                    src="img/madhav.jpeg"
-                   alt="Madhav Makwana Profile Photo" />
+                   alt="Madhav Makwana Profile Photo"
+                   loading="eager" />
             </div>
             <div class="avatar-modal-meta">
               <h3 class="avatar-modal-name">Madhav Makwana</h3>
