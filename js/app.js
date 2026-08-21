@@ -484,27 +484,61 @@ function initProjectCarousel() {
 
     // Treat edge proximity as authoritative so decorative edge spacing
     // can't leave the carousel one click short of a true first/last state.
-    if (currentScroll <= 2) {
+    if (currentScroll <= 4) {
       setActive(0);
       return;
     }
-    if (currentScroll >= maxScrollLeft - 2) {
+    if (currentScroll >= maxScrollLeft - 4) {
       setActive(cards.length - 1);
       return;
     }
 
+    const trackRect = track.getBoundingClientRect();
+    const trackCenter = trackRect.left + trackRect.width / 2;
+
     let closestIndex = 0;
     let closestDistance = Infinity;
 
-    cards.forEach((_, i) => {
-      const distance = Math.abs(getCardTargetScrollLeft(i) - currentScroll);
+    cards.forEach((card, i) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(cardCenter - trackCenter);
       if (distance < closestDistance) {
         closestDistance = distance;
         closestIndex = i;
       }
     });
 
-    setActive(closestIndex);
+    if (closestIndex !== activeIndex) {
+      setActive(closestIndex);
+    }
+  }
+
+  // Real-time swipe/scroll tracking: automatically focuses active card on swipe
+  let scrollRafId = null;
+  track.addEventListener(
+    "scroll",
+    () => {
+      if (isProgrammaticScroll) return;
+      if (scrollRafId) cancelAnimationFrame(scrollRafId);
+      scrollRafId = requestAnimationFrame(() => {
+        detectActiveCard();
+        scrollRafId = null;
+      });
+    },
+    { passive: true }
+  );
+
+  if ("onscrollend" in window) {
+    track.addEventListener(
+      "scrollend",
+      () => {
+        if (!isProgrammaticScroll) {
+          detectActiveCard();
+        }
+      },
+      { passive: true }
+    );
   }
 
   dots.forEach((dot, i) => {
