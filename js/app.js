@@ -464,18 +464,15 @@ function initProjectCarousel() {
   track._scrollToCard = scrollToCard;
 
   function getCardTargetScrollLeft(index) {
+    if (index === 0) return 0;
+    const maxScrollLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+    if (index === cards.length - 1) return maxScrollLeft;
+
     const card = cards[index];
     const cardRect = card.getBoundingClientRect();
     const trackRect = track.getBoundingClientRect();
     const cardLeftInContent = cardRect.left - trackRect.left + track.scrollLeft;
-
-    if (index === 0) {
-      return cardLeftInContent;
-    }
-    if (index === cards.length - 1) {
-      return cardLeftInContent + cardRect.width - track.clientWidth;
-    }
-    return cardLeftInContent + cardRect.width / 2 - track.clientWidth / 2;
+    return Math.max(0, Math.min(maxScrollLeft, cardLeftInContent + cardRect.width / 2 - track.clientWidth / 2));
   }
 
   function detectActiveCard() {
@@ -484,25 +481,21 @@ function initProjectCarousel() {
 
     // Treat edge proximity as authoritative so decorative edge spacing
     // can't leave the carousel one click short of a true first/last state.
-    if (currentScroll <= 4) {
-      setActive(0);
+    if (currentScroll <= 15) {
+      if (activeIndex !== 0) setActive(0);
       return;
     }
-    if (currentScroll >= maxScrollLeft - 4) {
-      setActive(cards.length - 1);
+    if (currentScroll >= maxScrollLeft - 15) {
+      if (activeIndex !== cards.length - 1) setActive(cards.length - 1);
       return;
     }
-
-    const trackRect = track.getBoundingClientRect();
-    const trackCenter = trackRect.left + trackRect.width / 2;
 
     let closestIndex = 0;
     let closestDistance = Infinity;
 
-    cards.forEach((card, i) => {
-      const cardRect = card.getBoundingClientRect();
-      const cardCenter = cardRect.left + cardRect.width / 2;
-      const distance = Math.abs(cardCenter - trackCenter);
+    cards.forEach((_, i) => {
+      const target = getCardTargetScrollLeft(i);
+      const distance = Math.abs(target - currentScroll);
       if (distance < closestDistance) {
         closestDistance = distance;
         closestIndex = i;
