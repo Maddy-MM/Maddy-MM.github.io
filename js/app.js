@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  initPreventPinchZoom();
   initStickyBar();
   initHeaderTilt();
   initHeaderSpotlight();
@@ -56,10 +57,7 @@ function initLightbox() {
   }
 
   document.querySelectorAll(".main-gallery img, .side-gallery img, .hobby-media img").forEach((img) => {
-    img.addEventListener("click", () => {
-      if (window.matchMedia("(max-width: 47.99rem)").matches) return;
-      openLightbox(img.src, img.alt);
-    });
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
   });
 
   closeBtn.addEventListener("click", closeLightbox);
@@ -1299,6 +1297,61 @@ function initAvatarModal() {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && overlay.classList.contains("is-open")) {
       closeAvatarModal();
+    }
+  });
+}
+
+function initPreventPinchZoom() {
+  // 1. Intercept multi-touch gestures on mobile touchscreens (pinch-to-zoom)
+  document.addEventListener(
+    "touchstart",
+    (e) => {
+      if (e.touches && e.touches.length > 1) {
+        e.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+
+  document.addEventListener(
+    "touchmove",
+    (e) => {
+      if (e.touches && e.touches.length > 1) {
+        e.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+
+  // 2. Intercept iOS Safari WebKit gesture events
+  document.addEventListener("gesturestart", (e) => {
+    e.preventDefault();
+  });
+  document.addEventListener("gesturechange", (e) => {
+    e.preventDefault();
+  });
+  document.addEventListener("gestureend", (e) => {
+    e.preventDefault();
+  });
+
+  // 3. Intercept trackpad pinch-zoom & Ctrl+MouseWheel zoom on desktop
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+
+  // 4. Intercept keyboard zoom shortcuts (Ctrl/Cmd + '+', '-', '=', '0')
+  window.addEventListener("keydown", (e) => {
+    if (
+      (e.ctrlKey || e.metaKey) &&
+      (e.key === "+" || e.key === "-" || e.key === "=" || e.key === "0")
+    ) {
+      e.preventDefault();
     }
   });
 }
