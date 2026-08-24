@@ -5,11 +5,26 @@
      height="16"
      viewBox="0 0 16 16"
      fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
      stroke-linecap="round"
-     stroke-linejoin="round">
-  <rect x="1.5" y="1.5" width="13" height="13" rx="3" />
-  <circle cx="8" cy="8" r="3" />
-  <circle cx="11.5" cy="4.5" r="0.75" fill="currentColor" stroke="none" />
+     stroke-linejoin="round"
+     class="instagram-icon-svg">
+  <defs>
+    <linearGradient id="insta-icon-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f09433" />
+      <stop offset="25%" stop-color="#e6683c" />
+      <stop offset="50%" stop-color="#dc2743" />
+      <stop offset="75%" stop-color="#cc2366" />
+      <stop offset="100%" stop-color="#bc1888" />
+    </linearGradient>
+  </defs>
+  <g class="insta-icon-neutral">
+    <rect x="1.5" y="1.5" width="13" height="13" rx="3" stroke="currentColor" stroke-width="1.5" />
+    <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5" />
+    <circle cx="11.5" cy="4.5" r="0.75" fill="currentColor" stroke="none" />
+  </g>
+  <g class="insta-icon-colored">
+    <rect x="1.5" y="1.5" width="13" height="13" rx="3" stroke="url(#insta-icon-grad)" stroke-width="1.5" />
+    <circle cx="8" cy="8" r="3" stroke="url(#insta-icon-grad)" stroke-width="1.5" />
+    <circle cx="11.5" cy="4.5" r="0.75" fill="url(#insta-icon-grad)" stroke="none" />
+  </g>
 </svg>

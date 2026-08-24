@@ -1680,7 +1680,7 @@ section {
   height: 2.5rem;
   border-radius: 10px;
   background: #ffffff;
-  border: 1.5px solid #cbd5e1;
+  border: 2px solid #cbd5e1;
   color: #475569 !important;
   text-decoration: none !important;
   box-shadow:
@@ -1723,11 +1723,39 @@ section {
   box-shadow: 0 6px 18px rgba(10, 102, 194, 0.24), inset 0 1px 0 #ffffff;
 }
 
+.footer-social-icon-btn[href*="instagram.com"] {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
 .footer-social-icon-btn[href*="instagram.com"]:hover {
-  background: #ffffff;
-  border-color: #dd2a7b;
-  color: #dd2a7b !important;
-  box-shadow: 0 6px 18px rgba(221, 42, 123, 0.24), inset 0 1px 0 #ffffff;
+  border: 2px solid transparent !important;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box !important;
+  box-shadow: 0 6px 18px rgba(220, 39, 67, 0.26), inset 0 1px 0 #ffffff;
+}
+
+/* Instagram SVG Dual-Layer (Neutral / Gradient) Controls */
+.instagram-icon-svg {
+  position: relative;
+}
+
+.instagram-icon-svg .insta-icon-colored {
+  opacity: 0;
+}
+
+.instagram-icon-svg .insta-icon-neutral {
+  opacity: 1;
+}
+
+.page-header .inline-list li:has(a[href*="instagram.com"]):hover .insta-icon-colored,
+.footer-social-icon-btn[href*="instagram.com"]:hover .insta-icon-colored {
+  opacity: 1 !important;
+}
+
+.page-header .inline-list li:has(a[href*="instagram.com"]):hover .insta-icon-neutral,
+.footer-social-icon-btn[href*="instagram.com"]:hover .insta-icon-neutral {
+  opacity: 0 !important;
 }
 
 .footer-bottom-row {
@@ -5121,7 +5149,7 @@ aside li {
   display: inline-flex;
   align-items: center;
   background: #ffffff;
-  border: 1.5px solid #cbd5e1;
+  border: 2px solid #cbd5e1;
   border-radius: 999px;
   padding: 0.32rem 0.8rem;
   max-width: 100%;
@@ -5274,27 +5302,44 @@ aside li {
   transform: scale(1.08);
 }
 
-.page-header .inline-list li:has(a[href*="instagram.com"]):hover {
-  border-color: transparent;
-  background: linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%) border-box;
-  box-shadow: 0 6px 18px rgba(221, 42, 123, 0.24), inset 0 1px 0 #ffffff;
+.page-header .inline-list li:has(a[href*="instagram.com"]) {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 }
 
-.page-header .inline-list li:has(a[href*="instagram.com"]):hover a {
-  color: #dd2a7b !important;
+.page-header .inline-list li:has(a[href*="instagram.com"]):hover {
+  border: 2px solid transparent !important;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box !important;
+  box-shadow: 0 6px 18px rgba(220, 39, 67, 0.26), inset 0 1px 0 #ffffff;
+}
+
+.page-header .inline-list li:has(a[href*="instagram.com"]):hover a,
+.page-header .inline-list li:has(a[href*="instagram.com"]):hover a span {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
 }
 
 .page-header .inline-list li:has(a[href*="instagram.com"]):hover svg {
-  color: #dd2a7b;
   transform: scale(1.08);
 }
 
 /* ── Mobile-Default Brand Colors for Social Media Pills & Buttons ── */
 @media (max-width: 47.99rem) {
+  .instagram-icon-svg .insta-icon-colored {
+    opacity: 1 !important;
+  }
+  .instagram-icon-svg .insta-icon-neutral {
+    opacity: 0 !important;
+  }
+
   /* Header Social Pills */
   .page-header .inline-list li:has(a[href*="github.com"]) {
     border-color: #181717;
+    border-width: 2px;
     box-shadow: 0 2px 8px rgba(24, 23, 23, 0.12), inset 0 1px 0 #ffffff;
   }
   .page-header .inline-list li:has(a[href*="github.com"]) a {
@@ -5306,6 +5351,7 @@ aside li {
 
   .page-header .inline-list li:has(a[href*="linkedin.com"]) {
     border-color: #0a66c2;
+    border-width: 2px;
     box-shadow: 0 2px 8px rgba(10, 102, 194, 0.15), inset 0 1px 0 #ffffff;
   }
   .page-header .inline-list li:has(a[href*="linkedin.com"]) a {
@@ -5316,22 +5362,26 @@ aside li {
   }
 
   .page-header .inline-list li:has(a[href*="instagram.com"]) {
-    border-color: transparent;
-    background: linear-gradient(#ffffff, #ffffff) padding-box,
-      linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%) border-box;
-    box-shadow: 0 2px 8px rgba(221, 42, 123, 0.16), inset 0 1px 0 #ffffff;
+    border: 2px solid transparent !important;
+    background:
+      linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box !important;
+    box-shadow: 0 2px 8px rgba(220, 39, 67, 0.18), inset 0 1px 0 #ffffff;
   }
-  .page-header .inline-list li:has(a[href*="instagram.com"]) a {
-    color: #dd2a7b !important;
-  }
-  .page-header .inline-list li:has(a[href*="instagram.com"]) svg {
-    color: #dd2a7b;
+  .page-header .inline-list li:has(a[href*="instagram.com"]) a,
+  .page-header .inline-list li:has(a[href*="instagram.com"]) a span {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent !important;
   }
 
   /* Footer Social Icon Buttons */
   .footer-social-icon-btn[href*="github.com"] {
     background: #ffffff;
     border-color: #181717;
+    border-width: 2px;
     color: #181717 !important;
     box-shadow: 0 3px 10px rgba(24, 23, 23, 0.14), inset 0 1px 0 #ffffff;
   }
@@ -5339,15 +5389,17 @@ aside li {
   .footer-social-icon-btn[href*="linkedin.com"] {
     background: #ffffff;
     border-color: #0a66c2;
+    border-width: 2px;
     color: #0a66c2 !important;
     box-shadow: 0 3px 10px rgba(10, 102, 194, 0.16), inset 0 1px 0 #ffffff;
   }
 
   .footer-social-icon-btn[href*="instagram.com"] {
-    background: #ffffff;
-    border-color: #dd2a7b;
-    color: #dd2a7b !important;
-    box-shadow: 0 3px 10px rgba(221, 42, 123, 0.16), inset 0 1px 0 #ffffff;
+    border: 2px solid transparent !important;
+    background:
+      linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box !important;
+    box-shadow: 0 3px 10px rgba(220, 39, 67, 0.18), inset 0 1px 0 #ffffff;
   }
 }
 
