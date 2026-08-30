@@ -1175,8 +1175,23 @@ function initMobileSidebarDrawer() {
   const openFab = document.getElementById("open-sidebar-fab");
   const openBanner = document.getElementById("open-sidebar-banner-btn");
   const closeBtn = document.getElementById("sidebar-drawer-close");
+  const pageHeader = document.querySelector(".page-header");
 
   if (!sidebar || !overlay) return;
+
+  // Reveal floating trigger pill only when the page header has scrolled out of view
+  if (openFab && pageHeader) {
+    const fabObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const isHeaderOutOfView = !entry.isIntersecting;
+          openFab.classList.toggle("is-visible", isHeaderOutOfView);
+        });
+      },
+      { threshold: 0, rootMargin: "-15px 0px 0px 0px" }
+    );
+    fabObserver.observe(pageHeader);
+  }
 
   let lastActiveElement = null;
 

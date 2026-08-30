@@ -2729,12 +2729,22 @@ main > section > .section-heading:hover .heading-icon {
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.92);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.28s ease,
               box-shadow 0.22s ease;
 }
 
-.mobile-sidebar-fab:active {
-  transform: scale(0.95);
+.mobile-sidebar-fab.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.mobile-sidebar-fab.is-visible:active {
+  transform: translateY(0) scale(0.95);
 }
 
 .mobile-sidebar-fab .fab-icon-wrap {
@@ -2815,6 +2825,23 @@ main > section > .section-heading:hover .heading-icon {
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
+  }
+
+  .sidebar-drawer-header::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, #94a3b8 0%, #0077cc 25%, #0284c7 50%, #005fa3 75%, #94a3b8 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .page-sidebar {
+    mask-image: linear-gradient(to bottom, black calc(100% - 2.5rem), rgba(0, 0, 0, 0.4) calc(100% - 0.75rem), transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 2.5rem), rgba(0, 0, 0, 0.4) calc(100% - 0.75rem), transparent 100%);
   }
 
   .sidebar-drawer-drag-pill {
@@ -6197,13 +6224,39 @@ body.modal-open .project-card-badge-dot,
     bottom: max(1.25rem, calc(0.75rem + env(safe-area-inset-bottom)));
   }
 
-  /* Mobile GPU & Fill-Rate Optimizations */
-  .page-header__aurora,
+  /* Mobile GPU & Fill-Rate Optimizations: Rich static multi-radial gradients (0-cost rasterization, no real-time blur) */
+  .page-header__beam {
+    display: none !important;
+  }
+
+  .page-header__aurora {
+    filter: none;
+    opacity: 1;
+    background:
+      /* Top-center soft luminous glow replacing heavy blur beam */
+      radial-gradient(ellipse 85% 45% at 50% 0%, rgba(255, 255, 255, 0.85) 0%, rgba(56, 189, 248, 0.22) 40%, transparent 75%),
+      /* Top-left vibrant Azure glow */
+      radial-gradient(ellipse 65% 55% at 0% 12%, rgba(56, 189, 248, 0.4) 0%, rgba(2, 132, 199, 0.18) 45%, transparent 72%),
+      /* Top-right vibrant Indigo glow */
+      radial-gradient(ellipse 60% 50% at 100% 18%, rgba(129, 140, 248, 0.35) 0%, rgba(99, 102, 241, 0.16) 45%, transparent 70%),
+      /* Mid-right subtle Prism/Magenta accent */
+      radial-gradient(ellipse 50% 45% at 92% 65%, rgba(217, 70, 239, 0.16) 0%, rgba(168, 85, 247, 0.07) 45%, transparent 68%),
+      /* Bottom-left vibrant Teal / Cyan glow */
+      radial-gradient(ellipse 65% 50% at 10% 88%, rgba(45, 212, 191, 0.3) 0%, rgba(6, 182, 212, 0.12) 50%, transparent 70%);
+  }
+
   .page-footer__aurora {
     filter: none;
-    background: radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.16) 0%, transparent 55%),
-                radial-gradient(circle at 85% 25%, rgba(129, 140, 248, 0.14) 0%, transparent 50%),
-                radial-gradient(circle at 45% 85%, rgba(45, 212, 191, 0.1) 0%, transparent 50%);
+    opacity: 1;
+    background:
+      /* Top-center soft sheen */
+      radial-gradient(ellipse 85% 40% at 50% 0%, rgba(255, 255, 255, 0.75) 0%, transparent 65%),
+      /* Bottom-left Azure glow */
+      radial-gradient(ellipse 75% 65% at 5% 85%, rgba(56, 189, 248, 0.38) 0%, rgba(2, 132, 199, 0.18) 45%, transparent 75%),
+      /* Bottom-right Indigo glow */
+      radial-gradient(ellipse 70% 60% at 95% 80%, rgba(129, 140, 248, 0.32) 0%, rgba(99, 102, 241, 0.15) 45%, transparent 75%),
+      /* Center-bottom soft cyan ambient */
+      radial-gradient(ellipse 55% 45% at 50% 92%, rgba(45, 212, 191, 0.22) 0%, transparent 65%);
   }
 
   .aurora-orb,
