@@ -9,7 +9,7 @@
 "location": "Delhi, India"
 },
 
-"summary": "Final-year <strong>Engineering Physics</strong> student at <strong>Delhi Technological University</strong> with a Minor in Computer Science. Focused on backend and GenAI systems that hold up in production — <strong>LLM gateways</strong> with cost and safety guardrails, low-latency Redis caching layers, and finely tuned <strong>RAG retrieval</strong>. Experienced in FastAPI, Docker, AWS, LangChain, Redis, and deploying scalable inference pipelines end-to-end.",
+"summary": "Final-year <strong>Engineering Physics</strong> student at <strong>Delhi Technological University</strong> with a Minor in Computer Science. Focused on backend and agentic GenAI systems that hold up in production — <strong>LLM gateways</strong> with cost and safety guardrails, <strong>multi-agent LangGraph pipelines</strong> with MCP tool-calling agents, and <strong>RAG systems</strong> backed by measured evaluation. Experienced in FastAPI, Docker, AWS, LangChain/LangGraph, Redis, and deploying scalable inference pipelines end-to-end.",
 
 "base_url": "https://maddy-mm.github.io",
 
@@ -50,34 +50,20 @@
 
 "projects": [
   {
-    "title": "LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs",
-    "tech_stack": ["FastAPI", "Redis", "FAISS", "Docker", "AWS EC2", "Prometheus", "Grafana", "pytest"],
-    "summary": "Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.",
-    "url": "https://github.com/Maddy-MM/llm-gateway",
-    "highlights": [
-      "Built an OpenAI-compatible gateway with circuit-breaker routing and automatic failover.",
-      "Blocked adversarial prompts via embedding-similarity injection detection.",
-      "Added dual-layer caching — Redis exact-match plus FAISS semantic match.",
-      "Enforced per-API-key budget caps; deployed via Docker Compose to AWS EC2."
-    ],
-    "images": [
-      {
-        "img_path": "img/llm-gateway.webp",
-        "caption": "LLM Gateway Architecture"
-      }
-    ]
-  },
-
-  {
     "title": "ResearchMind — Multi-Agent AI Research System",
-    "tech_stack": ["FastAPI", "LangChain", "Groq API", "JWT", "Prometheus", "Docker"],
-    "summary": "Production-grade multi-agent research assistant using FastAPI, LangChain, Groq API and agentic AI workflows.",
-    "url": "https://ai-research-system-jhb7jlklgmucvhtmptz5dm.streamlit.app/",
+    "card_title": "ResearchMind",
+    "tech_stack": ["FastAPI", "LangGraph", "MCP", "OpenAI API", "JWT", "Prometheus", "Docker"],
+    "summary": "Multi-agent research pipeline orchestrated with LangGraph — parallel MCP tool-calling agents for research and independent, tool-verified claim checking.",
+    "url": "https://researchmind.madhavmakwana.dev/",
     "highlights": [
-      "Built a 4-step agentic workflow: Search → Scrape → Write → Critique.",
-      "Implemented JWT authentication and modular FastAPI backend.",
-      "Added Critic Chain for self-evaluation and hallucination reduction.",
-      "Integrated Prometheus monitoring and Docker deployment.",
+      "Orchestrated a LangGraph StateGraph pipeline — plan, parallel research, write, critique, verify — with conditional routing driven by structured LLM output.",
+      "Built a standalone MCP tool server (FastMCP) exposing web search, page scraping, arXiv search, and a sandboxed calculator to independent tool-calling agents.",
+      "Parallelized sub-question research via LangGraph's Send API, fanning out concurrent researcher agents that each independently choose which MCP tools to call.",
+      "Designed a dynamic planner that scales sub-question count with topic complexity and can return a clarifying question instead of researching an ambiguous topic outright.",
+      "Implemented an iterative critic loop with a structured score + issue-type verdict, routing failures back to the planner or writer under an iteration cap and token budget.",
+      "Built an independent verifier agent that re-investigates a report's most load-bearing claims against fresh sources via its own tool calls, then returns a per-claim yes/no/partial verdict.",
+      "Secured the API with JWT auth and instrumented every pipeline stage with per-step Prometheus histograms plus request-ID-tagged structured JSON logging.",
+      "Deployed FastMCP and FastAPI as a single unified container via a custom entrypoint process supervisor, backed by an async pytest suite with a fully mocked pipeline.",
       "GitHub Repository: github.com/Maddy-MM/ai-research-system"
     ],
     "images": [
@@ -90,20 +76,49 @@
 
   {
     "title": "YTLens — RAG-Powered YouTube Q&A System",
-    "tech_stack": ["FastAPI", "FAISS", "HuggingFace", "RAG", "JWT"],
-    "summary": "Question answering system over YouTube transcripts using Retrieval-Augmented Generation.",
-    "url": "https://youtube-rag-chatbot-jixvzdtnxgbinlnnr4hbqo.streamlit.app/",
+    "card_title": "YTLens",
+    "tech_stack": ["FastAPI", "LangChain", "Pinecone", "OpenAI API", "Cross-Encoder Reranking", "JWT"],
+    "summary": "Evaluation-driven RAG system over YouTube transcripts — cross-encoder reranking validated against a labeled retrieval benchmark, not assumed.",
+    "url": "https://ytlens.madhavmakwana.dev",
     "highlights": [
-      "Built transcript ingestion and embedding pipeline.",
-      "Used FAISS vector database with HuggingFace embeddings.",
-      "Implemented MMR retrieval strategy.",
-      "Added authentication and persistent storage.",
+      "Built an end-to-end RAG pipeline — sentence-boundary-aware chunking, text-embedding-3-small embeddings, and namespaced Pinecone storage that survives backend restarts and redeploys.",
+      "Namespaced the vector store per video ID so retrieval for one video can never leak chunks from another, with the namespace doubling as an already-processed check.",
+      "Layered BAAI/bge-reranker-base cross-encoder reranking on top of dense retrieval, validating the choice against a labeled evaluation set rather than assuming it would help.",
+      "Built a 25-question labeled retrieval evaluation harness across 4 configurations — found hybrid BM25+dense fusion underperformed dense-only at this corpus scale, while reranking cut top-3 retrieval misses by 33%.",
+      "Designed a two-layer transcript fetch strategy with graceful degradation — direct fetch, then a residential proxy pass with a hard 3-second OS-level timeout overriding the library's own retry logic — before falling back to manual paste.",
+      "Made the chat model swappable via a single environment variable between OpenAI and free Hugging Face inference models, enabling zero-cost testing without touching pipeline code.",
+      "Streamed LLM responses token-by-token over Server-Sent Events so answers render progressively instead of blocking on full generation.",
+      "Secured the API with JWT auth and bcrypt-hashed passwords, with the admin user auto-reseeded on startup to survive Render's ephemeral filesystem wipes on redeploy.",
       "GitHub Repository: github.com/Maddy-MM/youtube-rag-assistant"
     ],
     "images": [
       {
         "img_path": "img/ytlens.webp",
         "caption": "YTLens Interface"
+      }
+    ]
+  },
+
+  {
+    "title": "LLM Gateway — Secure, Cost-Aware Routing Proxy for LLM APIs",
+    "card_title": "LLM Gateway",
+    "tech_stack": ["FastAPI", "Redis", "FAISS", "Docker", "AWS EC2", "Prometheus", "Grafana", "pytest"],
+    "summary": "Production-grade LLM gateway with circuit-breaker routing, dual-layer caching, prompt injection defense, and per-key budget enforcement — deployed to AWS EC2.",
+    "url": "https://github.com/Maddy-MM/llm-gateway",
+    "highlights": [
+      "Architected an OpenAI-compatible gateway (/v1/chat/completions) with circuit-breaker routing across Groq and OpenAI, auto-failing over on timeout or provider error.",
+      "Designed a hand-rolled closed/open/half-open circuit breaker that skips known-bad providers until a recovery timeout elapses, avoiding wasted calls to a failing provider.",
+      "Built dual-layer caching — Redis exact-match plus FAISS-backed semantic similarity — to short-circuit both identical and near-duplicate prompts before they hit a model.",
+      "Implemented embedding-similarity prompt injection/jailbreak detection that screens and blocks adversarial requests pre-inference, with audit logging of block reasons.",
+      "Built a per-API-key token/cost ledger enforcing hard budget caps, returning 429 on overrun to guarantee spend never exceeds a configured limit.",
+      "Kept ledger writes, cache writes, and metric recording off the synchronous response path via background tasks to minimize response latency.",
+      "Instrumented the full stack with Prometheus (custom cache/injection/provider metrics plus auto-instrumented HTTP metrics) and a provisioned, zero-touch Grafana dashboard.",
+      "Wrote a pytest suite with a FakeProvider and fakeredis achieving full pipeline coverage — routing/fallback, breaker state transitions, caching, injection detection, and billing — with zero real API spend."
+    ],
+    "images": [
+      {
+        "img_path": "img/llm-gateway.webp",
+        "caption": "LLM Gateway Architecture"
       }
     ]
   }
@@ -206,17 +221,22 @@
 "skills": [
 {
 "name": "Python",
-"proficiency": 90,
+"proficiency": 92,
 "proficiency_label": "Advanced"
 },
 {
 "name": "FastAPI",
-"proficiency": 90,
+"proficiency": 92,
 "proficiency_label": "Advanced"
 },
 {
-"name": "Docker",
-"proficiency": 85,
+"name": "LangGraph",
+"proficiency": 88,
+"proficiency_label": "Advanced"
+},
+{
+"name": "RAG Systems",
+"proficiency": 90,
 "proficiency_label": "Advanced"
 },
 {
@@ -225,9 +245,19 @@
 "proficiency_label": "Advanced"
 },
 {
-"name": "RAG Systems",
+"name": "Docker",
 "proficiency": 85,
 "proficiency_label": "Advanced"
+},
+{
+"name": "Vector Databases (Pinecone, FAISS)",
+"proficiency": 82,
+"proficiency_label": "Advanced"
+},
+{
+"name": "Redis",
+"proficiency": 78,
+"proficiency_label": "Intermediate"
 },
 {
 "name": "Machine Learning",
@@ -237,11 +267,6 @@
 {
 "name": "SQL",
 "proficiency": 80,
-"proficiency_label": "Intermediate"
-},
-{
-"name": "Redis",
-"proficiency": 75,
 "proficiency_label": "Intermediate"
 }
 ],

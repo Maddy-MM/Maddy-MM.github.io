@@ -284,7 +284,7 @@
                 <div class="project-carousel-track" id="project-carousel-track" tabindex="0" aria-label="Featured projects, scroll to browse">
               {% for project in projects %}
                 <div class="project-card-slot">
-                <button class="project-card" type="button" data-project-index="{{ loop.index0 }}" aria-haspopup="dialog" aria-label="View details for {{ project.title }}">
+                <button class="project-card" type="button" data-project-index="{{ loop.index0 }}" aria-haspopup="dialog" aria-label="View details for {{ project.card_title or project.title }}">
                   {% if project.images %}
                     <div class="project-card-thumb">
                       <span class="project-card-badge" aria-hidden="true">
@@ -295,7 +295,7 @@
                     </div>
                   {% endif %}
                   <div class="project-card-body">
-                    <h3 class="project-card-title">{{ project.title }}</h3>
+                    <h3 class="project-card-title">{{ project.card_title or project.title }}</h3>
                     {% if project.summary %}<p class="project-card-teaser">{{ project.summary }}</p>{% endif %}
                     {% if project.tech_stack %}
                       {% if project.tech_stack|length > 4 %}
@@ -335,7 +335,7 @@
                 </button>
                 <div class="carousel-dots" id="project-carousel-dots" role="tablist" aria-label="Select featured project">
                   {% for project in projects %}
-                    <button class="carousel-dot{% if loop.first %} is-active{% endif %}" type="button" role="tab" aria-label="Go to {{ project.title }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}"></button>
+                    <button class="carousel-dot{% if loop.first %} is-active{% endif %}" type="button" role="tab" aria-label="Go to {{ project.card_title or project.title }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}"></button>
                   {% endfor %}
                 </div>
                 <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Next project">
