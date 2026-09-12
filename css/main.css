@@ -2566,6 +2566,18 @@ main > section:last-child {
   margin-bottom: 0;
 }
 
+@media (min-width: 48rem) {
+  .page-content main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-content main > section:last-child {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+}
+
 /* Centered Flanked Dividing Section Heading (Main Column Cards) */
 main > section > .section-heading {
   display: flex;
