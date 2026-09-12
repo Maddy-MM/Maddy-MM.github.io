@@ -60,6 +60,15 @@ function initLightbox() {
     img.addEventListener("click", () => openLightbox(img.src, img.alt));
   });
 
+  document.querySelectorAll(".browser-chrome-expand").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const figure = btn.closest("figure");
+      const img = figure ? figure.querySelector("img") : null;
+      if (img) openLightbox(img.src, img.alt);
+    });
+  });
+
   closeBtn.addEventListener("click", closeLightbox);
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) closeLightbox();
@@ -374,6 +383,36 @@ function initCopyEmail() {
       console.error("Copy failed:", err);
     }
   });
+
+  const phoneLink = document.querySelector('.phone-tag a[href^="tel:"]');
+  if (phoneLink) {
+    const phone = phoneLink.querySelector("span") ? phoneLink.querySelector("span").textContent.trim() : "";
+    if (phone) {
+      const phoneBtn = document.createElement("button");
+      phoneBtn.className = "copy-phone-btn";
+      phoneBtn.type = "button";
+      phoneBtn.setAttribute("aria-label", `Copy phone number (${phone})`);
+      phoneBtn.setAttribute("title", `Copy ${phone}`);
+      phoneBtn.innerHTML = copyIcon;
+      phoneLink.appendChild(phoneBtn);
+
+      phoneBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        try {
+          await navigator.clipboard.writeText(phone);
+          phoneBtn.innerHTML = checkIcon;
+          phoneBtn.classList.add("is-copied");
+          setTimeout(() => {
+            phoneBtn.innerHTML = copyIcon;
+            phoneBtn.classList.remove("is-copied");
+          }, 1500);
+        } catch (err) {
+          console.error("Copy failed:", err);
+        }
+      });
+    }
+  }
 }
 
 function initSkillBars() {
@@ -702,6 +741,12 @@ function initProjectModal() {
     });
     if (prevBtn) prevBtn.disabled = activePanel === 0;
     if (nextBtn) nextBtn.disabled = activePanel === panels.length - 1;
+    overlay.querySelectorAll(".modal-footer-prev").forEach((btn) => {
+      btn.disabled = activePanel === 0;
+    });
+    overlay.querySelectorAll(".modal-footer-next").forEach((btn) => {
+      btn.disabled = activePanel === panels.length - 1;
+    });
     const activeBody = panels[activePanel]?.querySelector(".project-modal-content");
     if (activeBody) activeBody.scrollTop = 0;
     if (panelsContainer) panelsContainer.scrollTop = 0;
@@ -777,6 +822,13 @@ function initProjectModal() {
 
   if (prevBtn) prevBtn.addEventListener("click", () => showPanel(activePanel - 1));
   if (nextBtn) nextBtn.addEventListener("click", () => showPanel(activePanel + 1));
+
+  overlay.querySelectorAll(".modal-footer-prev").forEach((btn) => {
+    btn.addEventListener("click", () => showPanel(activePanel - 1));
+  });
+  overlay.querySelectorAll(".modal-footer-next").forEach((btn) => {
+    btn.addEventListener("click", () => showPanel(activePanel + 1));
+  });
 
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => showPanel(i));
