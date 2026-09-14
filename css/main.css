@@ -4703,6 +4703,14 @@ section[id] {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  .project-modal-footer-nav {
+    display: none;
+  }
+
+  .project-modal-footer {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 37.49rem) {
