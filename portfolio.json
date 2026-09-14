@@ -62,7 +62,8 @@
       "Designed a dynamic planner that scales sub-question count with topic complexity and can return a clarifying question instead of researching an ambiguous topic outright.",
       "Implemented an iterative critic loop with a structured score + issue-type verdict, routing failures back to the planner or writer under an iteration cap and token budget.",
       "Built an independent verifier agent that re-investigates a report's most load-bearing claims against fresh sources via its own tool calls, then returns a per-claim yes/no/partial verdict.",
-      "Secured the API with JWT auth and instrumented every pipeline stage with per-step Prometheus histograms plus request-ID-tagged structured JSON logging.",
+      "Secured the API with database-backed JWT auth — SQLAlchemy user records with bcrypt-hashed passwords — and persisted every research run as retrievable, user-scoped history.",
+      "Instrumented every pipeline stage with per-step Prometheus histograms plus request-ID-tagged structured JSON logging.",
       "Deployed FastMCP and FastAPI as a single unified container via a custom entrypoint process supervisor, backed by an async pytest suite with a fully mocked pipeline.",
       "GitHub Repository: github.com/Maddy-MM/ai-research-system"
     ],
@@ -83,9 +84,9 @@
     "highlights": [
       "Built an end-to-end RAG pipeline — sentence-boundary-aware chunking, text-embedding-3-small embeddings, and namespaced Pinecone storage that survives backend restarts and redeploys.",
       "Namespaced the vector store per video ID so retrieval for one video can never leak chunks from another, with the namespace doubling as an already-processed check.",
-      "Layered BAAI/bge-reranker-base cross-encoder reranking on top of dense retrieval, validating the choice against a labeled evaluation set rather than assuming it would help.",
+      "Benchmarked cross-encoder reranking (cross-encoder/ms-marco-MiniLM-L-2-v2) against a labeled evaluation set before shipping it as a configurable, memory-aware toggle — off by default on 512MB free-tier hosts to avoid OOM, enabled where headroom allows.",
       "Built a 25-question labeled retrieval evaluation harness across 4 configurations — found hybrid BM25+dense fusion underperformed dense-only at this corpus scale, while reranking cut top-3 retrieval misses by 33%.",
-      "Designed a two-layer transcript fetch strategy with graceful degradation — direct fetch, then a residential proxy pass with a hard 3-second OS-level timeout overriding the library's own retry logic — before falling back to manual paste.",
+      "Designed a three-layer transcript fetch strategy with graceful degradation — direct fetch, then a residential proxy pass with a hard 3-second OS-level timeout overriding the library's own retry logic, then a manual-paste fallback — so no video is ever a hard failure for the user.",
       "Made the chat model swappable via a single environment variable between OpenAI and free Hugging Face inference models, enabling zero-cost testing without touching pipeline code.",
       "Streamed LLM responses token-by-token over Server-Sent Events so answers render progressively instead of blocking on full generation.",
       "Secured the API with JWT auth and bcrypt-hashed passwords, with the admin user auto-reseeded on startup to survive Render's ephemeral filesystem wipes on redeploy.",
