@@ -11,6 +11,20 @@ with Path("portfolio.json").open(encoding="utf-8") as f:
 # Add any extra context if needed
 data["current_year"] = datetime.now(tz=UTC).year
 
+# Auto-detect resume file in the resume/ directory if not explicitly specified
+if "resume_path" not in data or not Path(data["resume_path"]).is_file():
+    resume_files = sorted(Path("resume").glob("*.pdf"), key=lambda p: p.stat().st_mtime, reverse=True)
+    if resume_files:
+        data["resume_path"] = resume_files[0].as_posix()
+    else:
+        data["resume_path"] = "resume/Madhav_Makwana_DTU26.pdf"
+
+# Ensure download name is configured and ends with .pdf
+if "resume_download_name" not in data:
+    data["resume_download_name"] = "Madhav_Makwana_DTU26.pdf"
+elif not data["resume_download_name"].lower().endswith(".pdf"):
+    data["resume_download_name"] += ".pdf"
+
 if "social_links" in data:
     for link in data["social_links"]:
         if link.get("svg_path"):

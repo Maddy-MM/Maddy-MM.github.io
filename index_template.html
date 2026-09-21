@@ -70,7 +70,7 @@
           <span class="sticky-bar-name">{{ name }}</span>
           <span class="sticky-bar-tagline" id="sticky-typewriter"></span>
         </div>
-        <a class="sticky-bar-resume" href="resume/Madhav_Makwana_2K22-EP-58.pdf" download="Madhav_Makwana_DTU.pdf">
+        <a class="sticky-bar-resume" href="{{ resume_path }}" download="{{ resume_download_name }}">
           <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14H2.75Zm4.47-3.28a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V1.75a.75.75 0 0 0-1.5 0v6.63L5.28 6.66a.75.75 0 0 0-1.06 1.06l3 3Z"/></svg>
           <span>Resume</span>
         </a>
@@ -184,8 +184,8 @@
             {% endif %}
             <div class="header-actions">
               <a class="download-resume-button magnetic"
-                 href="resume/Madhav_Makwana_2K22-EP-58.pdf"
-                 download="Madhav_Makwana_DTU.pdf"
+                 href="{{ resume_path }}"
+                 download="{{ resume_download_name }}"
                  id="resume-download-link">
                 <span>Download Resume</span>
                 <span class="btn-icon-wrap">
